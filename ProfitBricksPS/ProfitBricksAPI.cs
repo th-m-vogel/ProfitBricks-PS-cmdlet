@@ -9,8 +9,10 @@ using System.Management.Automation;
 
 namespace ProfitBricksPS
 {
+
+    #region New-PBApiServive
     [Cmdlet(VerbsCommon.New, "PBApiService")]
-    public class New_ProfitBricksApiService : PSCmdlet
+    public class New_PBApiService : PSCmdlet
     {
         [Parameter(
             Position = 0, 
@@ -44,7 +46,9 @@ namespace ProfitBricksPS
             this.WriteObject(PBApi);
         }
     }
+    #endregion
 
+    #region Get-PBAllDatacenters
     [Cmdlet(VerbsCommon.Get, "PBAllDataCenters")]
     public class Get_Datacenters : PSCmdlet
     {
@@ -56,10 +60,14 @@ namespace ProfitBricksPS
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApiService.getAllDataCenters());
+            foreach(var _dc in PBApiService.getAllDataCenters()) {
+                this.WriteObject(_dc);
+            }
         }
     }
+    #endregion
 
+    #region Get-PBDatacenter
     [Cmdlet(VerbsCommon.Get, "PBDatacenter")]
     public class Get_Datacenter : PSCmdlet
     {
@@ -74,7 +82,6 @@ namespace ProfitBricksPS
             Mandatory = true,
             ValueFromPipeline = true,
             ValueFromPipelineByPropertyName = true
-
         )]
         public string[] dataCenterId;
 
@@ -82,8 +89,42 @@ namespace ProfitBricksPS
         {
             foreach (var id in dataCenterId)
             {
-               this.WriteObject(PBApiService.getDataCenter(id));
+                // this.WriteObject(id);
+                this.WriteObject(PBApiService.getDataCenter(id));
             }
         }
     }
+    #endregion
+
+    #region New-PBDatacenter
+    [Cmdlet(VerbsCommon.New, "PBDatacenter")]
+    public class New_Datacenter : PSCmdlet
+    {
+        [Parameter(
+            Position = 0,
+            Mandatory = true
+        )]
+        public ProfitbricksApiServicePortTypeClient PBApiService;
+
+        [Parameter(
+            Position = 1,
+            Mandatory = false
+        )]
+        public string dataCenterName;
+
+        [Parameter(
+            Position = 2,
+            Mandatory = false
+        )]
+        public region Region;
+
+        protected override void ProcessRecord()
+        {
+            this.WriteObject(dataCenterName);
+            this.WriteObject(Region);
+            var response = PBApiService.createDataCenter(dataCenterName, Region);
+        }
+    }
+    #endregion
+
 }

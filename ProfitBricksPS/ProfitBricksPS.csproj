@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProfitBricksAPI.cs" />
+    <Compile Include="ProfitBricksAPI.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\WsProfitBricksApi\Reference.cs">
       <AutoGen>True</AutoGen>
