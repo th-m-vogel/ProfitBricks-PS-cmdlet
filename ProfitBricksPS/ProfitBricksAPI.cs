@@ -41,7 +41,7 @@ namespace ProfitBricksPS
             PBApi.ClientCredentials.UserName.UserName = Username;
             PBApi.ClientCredentials.UserName.Password = Password;
 
-            PBApi.Open();
+            // PBApi.Open();
 
             this.WriteObject(PBApi);
         }
