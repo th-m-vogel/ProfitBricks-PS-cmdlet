@@ -6,24 +6,54 @@ using System.Text;
 using System.Threading.Tasks;
 using ProfitBricksPS.WsProfitBricksApi;
 using System.Management.Automation;
+using System.Collections;
+using System.Runtime.InteropServices;
 
 namespace ProfitBricksPS
 {
+    #region CommonCode
 
+    public class PBHelper : PSCmdlet
+    {
+        [Parameter(
+            Position = 0,
+            Mandatory = true
+        )]
+        public ProfitbricksApiServicePortTypeClient PBApiService;
+
+        protected void WriteObjects(IEnumerable objects)
+        {
+            foreach (var obj in objects)
+            {
+                WriteObject(obj);
+            }
+        }
+    }
+
+
+    #endregion
     #region New-PBApiServive
     [Cmdlet(VerbsCommon.New, "PBApiService")]
     public class New_PBApiService : PSCmdlet
     {
         [Parameter(
+            ParameterSetName = "UserPass",
             Position = 0, 
             Mandatory = true
         )]
         public string Username;
         [Parameter(
+            ParameterSetName = "UserPass",
             Position = 1,
             Mandatory = true
         )]
         public string Password;
+        [Parameter(
+            ParameterSetName = "PSCredentials",
+            Position = 0,
+            Mandatory = true
+        )]
+        public PSCredential Credentials;
 
         protected override void ProcessRecord()
         {
@@ -38,10 +68,21 @@ namespace ProfitBricksPS
             // create API Client
             var PBApi = new ProfitbricksApiServicePortTypeClient(binding, EA);
             // Set Credidentials
-            PBApi.ClientCredentials.UserName.UserName = Username;
-            PBApi.ClientCredentials.UserName.Password = Password;
 
-            // PBApi.Open();
+            switch (ParameterSetName)
+            {
+                case "UserPass":
+                    PBApi.ClientCredentials.UserName.UserName = Username;
+                    PBApi.ClientCredentials.UserName.Password = Password;
+                    break;
+
+                case "PSCredentials":
+                    PBApi.ClientCredentials.UserName.UserName = Credentials.UserName;
+                    // convert PSCredentiasl.password to decrypted password string
+                    PBApi.ClientCredentials.UserName.Password = Marshal.PtrToStringBSTR(
+                        Marshal.SecureStringToBSTR(Credentials.Password));
+                break;
+            }
 
             this.WriteObject(PBApi);
         }
@@ -50,32 +91,20 @@ namespace ProfitBricksPS
 
     #region Get-PBAllDatacenters
     [Cmdlet(VerbsCommon.Get, "PBAllDataCenters")]
-    public class Get_Datacenters : PSCmdlet
+    public class Get_Datacenters : PBHelper
     {
-        [Parameter(
-            Position = 0,
-            Mandatory = true
-        )]
-        public ProfitbricksApiServicePortTypeClient PBApiService;
 
         protected override void ProcessRecord()
         {
-            foreach(var _dc in PBApiService.getAllDataCenters()) {
-                this.WriteObject(_dc);
-            }
+            this.WriteObjects(PBApiService.getAllDataCenters());
         }
     }
     #endregion
 
     #region Get-PBDatacenter
     [Cmdlet(VerbsCommon.Get, "PBDatacenter")]
-    public class Get_Datacenter : PSCmdlet
+    public class Get_Datacenter : PBHelper
     {
-        [Parameter(
-            Position = 0,
-            Mandatory = true
-        )]
-        public ProfitbricksApiServicePortTypeClient PBApiService;
 
         [Parameter(
             Position = 1,
@@ -83,29 +112,39 @@ namespace ProfitBricksPS
             ValueFromPipeline = true,
             ValueFromPipelineByPropertyName = true
         )]
-        public string[] dataCenterId;
+        public string dataCenterId;
 
         protected override void ProcessRecord()
         {
-            foreach (var id in dataCenterId)
-            {
-                // this.WriteObject(id);
-                this.WriteObject(PBApiService.getDataCenter(id));
-            }
+            this.WriteObject(PBApiService.getDataCenter(dataCenterId));
         }
     }
     #endregion
 
+    #region Get_PBDatacenterState
+    [Cmdlet(VerbsCommon.Get, "PBDatacenterState")]
+    public class Get_DatacenterStatus : PBHelper
+    {
+
+        [Parameter(
+            Position = 1,
+            Mandatory = true,
+            ValueFromPipeline = true,
+            ValueFromPipelineByPropertyName = true
+        )]
+        public string dataCenterId;
+
+        protected override void ProcessRecord()
+        {
+            this.WriteObject(PBApiService.getDataCenterState(dataCenterId));
+        }
+    }
+    #endregion 
+
     #region New-PBDatacenter
     [Cmdlet(VerbsCommon.New, "PBDatacenter")]
-    public class New_Datacenter : PSCmdlet
+    public class New_Datacenter : PBHelper
     {
-        [Parameter(
-            Position = 0,
-            Mandatory = true
-        )]
-        public ProfitbricksApiServicePortTypeClient PBApiService;
-
         [Parameter(
             Position = 1,
             Mandatory = false
@@ -120,11 +159,10 @@ namespace ProfitBricksPS
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(dataCenterName);
-            this.WriteObject(Region);
+            this.WriteVerbose("Create Datacenter: " + dataCenterName + " in Region " + Region);
             var response = PBApiService.createDataCenter(dataCenterName, Region);
+            this.WriteVerbose("RequestID " + response.requestId + " created Dataceter using UUID " + response.dataCenterId);
         }
     }
     #endregion
-
 }
