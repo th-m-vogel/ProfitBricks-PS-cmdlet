@@ -90,7 +90,7 @@ namespace ProfitBricksPSmoduleSoapAPI
     #endregion
 
     #region Get-PBDatacenterIdentifiers
-    [Cmdlet(VerbsCommon.Get, "DatacenterIdentifiers")]
+    [Cmdlet(VerbsCommon.Get, "PBDatacenterIdentifiers")]
     public class Get_DatacenterIdentifiers : PBHelper
     {
 
