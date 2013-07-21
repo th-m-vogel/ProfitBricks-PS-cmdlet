@@ -16,7 +16,7 @@ Initialise the API:
 
 Cmdlet usage:
 
-	Verb-PBMethod [-PBApiService] $var {[-Parameters] Value ...}
+	Verb-PBNoun [-PBApiService] $var {-Parameters Value ...}
 
 ## LICENSE:
 

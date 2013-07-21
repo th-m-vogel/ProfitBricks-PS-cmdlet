@@ -7,8 +7,8 @@
     <ProjectGuid>{251B2E51-AA74-4CA6-83EF-5CA6BF0693A1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProfitBricksPS</RootNamespace>
-    <AssemblyName>ProfitBricksPS</AssemblyName>
+    <RootNamespace>ProfitBricksPSmoduleSoapAPI</RootNamespace>
+    <AssemblyName>ProfitBricksPSmoduleSoapAPI</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProfitBricksAPI.cs">
+    <Compile Include="ProfitBricksPSmoduleSoapAPI.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,66 +63,6 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Service References\WsProfitBricksApi\ProfitbricksApiService.wsdl" />
-    <None Include="Service References\WsProfitBricksApi\ProfitBricksPS.WsProfitBricksApi.createDcResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WsProfitBricksApi\ProfitBricksPS.WsProfitBricksApi.createLbResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WsProfitBricksApi\ProfitBricksPS.WsProfitBricksApi.createNicResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WsProfitBricksApi\ProfitBricksPS.WsProfitBricksApi.createServerResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WsProfitBricksApi\ProfitBricksPS.WsProfitBricksApi.createStorageResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WsProfitBricksApi\ProfitBricksPS.WsProfitBricksApi.dataCenter.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WsProfitBricksApi\ProfitBricksPS.WsProfitBricksApi.dataCenterIdentifier.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WsProfitBricksApi\ProfitBricksPS.WsProfitBricksApi.firewall.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WsProfitBricksApi\ProfitBricksPS.WsProfitBricksApi.image.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WsProfitBricksApi\ProfitBricksPS.WsProfitBricksApi.ipBlock.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WsProfitBricksApi\ProfitBricksPS.WsProfitBricksApi.ipBlockResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WsProfitBricksApi\ProfitBricksPS.WsProfitBricksApi.loadBalancer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WsProfitBricksApi\ProfitBricksPS.WsProfitBricksApi.nic.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WsProfitBricksApi\ProfitBricksPS.WsProfitBricksApi.notification.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WsProfitBricksApi\ProfitBricksPS.WsProfitBricksApi.provisioningState.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WsProfitBricksApi\ProfitBricksPS.WsProfitBricksApi.registerLbServerResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WsProfitBricksApi\ProfitBricksPS.WsProfitBricksApi.requestResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WsProfitBricksApi\ProfitBricksPS.WsProfitBricksApi.server.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WsProfitBricksApi\ProfitBricksPS.WsProfitBricksApi.storage.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WsProfitBricksApi\ProfitBricksPS.WsProfitBricksApi.versionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\WsProfitBricksApi\" />
@@ -134,6 +74,66 @@
     <None Include="Service References\WsProfitBricksApi\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDcResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLbResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.dataCenter.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.dataCenterIdentifier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.firewall.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.image.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ipBlock.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ipBlockResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.loadBalancer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.nic.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.notification.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.provisioningState.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.registerLbServerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.server.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.storage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\WsProfitBricksApi\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

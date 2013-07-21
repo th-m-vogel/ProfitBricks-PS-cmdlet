@@ -6,5 +6,5 @@
     cause the file to be unrecognizable by the program.
 -->
 <GenericObjectDataSource DisplayName="loadBalancer" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>ProfitBricksPS.WsProfitBricksApi.loadBalancer, Service References.WsProfitBricksApi.Reference.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+   <TypeInfo>ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.loadBalancer, Service References.WsProfitBricksApi.Reference.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
 </GenericObjectDataSource>

@@ -4,12 +4,12 @@ using System.Linq;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
-using ProfitBricksPS.WsProfitBricksApi;
+using ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi;
 using System.Management.Automation;
 using System.Collections;
 using System.Runtime.InteropServices;
 
-namespace ProfitBricksPS
+namespace ProfitBricksPSmoduleSoapAPI
 {
     #region CommonCode
 
@@ -89,9 +89,9 @@ namespace ProfitBricksPS
     }
     #endregion
 
-    #region Get-PBAllDatacenters
-    [Cmdlet(VerbsCommon.Get, "PBAllDataCenters")]
-    public class Get_Datacenters : PBHelper
+    #region Get-PBDatacenterIdentifiers
+    [Cmdlet(VerbsCommon.Get, "DatacenterIdentifiers")]
+    public class Get_DatacenterIdentifiers : PBHelper
     {
 
         protected override void ProcessRecord()

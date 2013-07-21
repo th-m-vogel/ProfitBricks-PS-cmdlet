@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProfitBricksPS.WsProfitBricksApi {
+namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     
     
     /// <remarks/>
@@ -2329,415 +2329,415 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.getServerResponse getServer(ProfitBricksPS.WsProfitBricksApi.getServerRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getServerResponse getServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getServerRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.getImageResponse getImage(ProfitBricksPS.WsProfitBricksApi.getImageRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getImageResponse getImage(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getImageRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.deactivateFirewallsResponse deactivateFirewalls(ProfitBricksPS.WsProfitBricksApi.deactivateFirewallsRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deactivateFirewallsResponse deactivateFirewalls(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deactivateFirewallsRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.activateFirewallsResponse activateFirewalls(ProfitBricksPS.WsProfitBricksApi.activateFirewallsRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.activateFirewallsResponse activateFirewalls(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.activateFirewallsRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.deleteStorageResponse deleteStorage(ProfitBricksPS.WsProfitBricksApi.deleteStorageRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteStorageResponse deleteStorage(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteStorageRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.resetServerResponse resetServer(ProfitBricksPS.WsProfitBricksApi.resetServerRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.resetServerResponse resetServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.resetServerRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.releasePublicIpBlockResponse releasePublicIpBlock(ProfitBricksPS.WsProfitBricksApi.releasePublicIpBlockRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.releasePublicIpBlockResponse releasePublicIpBlock(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.releasePublicIpBlockRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.addFirewallRulesToNicResponse addFirewallRulesToNic(ProfitBricksPS.WsProfitBricksApi.addFirewallRulesToNicRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addFirewallRulesToNicResponse addFirewallRulesToNic(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addFirewallRulesToNicRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.setImageOsTypeResponse setImageOsType(ProfitBricksPS.WsProfitBricksApi.setImageOsTypeRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.setImageOsTypeResponse setImageOsType(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.setImageOsTypeRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.updateServerResponse updateServer(ProfitBricksPS.WsProfitBricksApi.updateServerRequest1 request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateServerResponse updateServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateServerRequest1 request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.createLoadBalancerResponse createLoadBalancer(ProfitBricksPS.WsProfitBricksApi.createLoadBalancerRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLoadBalancerResponse createLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLoadBalancerRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.deregisterServersOnLoadBalancerResponse deregisterServersOnLoadBalancer(ProfitBricksPS.WsProfitBricksApi.deregisterServersOnLoadBalancerRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deregisterServersOnLoadBalancerResponse deregisterServersOnLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deregisterServersOnLoadBalancerRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.registerServersOnLoadBalancerResponse registerServersOnLoadBalancer(ProfitBricksPS.WsProfitBricksApi.registerServersOnLoadBalancerRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.registerServersOnLoadBalancerResponse registerServersOnLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.registerServersOnLoadBalancerRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.activateLoadBalancingOnServersResponse activateLoadBalancingOnServers(ProfitBricksPS.WsProfitBricksApi.activateLoadBalancingOnServersRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.activateLoadBalancingOnServersResponse activateLoadBalancingOnServers(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.activateLoadBalancingOnServersRequest request);
         
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (createNicReturn) von Nachricht "createNicResponse" nicht mit dem Standardwert (createNic) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
-        ProfitBricksPS.WsProfitBricksApi.createNicResponse1 createNic(ProfitBricksPS.WsProfitBricksApi.createNicRequest1 request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicResponse1 createNic(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicRequest1 request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.getNotificationsResponse getNotifications(ProfitBricksPS.WsProfitBricksApi.getNotificationsRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNotificationsResponse getNotifications(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNotificationsRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.startServerResponse startServer(ProfitBricksPS.WsProfitBricksApi.startServerRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.startServerResponse startServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.startServerRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.removePublicIpFromNicResponse removePublicIpFromNic(ProfitBricksPS.WsProfitBricksApi.removePublicIpFromNicRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.removePublicIpFromNicResponse removePublicIpFromNic(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.removePublicIpFromNicRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.updateNicResponse updateNic(ProfitBricksPS.WsProfitBricksApi.updateNicRequest1 request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateNicResponse updateNic(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateNicRequest1 request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.reservePublicIpBlockResponse reservePublicIpBlock(ProfitBricksPS.WsProfitBricksApi.reservePublicIpBlockRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.reservePublicIpBlockResponse reservePublicIpBlock(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.reservePublicIpBlockRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.getNicResponse getNic(ProfitBricksPS.WsProfitBricksApi.getNicRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNicResponse getNic(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNicRequest request);
         
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (createStorageReturn) von Nachricht "createStorageResponse" nicht mit dem Standardwert (createStorage) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
-        ProfitBricksPS.WsProfitBricksApi.createStorageResponse1 createStorage(ProfitBricksPS.WsProfitBricksApi.createStorageRequest1 request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageResponse1 createStorage(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageRequest1 request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.stopServerResponse stopServer(ProfitBricksPS.WsProfitBricksApi.stopServerRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.stopServerResponse stopServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.stopServerRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.deleteLoadBalancerResponse deleteLoadBalancer(ProfitBricksPS.WsProfitBricksApi.deleteLoadBalancerRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteLoadBalancerResponse deleteLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteLoadBalancerRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.setInternetAccessResponse setInternetAccess(ProfitBricksPS.WsProfitBricksApi.setInternetAccessRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.setInternetAccessResponse setInternetAccess(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.setInternetAccessRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.addFirewallRulesToLoadBalancerResponse addFirewallRulesToLoadBalancer(ProfitBricksPS.WsProfitBricksApi.addFirewallRulesToLoadBalancerRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addFirewallRulesToLoadBalancerResponse addFirewallRulesToLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addFirewallRulesToLoadBalancerRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.deleteNicResponse deleteNic(ProfitBricksPS.WsProfitBricksApi.deleteNicRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteNicResponse deleteNic(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteNicRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.deleteServerResponse deleteServer(ProfitBricksPS.WsProfitBricksApi.deleteServerRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteServerResponse deleteServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteServerRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.deleteFirewallsResponse deleteFirewalls(ProfitBricksPS.WsProfitBricksApi.deleteFirewallsRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteFirewallsResponse deleteFirewalls(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteFirewallsRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.updateStorageResponse updateStorage(ProfitBricksPS.WsProfitBricksApi.updateStorageRequest1 request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateStorageResponse updateStorage(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateStorageRequest1 request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.removeFirewallRulesResponse removeFirewallRules(ProfitBricksPS.WsProfitBricksApi.removeFirewallRulesRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.removeFirewallRulesResponse removeFirewallRules(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.removeFirewallRulesRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.deactivateLoadBalancingOnServersResponse deactivateLoadBalancingOnServers(ProfitBricksPS.WsProfitBricksApi.deactivateLoadBalancingOnServersRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deactivateLoadBalancingOnServersResponse deactivateLoadBalancingOnServers(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deactivateLoadBalancingOnServersRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.updateLoadBalancerResponse updateLoadBalancer(ProfitBricksPS.WsProfitBricksApi.updateLoadBalancerRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLoadBalancerResponse updateLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLoadBalancerRequest request);
         
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (createServerReturn) von Nachricht "createServerResponse" nicht mit dem Standardwert (createServer) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
-        ProfitBricksPS.WsProfitBricksApi.createServerResponse1 createServer(ProfitBricksPS.WsProfitBricksApi.createServerRequest1 request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerResponse1 createServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerRequest1 request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.getAllImagesResponse getAllImages(ProfitBricksPS.WsProfitBricksApi.getAllImagesRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllImagesResponse getAllImages(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllImagesRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.getStorageResponse getStorage(ProfitBricksPS.WsProfitBricksApi.getStorageRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getStorageResponse getStorage(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getStorageRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.addPublicIpToNicResponse addPublicIpToNic(ProfitBricksPS.WsProfitBricksApi.addPublicIpToNicRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addPublicIpToNicResponse addPublicIpToNic(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addPublicIpToNicRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.getAllPublicIpBlocksResponse getAllPublicIpBlocks(ProfitBricksPS.WsProfitBricksApi.getAllPublicIpBlocksRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllPublicIpBlocksResponse getAllPublicIpBlocks(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllPublicIpBlocksRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.getLoadBalancerResponse getLoadBalancer(ProfitBricksPS.WsProfitBricksApi.getLoadBalancerRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getLoadBalancerResponse getLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getLoadBalancerRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.getFirewallResponse getFirewall(ProfitBricksPS.WsProfitBricksApi.getFirewallRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getFirewallResponse getFirewall(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getFirewallRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.createDataCenterResponse createDataCenter(ProfitBricksPS.WsProfitBricksApi.createDataCenterRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterResponse createDataCenter(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.updateDataCenterResponse updateDataCenter(ProfitBricksPS.WsProfitBricksApi.updateDataCenterRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateDataCenterResponse updateDataCenter(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateDataCenterRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.clearDataCenterResponse clearDataCenter(ProfitBricksPS.WsProfitBricksApi.clearDataCenterRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.clearDataCenterResponse clearDataCenter(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.clearDataCenterRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.deleteDataCenterResponse deleteDataCenter(ProfitBricksPS.WsProfitBricksApi.deleteDataCenterRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteDataCenterResponse deleteDataCenter(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteDataCenterRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.getAllDataCentersResponse getAllDataCenters(ProfitBricksPS.WsProfitBricksApi.getAllDataCentersRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllDataCentersResponse getAllDataCenters(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllDataCentersRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.connectStorageToServerResponse connectStorageToServer(ProfitBricksPS.WsProfitBricksApi.connectStorageToServerRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.connectStorageToServerResponse connectStorageToServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.connectStorageToServerRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.disconnectStorageFromServerResponse disconnectStorageFromServer(ProfitBricksPS.WsProfitBricksApi.disconnectStorageFromServerRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.disconnectStorageFromServerResponse disconnectStorageFromServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.disconnectStorageFromServerRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.addRomDriveToServerResponse addRomDriveToServer(ProfitBricksPS.WsProfitBricksApi.addRomDriveToServerRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addRomDriveToServerResponse addRomDriveToServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addRomDriveToServerRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.removeRomDriveFromServerResponse removeRomDriveFromServer(ProfitBricksPS.WsProfitBricksApi.removeRomDriveFromServerRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.removeRomDriveFromServerResponse removeRomDriveFromServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.removeRomDriveFromServerRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.getDataCenterResponse getDataCenter(ProfitBricksPS.WsProfitBricksApi.getDataCenterRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getDataCenterResponse getDataCenter(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getDataCenterRequest request);
         
         // CODEGEN: Parameter "return" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPS.WsProfitBricksApi.getDataCenterStateResponse getDataCenterState(ProfitBricksPS.WsProfitBricksApi.getDataCenterStateRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getDataCenterStateResponse getDataCenterState(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getDataCenterStateRequest request);
         
         // CODEGEN: Parameter "notificationId" erfordert zusätzliche Schemainformationen, die nicht mit dem Parametermodus erfasst werden können. Das spezifische Attribut ist "System.Xml.Serialization.XmlElementAttribute".
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPS.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
-        ProfitBricksPS.WsProfitBricksApi.deleteNotificationsResponse deleteNotifications(ProfitBricksPS.WsProfitBricksApi.deleteNotificationsRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteNotificationsResponse deleteNotifications(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteNotificationsRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2766,12 +2766,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.server @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.server @return;
         
         public getServerResponse() {
         }
         
-        public getServerResponse(ProfitBricksPS.WsProfitBricksApi.server @return) {
+        public getServerResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.server @return) {
             this.@return = @return;
         }
     }
@@ -3071,12 +3071,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.image @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.image @return;
         
         public getImageResponse() {
         }
         
-        public getImageResponse(ProfitBricksPS.WsProfitBricksApi.image @return) {
+        public getImageResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.image @return) {
             this.@return = @return;
         }
     }
@@ -3107,12 +3107,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public deactivateFirewallsResponse() {
         }
         
-        public deactivateFirewallsResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public deactivateFirewallsResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -3143,12 +3143,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public activateFirewallsResponse() {
         }
         
-        public activateFirewallsResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public activateFirewallsResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -3179,12 +3179,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public deleteStorageResponse() {
         }
         
-        public deleteStorageResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public deleteStorageResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -3215,12 +3215,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.requestResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse @return;
         
         public resetServerResponse() {
         }
         
-        public resetServerResponse(ProfitBricksPS.WsProfitBricksApi.requestResponse @return) {
+        public resetServerResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse @return) {
             this.@return = @return;
         }
     }
@@ -3251,12 +3251,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.requestResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse @return;
         
         public releasePublicIpBlockResponse() {
         }
         
-        public releasePublicIpBlockResponse(ProfitBricksPS.WsProfitBricksApi.requestResponse @return) {
+        public releasePublicIpBlockResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse @return) {
             this.@return = @return;
         }
     }
@@ -3469,7 +3469,7 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("request", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.firewallRuleRequest[] request;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.firewallRuleRequest[] request;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -3478,7 +3478,7 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         public addFirewallRulesToNicRequest() {
         }
         
-        public addFirewallRulesToNicRequest(ProfitBricksPS.WsProfitBricksApi.firewallRuleRequest[] request, string nicId) {
+        public addFirewallRulesToNicRequest(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.firewallRuleRequest[] request, string nicId) {
             this.request = request;
             this.nicId = nicId;
         }
@@ -3492,12 +3492,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.firewall @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.firewall @return;
         
         public addFirewallRulesToNicResponse() {
         }
         
-        public addFirewallRulesToNicResponse(ProfitBricksPS.WsProfitBricksApi.firewall @return) {
+        public addFirewallRulesToNicResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.firewall @return) {
             this.@return = @return;
         }
     }
@@ -3514,12 +3514,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.osType osType;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.osType osType;
         
         public setImageOsTypeRequest() {
         }
         
-        public setImageOsTypeRequest(string imageId, ProfitBricksPS.WsProfitBricksApi.osType osType) {
+        public setImageOsTypeRequest(string imageId, ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.osType osType) {
             this.imageId = imageId;
             this.osType = osType;
         }
@@ -3533,12 +3533,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.requestResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse @return;
         
         public setImageOsTypeResponse() {
         }
         
-        public setImageOsTypeResponse(ProfitBricksPS.WsProfitBricksApi.requestResponse @return) {
+        public setImageOsTypeResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse @return) {
             this.@return = @return;
         }
     }
@@ -3737,12 +3737,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.updateServerRequest arg0;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateServerRequest arg0;
         
         public updateServerRequest1() {
         }
         
-        public updateServerRequest1(ProfitBricksPS.WsProfitBricksApi.updateServerRequest arg0) {
+        public updateServerRequest1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateServerRequest arg0) {
             this.arg0 = arg0;
         }
     }
@@ -3755,12 +3755,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public updateServerResponse() {
         }
         
-        public updateServerResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public updateServerResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -3896,12 +3896,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.createLbRequest arg0;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLbRequest arg0;
         
         public createLoadBalancerRequest() {
         }
         
-        public createLoadBalancerRequest(ProfitBricksPS.WsProfitBricksApi.createLbRequest arg0) {
+        public createLoadBalancerRequest(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLbRequest arg0) {
             this.arg0 = arg0;
         }
     }
@@ -3914,12 +3914,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.createLbResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLbResponse @return;
         
         public createLoadBalancerResponse() {
         }
         
-        public createLoadBalancerResponse(ProfitBricksPS.WsProfitBricksApi.createLbResponse @return) {
+        public createLoadBalancerResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLbResponse @return) {
             this.@return = @return;
         }
     }
@@ -3955,12 +3955,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public deregisterServersOnLoadBalancerResponse() {
         }
         
-        public deregisterServersOnLoadBalancerResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public deregisterServersOnLoadBalancerResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -3996,12 +3996,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.registerLbServerResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.registerLbServerResponse @return;
         
         public registerServersOnLoadBalancerResponse() {
         }
         
-        public registerServersOnLoadBalancerResponse(ProfitBricksPS.WsProfitBricksApi.registerLbServerResponse @return) {
+        public registerServersOnLoadBalancerResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.registerLbServerResponse @return) {
             this.@return = @return;
         }
     }
@@ -4037,12 +4037,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public activateLoadBalancingOnServersResponse() {
         }
         
-        public activateLoadBalancingOnServersResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public activateLoadBalancingOnServersResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -4129,12 +4129,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.createNicRequest arg0;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicRequest arg0;
         
         public createNicRequest1() {
         }
         
-        public createNicRequest1(ProfitBricksPS.WsProfitBricksApi.createNicRequest arg0) {
+        public createNicRequest1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicRequest arg0) {
             this.arg0 = arg0;
         }
     }
@@ -4147,12 +4147,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.createNicResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicResponse @return;
         
         public createNicResponse1() {
         }
         
-        public createNicResponse1(ProfitBricksPS.WsProfitBricksApi.createNicResponse @return) {
+        public createNicResponse1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicResponse @return) {
             this.@return = @return;
         }
     }
@@ -4382,12 +4382,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.notification[] @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.notification[] @return;
         
         public getNotificationsResponse() {
         }
         
-        public getNotificationsResponse(ProfitBricksPS.WsProfitBricksApi.notification[] @return) {
+        public getNotificationsResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.notification[] @return) {
             this.@return = @return;
         }
     }
@@ -4418,12 +4418,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.requestResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse @return;
         
         public startServerResponse() {
         }
         
-        public startServerResponse(ProfitBricksPS.WsProfitBricksApi.requestResponse @return) {
+        public startServerResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse @return) {
             this.@return = @return;
         }
     }
@@ -4459,12 +4459,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public removePublicIpFromNicResponse() {
         }
         
-        public removePublicIpFromNicResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public removePublicIpFromNicResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -4565,12 +4565,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.updateNicRequest arg0;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateNicRequest arg0;
         
         public updateNicRequest1() {
         }
         
-        public updateNicRequest1(ProfitBricksPS.WsProfitBricksApi.updateNicRequest arg0) {
+        public updateNicRequest1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateNicRequest arg0) {
             this.arg0 = arg0;
         }
     }
@@ -4583,12 +4583,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public updateNicResponse() {
         }
         
-        public updateNicResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public updateNicResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -4605,12 +4605,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.region region;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.region region;
         
         public reservePublicIpBlockRequest() {
         }
         
-        public reservePublicIpBlockRequest(int blockSize, ProfitBricksPS.WsProfitBricksApi.region region) {
+        public reservePublicIpBlockRequest(int blockSize, ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.region region) {
             this.blockSize = blockSize;
             this.region = region;
         }
@@ -4624,12 +4624,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.ipBlockResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ipBlockResponse @return;
         
         public reservePublicIpBlockResponse() {
         }
         
-        public reservePublicIpBlockResponse(ProfitBricksPS.WsProfitBricksApi.ipBlockResponse @return) {
+        public reservePublicIpBlockResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ipBlockResponse @return) {
             this.@return = @return;
         }
     }
@@ -4660,12 +4660,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.nic @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.nic @return;
         
         public getNicResponse() {
         }
         
-        public getNicResponse(ProfitBricksPS.WsProfitBricksApi.nic @return) {
+        public getNicResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.nic @return) {
             this.@return = @return;
         }
     }
@@ -4766,12 +4766,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.createStorageRequest arg0;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageRequest arg0;
         
         public createStorageRequest1() {
         }
         
-        public createStorageRequest1(ProfitBricksPS.WsProfitBricksApi.createStorageRequest arg0) {
+        public createStorageRequest1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageRequest arg0) {
             this.arg0 = arg0;
         }
     }
@@ -4784,12 +4784,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.createStorageResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageResponse @return;
         
         public createStorageResponse1() {
         }
         
-        public createStorageResponse1(ProfitBricksPS.WsProfitBricksApi.createStorageResponse @return) {
+        public createStorageResponse1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageResponse @return) {
             this.@return = @return;
         }
     }
@@ -4820,12 +4820,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.requestResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse @return;
         
         public stopServerResponse() {
         }
         
-        public stopServerResponse(ProfitBricksPS.WsProfitBricksApi.requestResponse @return) {
+        public stopServerResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse @return) {
             this.@return = @return;
         }
     }
@@ -4856,12 +4856,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public deleteLoadBalancerResponse() {
         }
         
-        public deleteLoadBalancerResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public deleteLoadBalancerResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -4902,12 +4902,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public setInternetAccessResponse() {
         }
         
-        public setInternetAccessResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public setInternetAccessResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -4920,7 +4920,7 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("request", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.firewallRuleRequest[] request;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.firewallRuleRequest[] request;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -4929,7 +4929,7 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         public addFirewallRulesToLoadBalancerRequest() {
         }
         
-        public addFirewallRulesToLoadBalancerRequest(ProfitBricksPS.WsProfitBricksApi.firewallRuleRequest[] request, string loadBalancerId) {
+        public addFirewallRulesToLoadBalancerRequest(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.firewallRuleRequest[] request, string loadBalancerId) {
             this.request = request;
             this.loadBalancerId = loadBalancerId;
         }
@@ -4943,12 +4943,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.firewall @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.firewall @return;
         
         public addFirewallRulesToLoadBalancerResponse() {
         }
         
-        public addFirewallRulesToLoadBalancerResponse(ProfitBricksPS.WsProfitBricksApi.firewall @return) {
+        public addFirewallRulesToLoadBalancerResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.firewall @return) {
             this.@return = @return;
         }
     }
@@ -4979,12 +4979,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public deleteNicResponse() {
         }
         
-        public deleteNicResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public deleteNicResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -5015,12 +5015,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public deleteServerResponse() {
         }
         
-        public deleteServerResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public deleteServerResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -5051,12 +5051,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public deleteFirewallsResponse() {
         }
         
-        public deleteFirewallsResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public deleteFirewallsResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -5157,12 +5157,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.updateStorageRequest arg0;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateStorageRequest arg0;
         
         public updateStorageRequest1() {
         }
         
-        public updateStorageRequest1(ProfitBricksPS.WsProfitBricksApi.updateStorageRequest arg0) {
+        public updateStorageRequest1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateStorageRequest arg0) {
             this.arg0 = arg0;
         }
     }
@@ -5175,12 +5175,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public updateStorageResponse() {
         }
         
-        public updateStorageResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public updateStorageResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -5211,12 +5211,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public removeFirewallRulesResponse() {
         }
         
-        public removeFirewallRulesResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public removeFirewallRulesResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -5252,12 +5252,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public deactivateLoadBalancingOnServersResponse() {
         }
         
-        public deactivateLoadBalancingOnServersResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public deactivateLoadBalancingOnServersResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -5358,12 +5358,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.updateLbRequest arg0;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLbRequest arg0;
         
         public updateLoadBalancerRequest() {
         }
         
-        public updateLoadBalancerRequest(ProfitBricksPS.WsProfitBricksApi.updateLbRequest arg0) {
+        public updateLoadBalancerRequest(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLbRequest arg0) {
             this.arg0 = arg0;
         }
     }
@@ -5376,12 +5376,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public updateLoadBalancerResponse() {
         }
         
-        public updateLoadBalancerResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public updateLoadBalancerResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -5599,12 +5599,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.createServerRequest arg0;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerRequest arg0;
         
         public createServerRequest1() {
         }
         
-        public createServerRequest1(ProfitBricksPS.WsProfitBricksApi.createServerRequest arg0) {
+        public createServerRequest1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerRequest arg0) {
             this.arg0 = arg0;
         }
     }
@@ -5617,12 +5617,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.createServerResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerResponse @return;
         
         public createServerResponse1() {
         }
         
-        public createServerResponse1(ProfitBricksPS.WsProfitBricksApi.createServerResponse @return) {
+        public createServerResponse1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerResponse @return) {
             this.@return = @return;
         }
     }
@@ -5645,12 +5645,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.image[] @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.image[] @return;
         
         public getAllImagesResponse() {
         }
         
-        public getAllImagesResponse(ProfitBricksPS.WsProfitBricksApi.image[] @return) {
+        public getAllImagesResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.image[] @return) {
             this.@return = @return;
         }
     }
@@ -5681,12 +5681,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.storage @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.storage @return;
         
         public getStorageResponse() {
         }
         
-        public getStorageResponse(ProfitBricksPS.WsProfitBricksApi.storage @return) {
+        public getStorageResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.storage @return) {
             this.@return = @return;
         }
     }
@@ -5722,12 +5722,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public addPublicIpToNicResponse() {
         }
         
-        public addPublicIpToNicResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public addPublicIpToNicResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -5870,12 +5870,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.ipBlock[] @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ipBlock[] @return;
         
         public getAllPublicIpBlocksResponse() {
         }
         
-        public getAllPublicIpBlocksResponse(ProfitBricksPS.WsProfitBricksApi.ipBlock[] @return) {
+        public getAllPublicIpBlocksResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ipBlock[] @return) {
             this.@return = @return;
         }
     }
@@ -5906,12 +5906,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.loadBalancer @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.loadBalancer @return;
         
         public getLoadBalancerResponse() {
         }
         
-        public getLoadBalancerResponse(ProfitBricksPS.WsProfitBricksApi.loadBalancer @return) {
+        public getLoadBalancerResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.loadBalancer @return) {
             this.@return = @return;
         }
     }
@@ -5942,12 +5942,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.firewall @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.firewall @return;
         
         public getFirewallResponse() {
         }
         
-        public getFirewallResponse(ProfitBricksPS.WsProfitBricksApi.firewall @return) {
+        public getFirewallResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.firewall @return) {
             this.@return = @return;
         }
     }
@@ -5964,12 +5964,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.region region;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.region region;
         
         public createDataCenterRequest() {
         }
         
-        public createDataCenterRequest(string dataCenterName, ProfitBricksPS.WsProfitBricksApi.region region) {
+        public createDataCenterRequest(string dataCenterName, ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.region region) {
             this.dataCenterName = dataCenterName;
             this.region = region;
         }
@@ -5983,12 +5983,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.createDcResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDcResponse @return;
         
         public createDataCenterResponse() {
         }
         
-        public createDataCenterResponse(ProfitBricksPS.WsProfitBricksApi.createDcResponse @return) {
+        public createDataCenterResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDcResponse @return) {
             this.@return = @return;
         }
     }
@@ -6047,12 +6047,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.updateDcRequest arg0;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateDcRequest arg0;
         
         public updateDataCenterRequest() {
         }
         
-        public updateDataCenterRequest(ProfitBricksPS.WsProfitBricksApi.updateDcRequest arg0) {
+        public updateDataCenterRequest(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateDcRequest arg0) {
             this.arg0 = arg0;
         }
     }
@@ -6065,12 +6065,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public updateDataCenterResponse() {
         }
         
-        public updateDataCenterResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public updateDataCenterResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -6101,12 +6101,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public clearDataCenterResponse() {
         }
         
-        public clearDataCenterResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public clearDataCenterResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -6137,12 +6137,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.requestResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse @return;
         
         public deleteDataCenterResponse() {
         }
         
-        public deleteDataCenterResponse(ProfitBricksPS.WsProfitBricksApi.requestResponse @return) {
+        public deleteDataCenterResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse @return) {
             this.@return = @return;
         }
     }
@@ -6239,12 +6239,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.dataCenterIdentifier[] @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.dataCenterIdentifier[] @return;
         
         public getAllDataCentersResponse() {
         }
         
-        public getAllDataCentersResponse(ProfitBricksPS.WsProfitBricksApi.dataCenterIdentifier[] @return) {
+        public getAllDataCentersResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.dataCenterIdentifier[] @return) {
             this.@return = @return;
         }
     }
@@ -6359,12 +6359,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.connectStorageRequest arg0;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.connectStorageRequest arg0;
         
         public connectStorageToServerRequest() {
         }
         
-        public connectStorageToServerRequest(ProfitBricksPS.WsProfitBricksApi.connectStorageRequest arg0) {
+        public connectStorageToServerRequest(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.connectStorageRequest arg0) {
             this.arg0 = arg0;
         }
     }
@@ -6377,12 +6377,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public connectStorageToServerResponse() {
         }
         
-        public connectStorageToServerResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public connectStorageToServerResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -6418,12 +6418,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public disconnectStorageFromServerResponse() {
         }
         
-        public disconnectStorageFromServerResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public disconnectStorageFromServerResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -6510,12 +6510,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.romDriveRequest arg0;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.romDriveRequest arg0;
         
         public addRomDriveToServerRequest() {
         }
         
-        public addRomDriveToServerRequest(ProfitBricksPS.WsProfitBricksApi.romDriveRequest arg0) {
+        public addRomDriveToServerRequest(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.romDriveRequest arg0) {
             this.arg0 = arg0;
         }
     }
@@ -6528,12 +6528,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public addRomDriveToServerResponse() {
         }
         
-        public addRomDriveToServerResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public addRomDriveToServerResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -6569,12 +6569,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
         
         public removeRomDriveFromServerResponse() {
         }
         
-        public removeRomDriveFromServerResponse(ProfitBricksPS.WsProfitBricksApi.versionResponse @return) {
+        public removeRomDriveFromServerResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -6605,12 +6605,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.dataCenter @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.dataCenter @return;
         
         public getDataCenterResponse() {
         }
         
-        public getDataCenterResponse(ProfitBricksPS.WsProfitBricksApi.dataCenter @return) {
+        public getDataCenterResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.dataCenter @return) {
             this.@return = @return;
         }
     }
@@ -6641,12 +6641,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPS.WsProfitBricksApi.provisioningState @return;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.provisioningState @return;
         
         public getDataCenterStateResponse() {
         }
         
-        public getDataCenterStateResponse(ProfitBricksPS.WsProfitBricksApi.provisioningState @return) {
+        public getDataCenterStateResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.provisioningState @return) {
             this.@return = @return;
         }
     }
@@ -6680,12 +6680,12 @@ namespace ProfitBricksPS.WsProfitBricksApi {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ProfitbricksApiServicePortTypeChannel : ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType, System.ServiceModel.IClientChannel {
+    public interface ProfitbricksApiServicePortTypeChannel : ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ProfitbricksApiServicePortTypeClient : System.ServiceModel.ClientBase<ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType>, ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType {
+    public partial class ProfitbricksApiServicePortTypeClient : System.ServiceModel.ClientBase<ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType>, ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType {
         
         public ProfitbricksApiServicePortTypeClient() {
         }
@@ -6707,638 +6707,638 @@ namespace ProfitBricksPS.WsProfitBricksApi {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.getServerResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.getServer(ProfitBricksPS.WsProfitBricksApi.getServerRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getServerResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.getServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getServerRequest request) {
             return base.Channel.getServer(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.server getServer(string serverId) {
-            ProfitBricksPS.WsProfitBricksApi.getServerRequest inValue = new ProfitBricksPS.WsProfitBricksApi.getServerRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.server getServer(string serverId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getServerRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getServerRequest();
             inValue.serverId = serverId;
-            ProfitBricksPS.WsProfitBricksApi.getServerResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getServer(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getServerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getServer(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.getImageResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.getImage(ProfitBricksPS.WsProfitBricksApi.getImageRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getImageResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.getImage(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getImageRequest request) {
             return base.Channel.getImage(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.image getImage(string imageId) {
-            ProfitBricksPS.WsProfitBricksApi.getImageRequest inValue = new ProfitBricksPS.WsProfitBricksApi.getImageRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.image getImage(string imageId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getImageRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getImageRequest();
             inValue.imageId = imageId;
-            ProfitBricksPS.WsProfitBricksApi.getImageResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getImage(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getImageResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getImage(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.deactivateFirewallsResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.deactivateFirewalls(ProfitBricksPS.WsProfitBricksApi.deactivateFirewallsRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deactivateFirewallsResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.deactivateFirewalls(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deactivateFirewallsRequest request) {
             return base.Channel.deactivateFirewalls(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse deactivateFirewalls(string[] firewallIds) {
-            ProfitBricksPS.WsProfitBricksApi.deactivateFirewallsRequest inValue = new ProfitBricksPS.WsProfitBricksApi.deactivateFirewallsRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse deactivateFirewalls(string[] firewallIds) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deactivateFirewallsRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deactivateFirewallsRequest();
             inValue.firewallIds = firewallIds;
-            ProfitBricksPS.WsProfitBricksApi.deactivateFirewallsResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).deactivateFirewalls(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deactivateFirewallsResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).deactivateFirewalls(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.activateFirewallsResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.activateFirewalls(ProfitBricksPS.WsProfitBricksApi.activateFirewallsRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.activateFirewallsResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.activateFirewalls(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.activateFirewallsRequest request) {
             return base.Channel.activateFirewalls(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse activateFirewalls(string[] firewallIds) {
-            ProfitBricksPS.WsProfitBricksApi.activateFirewallsRequest inValue = new ProfitBricksPS.WsProfitBricksApi.activateFirewallsRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse activateFirewalls(string[] firewallIds) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.activateFirewallsRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.activateFirewallsRequest();
             inValue.firewallIds = firewallIds;
-            ProfitBricksPS.WsProfitBricksApi.activateFirewallsResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).activateFirewalls(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.activateFirewallsResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).activateFirewalls(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.deleteStorageResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.deleteStorage(ProfitBricksPS.WsProfitBricksApi.deleteStorageRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteStorageResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.deleteStorage(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteStorageRequest request) {
             return base.Channel.deleteStorage(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse deleteStorage(string storageId) {
-            ProfitBricksPS.WsProfitBricksApi.deleteStorageRequest inValue = new ProfitBricksPS.WsProfitBricksApi.deleteStorageRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse deleteStorage(string storageId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteStorageRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteStorageRequest();
             inValue.storageId = storageId;
-            ProfitBricksPS.WsProfitBricksApi.deleteStorageResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).deleteStorage(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteStorageResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).deleteStorage(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.resetServerResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.resetServer(ProfitBricksPS.WsProfitBricksApi.resetServerRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.resetServerResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.resetServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.resetServerRequest request) {
             return base.Channel.resetServer(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.requestResponse resetServer(string serverId) {
-            ProfitBricksPS.WsProfitBricksApi.resetServerRequest inValue = new ProfitBricksPS.WsProfitBricksApi.resetServerRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse resetServer(string serverId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.resetServerRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.resetServerRequest();
             inValue.serverId = serverId;
-            ProfitBricksPS.WsProfitBricksApi.resetServerResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).resetServer(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.resetServerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).resetServer(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.releasePublicIpBlockResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.releasePublicIpBlock(ProfitBricksPS.WsProfitBricksApi.releasePublicIpBlockRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.releasePublicIpBlockResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.releasePublicIpBlock(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.releasePublicIpBlockRequest request) {
             return base.Channel.releasePublicIpBlock(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.requestResponse releasePublicIpBlock(string blockId) {
-            ProfitBricksPS.WsProfitBricksApi.releasePublicIpBlockRequest inValue = new ProfitBricksPS.WsProfitBricksApi.releasePublicIpBlockRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse releasePublicIpBlock(string blockId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.releasePublicIpBlockRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.releasePublicIpBlockRequest();
             inValue.blockId = blockId;
-            ProfitBricksPS.WsProfitBricksApi.releasePublicIpBlockResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).releasePublicIpBlock(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.releasePublicIpBlockResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).releasePublicIpBlock(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.addFirewallRulesToNicResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.addFirewallRulesToNic(ProfitBricksPS.WsProfitBricksApi.addFirewallRulesToNicRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addFirewallRulesToNicResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.addFirewallRulesToNic(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addFirewallRulesToNicRequest request) {
             return base.Channel.addFirewallRulesToNic(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.firewall addFirewallRulesToNic(ProfitBricksPS.WsProfitBricksApi.firewallRuleRequest[] request, string nicId) {
-            ProfitBricksPS.WsProfitBricksApi.addFirewallRulesToNicRequest inValue = new ProfitBricksPS.WsProfitBricksApi.addFirewallRulesToNicRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.firewall addFirewallRulesToNic(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.firewallRuleRequest[] request, string nicId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addFirewallRulesToNicRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addFirewallRulesToNicRequest();
             inValue.request = request;
             inValue.nicId = nicId;
-            ProfitBricksPS.WsProfitBricksApi.addFirewallRulesToNicResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).addFirewallRulesToNic(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addFirewallRulesToNicResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).addFirewallRulesToNic(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.setImageOsTypeResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.setImageOsType(ProfitBricksPS.WsProfitBricksApi.setImageOsTypeRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.setImageOsTypeResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.setImageOsType(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.setImageOsTypeRequest request) {
             return base.Channel.setImageOsType(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.requestResponse setImageOsType(string imageId, ProfitBricksPS.WsProfitBricksApi.osType osType) {
-            ProfitBricksPS.WsProfitBricksApi.setImageOsTypeRequest inValue = new ProfitBricksPS.WsProfitBricksApi.setImageOsTypeRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse setImageOsType(string imageId, ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.osType osType) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.setImageOsTypeRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.setImageOsTypeRequest();
             inValue.imageId = imageId;
             inValue.osType = osType;
-            ProfitBricksPS.WsProfitBricksApi.setImageOsTypeResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).setImageOsType(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.setImageOsTypeResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).setImageOsType(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.updateServerResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.updateServer(ProfitBricksPS.WsProfitBricksApi.updateServerRequest1 request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateServerResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.updateServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateServerRequest1 request) {
             return base.Channel.updateServer(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse updateServer(ProfitBricksPS.WsProfitBricksApi.updateServerRequest arg0) {
-            ProfitBricksPS.WsProfitBricksApi.updateServerRequest1 inValue = new ProfitBricksPS.WsProfitBricksApi.updateServerRequest1();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse updateServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateServerRequest arg0) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateServerRequest1 inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateServerRequest1();
             inValue.arg0 = arg0;
-            ProfitBricksPS.WsProfitBricksApi.updateServerResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).updateServer(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateServerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).updateServer(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.createLoadBalancerResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.createLoadBalancer(ProfitBricksPS.WsProfitBricksApi.createLoadBalancerRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLoadBalancerResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.createLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLoadBalancerRequest request) {
             return base.Channel.createLoadBalancer(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.createLbResponse createLoadBalancer(ProfitBricksPS.WsProfitBricksApi.createLbRequest arg0) {
-            ProfitBricksPS.WsProfitBricksApi.createLoadBalancerRequest inValue = new ProfitBricksPS.WsProfitBricksApi.createLoadBalancerRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLbResponse createLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLbRequest arg0) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLoadBalancerRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLoadBalancerRequest();
             inValue.arg0 = arg0;
-            ProfitBricksPS.WsProfitBricksApi.createLoadBalancerResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).createLoadBalancer(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLoadBalancerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).createLoadBalancer(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.deregisterServersOnLoadBalancerResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.deregisterServersOnLoadBalancer(ProfitBricksPS.WsProfitBricksApi.deregisterServersOnLoadBalancerRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deregisterServersOnLoadBalancerResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.deregisterServersOnLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deregisterServersOnLoadBalancerRequest request) {
             return base.Channel.deregisterServersOnLoadBalancer(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse deregisterServersOnLoadBalancer(string[] serverIds, string loadBalancerId) {
-            ProfitBricksPS.WsProfitBricksApi.deregisterServersOnLoadBalancerRequest inValue = new ProfitBricksPS.WsProfitBricksApi.deregisterServersOnLoadBalancerRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse deregisterServersOnLoadBalancer(string[] serverIds, string loadBalancerId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deregisterServersOnLoadBalancerRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deregisterServersOnLoadBalancerRequest();
             inValue.serverIds = serverIds;
             inValue.loadBalancerId = loadBalancerId;
-            ProfitBricksPS.WsProfitBricksApi.deregisterServersOnLoadBalancerResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).deregisterServersOnLoadBalancer(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deregisterServersOnLoadBalancerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).deregisterServersOnLoadBalancer(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.registerServersOnLoadBalancerResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.registerServersOnLoadBalancer(ProfitBricksPS.WsProfitBricksApi.registerServersOnLoadBalancerRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.registerServersOnLoadBalancerResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.registerServersOnLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.registerServersOnLoadBalancerRequest request) {
             return base.Channel.registerServersOnLoadBalancer(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.registerLbServerResponse registerServersOnLoadBalancer(string[] serverIds, string loadBalancerId) {
-            ProfitBricksPS.WsProfitBricksApi.registerServersOnLoadBalancerRequest inValue = new ProfitBricksPS.WsProfitBricksApi.registerServersOnLoadBalancerRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.registerLbServerResponse registerServersOnLoadBalancer(string[] serverIds, string loadBalancerId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.registerServersOnLoadBalancerRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.registerServersOnLoadBalancerRequest();
             inValue.serverIds = serverIds;
             inValue.loadBalancerId = loadBalancerId;
-            ProfitBricksPS.WsProfitBricksApi.registerServersOnLoadBalancerResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).registerServersOnLoadBalancer(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.registerServersOnLoadBalancerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).registerServersOnLoadBalancer(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.activateLoadBalancingOnServersResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.activateLoadBalancingOnServers(ProfitBricksPS.WsProfitBricksApi.activateLoadBalancingOnServersRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.activateLoadBalancingOnServersResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.activateLoadBalancingOnServers(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.activateLoadBalancingOnServersRequest request) {
             return base.Channel.activateLoadBalancingOnServers(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse activateLoadBalancingOnServers(string loadBalancerId, string[] serverIds) {
-            ProfitBricksPS.WsProfitBricksApi.activateLoadBalancingOnServersRequest inValue = new ProfitBricksPS.WsProfitBricksApi.activateLoadBalancingOnServersRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse activateLoadBalancingOnServers(string loadBalancerId, string[] serverIds) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.activateLoadBalancingOnServersRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.activateLoadBalancingOnServersRequest();
             inValue.loadBalancerId = loadBalancerId;
             inValue.serverIds = serverIds;
-            ProfitBricksPS.WsProfitBricksApi.activateLoadBalancingOnServersResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).activateLoadBalancingOnServers(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.activateLoadBalancingOnServersResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).activateLoadBalancingOnServers(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.createNicResponse1 ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.createNic(ProfitBricksPS.WsProfitBricksApi.createNicRequest1 request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicResponse1 ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.createNic(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicRequest1 request) {
             return base.Channel.createNic(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.createNicResponse createNic(ProfitBricksPS.WsProfitBricksApi.createNicRequest arg0) {
-            ProfitBricksPS.WsProfitBricksApi.createNicRequest1 inValue = new ProfitBricksPS.WsProfitBricksApi.createNicRequest1();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicResponse createNic(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicRequest arg0) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicRequest1 inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicRequest1();
             inValue.arg0 = arg0;
-            ProfitBricksPS.WsProfitBricksApi.createNicResponse1 retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).createNic(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicResponse1 retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).createNic(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.getNotificationsResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.getNotifications(ProfitBricksPS.WsProfitBricksApi.getNotificationsRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNotificationsResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.getNotifications(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNotificationsRequest request) {
             return base.Channel.getNotifications(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.notification[] getNotifications(string networkUUID) {
-            ProfitBricksPS.WsProfitBricksApi.getNotificationsRequest inValue = new ProfitBricksPS.WsProfitBricksApi.getNotificationsRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.notification[] getNotifications(string networkUUID) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNotificationsRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNotificationsRequest();
             inValue.networkUUID = networkUUID;
-            ProfitBricksPS.WsProfitBricksApi.getNotificationsResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getNotifications(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNotificationsResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getNotifications(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.startServerResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.startServer(ProfitBricksPS.WsProfitBricksApi.startServerRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.startServerResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.startServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.startServerRequest request) {
             return base.Channel.startServer(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.requestResponse startServer(string serverId) {
-            ProfitBricksPS.WsProfitBricksApi.startServerRequest inValue = new ProfitBricksPS.WsProfitBricksApi.startServerRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse startServer(string serverId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.startServerRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.startServerRequest();
             inValue.serverId = serverId;
-            ProfitBricksPS.WsProfitBricksApi.startServerResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).startServer(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.startServerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).startServer(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.removePublicIpFromNicResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.removePublicIpFromNic(ProfitBricksPS.WsProfitBricksApi.removePublicIpFromNicRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.removePublicIpFromNicResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.removePublicIpFromNic(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.removePublicIpFromNicRequest request) {
             return base.Channel.removePublicIpFromNic(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse removePublicIpFromNic(string ip, string nicId) {
-            ProfitBricksPS.WsProfitBricksApi.removePublicIpFromNicRequest inValue = new ProfitBricksPS.WsProfitBricksApi.removePublicIpFromNicRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse removePublicIpFromNic(string ip, string nicId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.removePublicIpFromNicRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.removePublicIpFromNicRequest();
             inValue.ip = ip;
             inValue.nicId = nicId;
-            ProfitBricksPS.WsProfitBricksApi.removePublicIpFromNicResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).removePublicIpFromNic(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.removePublicIpFromNicResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).removePublicIpFromNic(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.updateNicResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.updateNic(ProfitBricksPS.WsProfitBricksApi.updateNicRequest1 request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateNicResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.updateNic(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateNicRequest1 request) {
             return base.Channel.updateNic(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse updateNic(ProfitBricksPS.WsProfitBricksApi.updateNicRequest arg0) {
-            ProfitBricksPS.WsProfitBricksApi.updateNicRequest1 inValue = new ProfitBricksPS.WsProfitBricksApi.updateNicRequest1();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse updateNic(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateNicRequest arg0) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateNicRequest1 inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateNicRequest1();
             inValue.arg0 = arg0;
-            ProfitBricksPS.WsProfitBricksApi.updateNicResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).updateNic(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateNicResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).updateNic(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.reservePublicIpBlockResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.reservePublicIpBlock(ProfitBricksPS.WsProfitBricksApi.reservePublicIpBlockRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.reservePublicIpBlockResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.reservePublicIpBlock(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.reservePublicIpBlockRequest request) {
             return base.Channel.reservePublicIpBlock(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.ipBlockResponse reservePublicIpBlock(int blockSize, ProfitBricksPS.WsProfitBricksApi.region region) {
-            ProfitBricksPS.WsProfitBricksApi.reservePublicIpBlockRequest inValue = new ProfitBricksPS.WsProfitBricksApi.reservePublicIpBlockRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ipBlockResponse reservePublicIpBlock(int blockSize, ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.region region) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.reservePublicIpBlockRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.reservePublicIpBlockRequest();
             inValue.blockSize = blockSize;
             inValue.region = region;
-            ProfitBricksPS.WsProfitBricksApi.reservePublicIpBlockResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).reservePublicIpBlock(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.reservePublicIpBlockResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).reservePublicIpBlock(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.getNicResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.getNic(ProfitBricksPS.WsProfitBricksApi.getNicRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNicResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.getNic(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNicRequest request) {
             return base.Channel.getNic(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.nic getNic(string nicId) {
-            ProfitBricksPS.WsProfitBricksApi.getNicRequest inValue = new ProfitBricksPS.WsProfitBricksApi.getNicRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.nic getNic(string nicId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNicRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNicRequest();
             inValue.nicId = nicId;
-            ProfitBricksPS.WsProfitBricksApi.getNicResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getNic(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNicResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getNic(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.createStorageResponse1 ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.createStorage(ProfitBricksPS.WsProfitBricksApi.createStorageRequest1 request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageResponse1 ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.createStorage(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageRequest1 request) {
             return base.Channel.createStorage(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.createStorageResponse createStorage(ProfitBricksPS.WsProfitBricksApi.createStorageRequest arg0) {
-            ProfitBricksPS.WsProfitBricksApi.createStorageRequest1 inValue = new ProfitBricksPS.WsProfitBricksApi.createStorageRequest1();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageResponse createStorage(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageRequest arg0) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageRequest1 inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageRequest1();
             inValue.arg0 = arg0;
-            ProfitBricksPS.WsProfitBricksApi.createStorageResponse1 retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).createStorage(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageResponse1 retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).createStorage(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.stopServerResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.stopServer(ProfitBricksPS.WsProfitBricksApi.stopServerRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.stopServerResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.stopServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.stopServerRequest request) {
             return base.Channel.stopServer(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.requestResponse stopServer(string serverId) {
-            ProfitBricksPS.WsProfitBricksApi.stopServerRequest inValue = new ProfitBricksPS.WsProfitBricksApi.stopServerRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse stopServer(string serverId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.stopServerRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.stopServerRequest();
             inValue.serverId = serverId;
-            ProfitBricksPS.WsProfitBricksApi.stopServerResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).stopServer(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.stopServerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).stopServer(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.deleteLoadBalancerResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.deleteLoadBalancer(ProfitBricksPS.WsProfitBricksApi.deleteLoadBalancerRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteLoadBalancerResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.deleteLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteLoadBalancerRequest request) {
             return base.Channel.deleteLoadBalancer(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse deleteLoadBalancer(string loadBalancerId) {
-            ProfitBricksPS.WsProfitBricksApi.deleteLoadBalancerRequest inValue = new ProfitBricksPS.WsProfitBricksApi.deleteLoadBalancerRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse deleteLoadBalancer(string loadBalancerId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteLoadBalancerRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteLoadBalancerRequest();
             inValue.loadBalancerId = loadBalancerId;
-            ProfitBricksPS.WsProfitBricksApi.deleteLoadBalancerResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).deleteLoadBalancer(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteLoadBalancerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).deleteLoadBalancer(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.setInternetAccessResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.setInternetAccess(ProfitBricksPS.WsProfitBricksApi.setInternetAccessRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.setInternetAccessResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.setInternetAccess(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.setInternetAccessRequest request) {
             return base.Channel.setInternetAccess(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse setInternetAccess(string dataCenterId, int lanId, bool internetAccess) {
-            ProfitBricksPS.WsProfitBricksApi.setInternetAccessRequest inValue = new ProfitBricksPS.WsProfitBricksApi.setInternetAccessRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse setInternetAccess(string dataCenterId, int lanId, bool internetAccess) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.setInternetAccessRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.setInternetAccessRequest();
             inValue.dataCenterId = dataCenterId;
             inValue.lanId = lanId;
             inValue.internetAccess = internetAccess;
-            ProfitBricksPS.WsProfitBricksApi.setInternetAccessResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).setInternetAccess(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.setInternetAccessResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).setInternetAccess(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.addFirewallRulesToLoadBalancerResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.addFirewallRulesToLoadBalancer(ProfitBricksPS.WsProfitBricksApi.addFirewallRulesToLoadBalancerRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addFirewallRulesToLoadBalancerResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.addFirewallRulesToLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addFirewallRulesToLoadBalancerRequest request) {
             return base.Channel.addFirewallRulesToLoadBalancer(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.firewall addFirewallRulesToLoadBalancer(ProfitBricksPS.WsProfitBricksApi.firewallRuleRequest[] request, string loadBalancerId) {
-            ProfitBricksPS.WsProfitBricksApi.addFirewallRulesToLoadBalancerRequest inValue = new ProfitBricksPS.WsProfitBricksApi.addFirewallRulesToLoadBalancerRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.firewall addFirewallRulesToLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.firewallRuleRequest[] request, string loadBalancerId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addFirewallRulesToLoadBalancerRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addFirewallRulesToLoadBalancerRequest();
             inValue.request = request;
             inValue.loadBalancerId = loadBalancerId;
-            ProfitBricksPS.WsProfitBricksApi.addFirewallRulesToLoadBalancerResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).addFirewallRulesToLoadBalancer(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addFirewallRulesToLoadBalancerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).addFirewallRulesToLoadBalancer(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.deleteNicResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.deleteNic(ProfitBricksPS.WsProfitBricksApi.deleteNicRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteNicResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.deleteNic(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteNicRequest request) {
             return base.Channel.deleteNic(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse deleteNic(string nicId) {
-            ProfitBricksPS.WsProfitBricksApi.deleteNicRequest inValue = new ProfitBricksPS.WsProfitBricksApi.deleteNicRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse deleteNic(string nicId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteNicRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteNicRequest();
             inValue.nicId = nicId;
-            ProfitBricksPS.WsProfitBricksApi.deleteNicResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).deleteNic(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteNicResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).deleteNic(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.deleteServerResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.deleteServer(ProfitBricksPS.WsProfitBricksApi.deleteServerRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteServerResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.deleteServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteServerRequest request) {
             return base.Channel.deleteServer(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse deleteServer(string serverId) {
-            ProfitBricksPS.WsProfitBricksApi.deleteServerRequest inValue = new ProfitBricksPS.WsProfitBricksApi.deleteServerRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse deleteServer(string serverId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteServerRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteServerRequest();
             inValue.serverId = serverId;
-            ProfitBricksPS.WsProfitBricksApi.deleteServerResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).deleteServer(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteServerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).deleteServer(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.deleteFirewallsResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.deleteFirewalls(ProfitBricksPS.WsProfitBricksApi.deleteFirewallsRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteFirewallsResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.deleteFirewalls(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteFirewallsRequest request) {
             return base.Channel.deleteFirewalls(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse deleteFirewalls(string[] firewallIds) {
-            ProfitBricksPS.WsProfitBricksApi.deleteFirewallsRequest inValue = new ProfitBricksPS.WsProfitBricksApi.deleteFirewallsRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse deleteFirewalls(string[] firewallIds) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteFirewallsRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteFirewallsRequest();
             inValue.firewallIds = firewallIds;
-            ProfitBricksPS.WsProfitBricksApi.deleteFirewallsResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).deleteFirewalls(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteFirewallsResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).deleteFirewalls(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.updateStorageResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.updateStorage(ProfitBricksPS.WsProfitBricksApi.updateStorageRequest1 request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateStorageResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.updateStorage(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateStorageRequest1 request) {
             return base.Channel.updateStorage(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse updateStorage(ProfitBricksPS.WsProfitBricksApi.updateStorageRequest arg0) {
-            ProfitBricksPS.WsProfitBricksApi.updateStorageRequest1 inValue = new ProfitBricksPS.WsProfitBricksApi.updateStorageRequest1();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse updateStorage(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateStorageRequest arg0) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateStorageRequest1 inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateStorageRequest1();
             inValue.arg0 = arg0;
-            ProfitBricksPS.WsProfitBricksApi.updateStorageResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).updateStorage(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateStorageResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).updateStorage(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.removeFirewallRulesResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.removeFirewallRules(ProfitBricksPS.WsProfitBricksApi.removeFirewallRulesRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.removeFirewallRulesResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.removeFirewallRules(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.removeFirewallRulesRequest request) {
             return base.Channel.removeFirewallRules(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse removeFirewallRules(string[] firewallRuleIds) {
-            ProfitBricksPS.WsProfitBricksApi.removeFirewallRulesRequest inValue = new ProfitBricksPS.WsProfitBricksApi.removeFirewallRulesRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse removeFirewallRules(string[] firewallRuleIds) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.removeFirewallRulesRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.removeFirewallRulesRequest();
             inValue.firewallRuleIds = firewallRuleIds;
-            ProfitBricksPS.WsProfitBricksApi.removeFirewallRulesResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).removeFirewallRules(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.removeFirewallRulesResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).removeFirewallRules(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.deactivateLoadBalancingOnServersResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.deactivateLoadBalancingOnServers(ProfitBricksPS.WsProfitBricksApi.deactivateLoadBalancingOnServersRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deactivateLoadBalancingOnServersResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.deactivateLoadBalancingOnServers(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deactivateLoadBalancingOnServersRequest request) {
             return base.Channel.deactivateLoadBalancingOnServers(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse deactivateLoadBalancingOnServers(string loadBalancerId, string[] serverIds) {
-            ProfitBricksPS.WsProfitBricksApi.deactivateLoadBalancingOnServersRequest inValue = new ProfitBricksPS.WsProfitBricksApi.deactivateLoadBalancingOnServersRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse deactivateLoadBalancingOnServers(string loadBalancerId, string[] serverIds) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deactivateLoadBalancingOnServersRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deactivateLoadBalancingOnServersRequest();
             inValue.loadBalancerId = loadBalancerId;
             inValue.serverIds = serverIds;
-            ProfitBricksPS.WsProfitBricksApi.deactivateLoadBalancingOnServersResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).deactivateLoadBalancingOnServers(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deactivateLoadBalancingOnServersResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).deactivateLoadBalancingOnServers(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.updateLoadBalancerResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.updateLoadBalancer(ProfitBricksPS.WsProfitBricksApi.updateLoadBalancerRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLoadBalancerResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.updateLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLoadBalancerRequest request) {
             return base.Channel.updateLoadBalancer(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse updateLoadBalancer(ProfitBricksPS.WsProfitBricksApi.updateLbRequest arg0) {
-            ProfitBricksPS.WsProfitBricksApi.updateLoadBalancerRequest inValue = new ProfitBricksPS.WsProfitBricksApi.updateLoadBalancerRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse updateLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLbRequest arg0) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLoadBalancerRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLoadBalancerRequest();
             inValue.arg0 = arg0;
-            ProfitBricksPS.WsProfitBricksApi.updateLoadBalancerResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).updateLoadBalancer(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLoadBalancerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).updateLoadBalancer(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.createServerResponse1 ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.createServer(ProfitBricksPS.WsProfitBricksApi.createServerRequest1 request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerResponse1 ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.createServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerRequest1 request) {
             return base.Channel.createServer(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.createServerResponse createServer(ProfitBricksPS.WsProfitBricksApi.createServerRequest arg0) {
-            ProfitBricksPS.WsProfitBricksApi.createServerRequest1 inValue = new ProfitBricksPS.WsProfitBricksApi.createServerRequest1();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerResponse createServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerRequest arg0) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerRequest1 inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerRequest1();
             inValue.arg0 = arg0;
-            ProfitBricksPS.WsProfitBricksApi.createServerResponse1 retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).createServer(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerResponse1 retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).createServer(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.getAllImagesResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.getAllImages(ProfitBricksPS.WsProfitBricksApi.getAllImagesRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllImagesResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.getAllImages(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllImagesRequest request) {
             return base.Channel.getAllImages(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.image[] getAllImages() {
-            ProfitBricksPS.WsProfitBricksApi.getAllImagesRequest inValue = new ProfitBricksPS.WsProfitBricksApi.getAllImagesRequest();
-            ProfitBricksPS.WsProfitBricksApi.getAllImagesResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getAllImages(inValue);
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.image[] getAllImages() {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllImagesRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllImagesRequest();
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllImagesResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getAllImages(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.getStorageResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.getStorage(ProfitBricksPS.WsProfitBricksApi.getStorageRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getStorageResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.getStorage(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getStorageRequest request) {
             return base.Channel.getStorage(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.storage getStorage(string storageId) {
-            ProfitBricksPS.WsProfitBricksApi.getStorageRequest inValue = new ProfitBricksPS.WsProfitBricksApi.getStorageRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.storage getStorage(string storageId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getStorageRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getStorageRequest();
             inValue.storageId = storageId;
-            ProfitBricksPS.WsProfitBricksApi.getStorageResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getStorage(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getStorageResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getStorage(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.addPublicIpToNicResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.addPublicIpToNic(ProfitBricksPS.WsProfitBricksApi.addPublicIpToNicRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addPublicIpToNicResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.addPublicIpToNic(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addPublicIpToNicRequest request) {
             return base.Channel.addPublicIpToNic(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse addPublicIpToNic(string ip, string nicId) {
-            ProfitBricksPS.WsProfitBricksApi.addPublicIpToNicRequest inValue = new ProfitBricksPS.WsProfitBricksApi.addPublicIpToNicRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse addPublicIpToNic(string ip, string nicId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addPublicIpToNicRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addPublicIpToNicRequest();
             inValue.ip = ip;
             inValue.nicId = nicId;
-            ProfitBricksPS.WsProfitBricksApi.addPublicIpToNicResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).addPublicIpToNic(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addPublicIpToNicResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).addPublicIpToNic(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.getAllPublicIpBlocksResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.getAllPublicIpBlocks(ProfitBricksPS.WsProfitBricksApi.getAllPublicIpBlocksRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllPublicIpBlocksResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.getAllPublicIpBlocks(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllPublicIpBlocksRequest request) {
             return base.Channel.getAllPublicIpBlocks(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.ipBlock[] getAllPublicIpBlocks() {
-            ProfitBricksPS.WsProfitBricksApi.getAllPublicIpBlocksRequest inValue = new ProfitBricksPS.WsProfitBricksApi.getAllPublicIpBlocksRequest();
-            ProfitBricksPS.WsProfitBricksApi.getAllPublicIpBlocksResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getAllPublicIpBlocks(inValue);
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ipBlock[] getAllPublicIpBlocks() {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllPublicIpBlocksRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllPublicIpBlocksRequest();
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllPublicIpBlocksResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getAllPublicIpBlocks(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.getLoadBalancerResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.getLoadBalancer(ProfitBricksPS.WsProfitBricksApi.getLoadBalancerRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getLoadBalancerResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.getLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getLoadBalancerRequest request) {
             return base.Channel.getLoadBalancer(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.loadBalancer getLoadBalancer(string loadBalancerId) {
-            ProfitBricksPS.WsProfitBricksApi.getLoadBalancerRequest inValue = new ProfitBricksPS.WsProfitBricksApi.getLoadBalancerRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.loadBalancer getLoadBalancer(string loadBalancerId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getLoadBalancerRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getLoadBalancerRequest();
             inValue.loadBalancerId = loadBalancerId;
-            ProfitBricksPS.WsProfitBricksApi.getLoadBalancerResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getLoadBalancer(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getLoadBalancerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getLoadBalancer(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.getFirewallResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.getFirewall(ProfitBricksPS.WsProfitBricksApi.getFirewallRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getFirewallResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.getFirewall(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getFirewallRequest request) {
             return base.Channel.getFirewall(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.firewall getFirewall(string firewallId) {
-            ProfitBricksPS.WsProfitBricksApi.getFirewallRequest inValue = new ProfitBricksPS.WsProfitBricksApi.getFirewallRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.firewall getFirewall(string firewallId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getFirewallRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getFirewallRequest();
             inValue.firewallId = firewallId;
-            ProfitBricksPS.WsProfitBricksApi.getFirewallResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getFirewall(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getFirewallResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getFirewall(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.createDataCenterResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.createDataCenter(ProfitBricksPS.WsProfitBricksApi.createDataCenterRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.createDataCenter(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterRequest request) {
             return base.Channel.createDataCenter(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.createDcResponse createDataCenter(string dataCenterName, ProfitBricksPS.WsProfitBricksApi.region region) {
-            ProfitBricksPS.WsProfitBricksApi.createDataCenterRequest inValue = new ProfitBricksPS.WsProfitBricksApi.createDataCenterRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDcResponse createDataCenter(string dataCenterName, ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.region region) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterRequest();
             inValue.dataCenterName = dataCenterName;
             inValue.region = region;
-            ProfitBricksPS.WsProfitBricksApi.createDataCenterResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).createDataCenter(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).createDataCenter(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.updateDataCenterResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.updateDataCenter(ProfitBricksPS.WsProfitBricksApi.updateDataCenterRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateDataCenterResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.updateDataCenter(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateDataCenterRequest request) {
             return base.Channel.updateDataCenter(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse updateDataCenter(ProfitBricksPS.WsProfitBricksApi.updateDcRequest arg0) {
-            ProfitBricksPS.WsProfitBricksApi.updateDataCenterRequest inValue = new ProfitBricksPS.WsProfitBricksApi.updateDataCenterRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse updateDataCenter(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateDcRequest arg0) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateDataCenterRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateDataCenterRequest();
             inValue.arg0 = arg0;
-            ProfitBricksPS.WsProfitBricksApi.updateDataCenterResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).updateDataCenter(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateDataCenterResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).updateDataCenter(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.clearDataCenterResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.clearDataCenter(ProfitBricksPS.WsProfitBricksApi.clearDataCenterRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.clearDataCenterResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.clearDataCenter(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.clearDataCenterRequest request) {
             return base.Channel.clearDataCenter(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse clearDataCenter(string dataCenterId) {
-            ProfitBricksPS.WsProfitBricksApi.clearDataCenterRequest inValue = new ProfitBricksPS.WsProfitBricksApi.clearDataCenterRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse clearDataCenter(string dataCenterId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.clearDataCenterRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.clearDataCenterRequest();
             inValue.dataCenterId = dataCenterId;
-            ProfitBricksPS.WsProfitBricksApi.clearDataCenterResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).clearDataCenter(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.clearDataCenterResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).clearDataCenter(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.deleteDataCenterResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.deleteDataCenter(ProfitBricksPS.WsProfitBricksApi.deleteDataCenterRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteDataCenterResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.deleteDataCenter(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteDataCenterRequest request) {
             return base.Channel.deleteDataCenter(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.requestResponse deleteDataCenter(string dataCenterId) {
-            ProfitBricksPS.WsProfitBricksApi.deleteDataCenterRequest inValue = new ProfitBricksPS.WsProfitBricksApi.deleteDataCenterRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse deleteDataCenter(string dataCenterId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteDataCenterRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteDataCenterRequest();
             inValue.dataCenterId = dataCenterId;
-            ProfitBricksPS.WsProfitBricksApi.deleteDataCenterResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).deleteDataCenter(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteDataCenterResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).deleteDataCenter(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.getAllDataCentersResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.getAllDataCenters(ProfitBricksPS.WsProfitBricksApi.getAllDataCentersRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllDataCentersResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.getAllDataCenters(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllDataCentersRequest request) {
             return base.Channel.getAllDataCenters(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.dataCenterIdentifier[] getAllDataCenters() {
-            ProfitBricksPS.WsProfitBricksApi.getAllDataCentersRequest inValue = new ProfitBricksPS.WsProfitBricksApi.getAllDataCentersRequest();
-            ProfitBricksPS.WsProfitBricksApi.getAllDataCentersResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getAllDataCenters(inValue);
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.dataCenterIdentifier[] getAllDataCenters() {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllDataCentersRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllDataCentersRequest();
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllDataCentersResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getAllDataCenters(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.connectStorageToServerResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.connectStorageToServer(ProfitBricksPS.WsProfitBricksApi.connectStorageToServerRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.connectStorageToServerResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.connectStorageToServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.connectStorageToServerRequest request) {
             return base.Channel.connectStorageToServer(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse connectStorageToServer(ProfitBricksPS.WsProfitBricksApi.connectStorageRequest arg0) {
-            ProfitBricksPS.WsProfitBricksApi.connectStorageToServerRequest inValue = new ProfitBricksPS.WsProfitBricksApi.connectStorageToServerRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse connectStorageToServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.connectStorageRequest arg0) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.connectStorageToServerRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.connectStorageToServerRequest();
             inValue.arg0 = arg0;
-            ProfitBricksPS.WsProfitBricksApi.connectStorageToServerResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).connectStorageToServer(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.connectStorageToServerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).connectStorageToServer(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.disconnectStorageFromServerResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.disconnectStorageFromServer(ProfitBricksPS.WsProfitBricksApi.disconnectStorageFromServerRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.disconnectStorageFromServerResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.disconnectStorageFromServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.disconnectStorageFromServerRequest request) {
             return base.Channel.disconnectStorageFromServer(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse disconnectStorageFromServer(string storageId, string serverId) {
-            ProfitBricksPS.WsProfitBricksApi.disconnectStorageFromServerRequest inValue = new ProfitBricksPS.WsProfitBricksApi.disconnectStorageFromServerRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse disconnectStorageFromServer(string storageId, string serverId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.disconnectStorageFromServerRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.disconnectStorageFromServerRequest();
             inValue.storageId = storageId;
             inValue.serverId = serverId;
-            ProfitBricksPS.WsProfitBricksApi.disconnectStorageFromServerResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).disconnectStorageFromServer(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.disconnectStorageFromServerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).disconnectStorageFromServer(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.addRomDriveToServerResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.addRomDriveToServer(ProfitBricksPS.WsProfitBricksApi.addRomDriveToServerRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addRomDriveToServerResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.addRomDriveToServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addRomDriveToServerRequest request) {
             return base.Channel.addRomDriveToServer(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse addRomDriveToServer(ProfitBricksPS.WsProfitBricksApi.romDriveRequest arg0) {
-            ProfitBricksPS.WsProfitBricksApi.addRomDriveToServerRequest inValue = new ProfitBricksPS.WsProfitBricksApi.addRomDriveToServerRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse addRomDriveToServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.romDriveRequest arg0) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addRomDriveToServerRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addRomDriveToServerRequest();
             inValue.arg0 = arg0;
-            ProfitBricksPS.WsProfitBricksApi.addRomDriveToServerResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).addRomDriveToServer(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addRomDriveToServerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).addRomDriveToServer(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.removeRomDriveFromServerResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.removeRomDriveFromServer(ProfitBricksPS.WsProfitBricksApi.removeRomDriveFromServerRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.removeRomDriveFromServerResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.removeRomDriveFromServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.removeRomDriveFromServerRequest request) {
             return base.Channel.removeRomDriveFromServer(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.versionResponse removeRomDriveFromServer(string imageId, string serverId) {
-            ProfitBricksPS.WsProfitBricksApi.removeRomDriveFromServerRequest inValue = new ProfitBricksPS.WsProfitBricksApi.removeRomDriveFromServerRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse removeRomDriveFromServer(string imageId, string serverId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.removeRomDriveFromServerRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.removeRomDriveFromServerRequest();
             inValue.imageId = imageId;
             inValue.serverId = serverId;
-            ProfitBricksPS.WsProfitBricksApi.removeRomDriveFromServerResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).removeRomDriveFromServer(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.removeRomDriveFromServerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).removeRomDriveFromServer(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.getDataCenterResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.getDataCenter(ProfitBricksPS.WsProfitBricksApi.getDataCenterRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getDataCenterResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.getDataCenter(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getDataCenterRequest request) {
             return base.Channel.getDataCenter(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.dataCenter getDataCenter(string dataCenterId) {
-            ProfitBricksPS.WsProfitBricksApi.getDataCenterRequest inValue = new ProfitBricksPS.WsProfitBricksApi.getDataCenterRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.dataCenter getDataCenter(string dataCenterId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getDataCenterRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getDataCenterRequest();
             inValue.dataCenterId = dataCenterId;
-            ProfitBricksPS.WsProfitBricksApi.getDataCenterResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getDataCenter(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getDataCenterResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getDataCenter(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.getDataCenterStateResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.getDataCenterState(ProfitBricksPS.WsProfitBricksApi.getDataCenterStateRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getDataCenterStateResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.getDataCenterState(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getDataCenterStateRequest request) {
             return base.Channel.getDataCenterState(request);
         }
         
-        public ProfitBricksPS.WsProfitBricksApi.provisioningState getDataCenterState(string dataCenterId) {
-            ProfitBricksPS.WsProfitBricksApi.getDataCenterStateRequest inValue = new ProfitBricksPS.WsProfitBricksApi.getDataCenterStateRequest();
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.provisioningState getDataCenterState(string dataCenterId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getDataCenterStateRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getDataCenterStateRequest();
             inValue.dataCenterId = dataCenterId;
-            ProfitBricksPS.WsProfitBricksApi.getDataCenterStateResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getDataCenterState(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getDataCenterStateResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getDataCenterState(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPS.WsProfitBricksApi.deleteNotificationsResponse ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType.deleteNotifications(ProfitBricksPS.WsProfitBricksApi.deleteNotificationsRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteNotificationsResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.deleteNotifications(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteNotificationsRequest request) {
             return base.Channel.deleteNotifications(request);
         }
         
         public void deleteNotifications(string[] notificationId) {
-            ProfitBricksPS.WsProfitBricksApi.deleteNotificationsRequest inValue = new ProfitBricksPS.WsProfitBricksApi.deleteNotificationsRequest();
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteNotificationsRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteNotificationsRequest();
             inValue.notificationId = notificationId;
-            ProfitBricksPS.WsProfitBricksApi.deleteNotificationsResponse retVal = ((ProfitBricksPS.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).deleteNotifications(inValue);
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteNotificationsResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).deleteNotifications(inValue);
         }
     }
 }

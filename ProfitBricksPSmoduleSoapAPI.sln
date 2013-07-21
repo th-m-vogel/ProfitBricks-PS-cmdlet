@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Windows Desktop
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProfitBricksPS", "ProfitBricksPS\ProfitBricksPS.csproj", "{251B2E51-AA74-4CA6-83EF-5CA6BF0693A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProfitBricksPSmoduleSoapAPI", "ProfitBricksPSmoduleSoapAPI\ProfitBricksPSmoduleSoapAPI.csproj", "{251B2E51-AA74-4CA6-83EF-5CA6BF0693A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
