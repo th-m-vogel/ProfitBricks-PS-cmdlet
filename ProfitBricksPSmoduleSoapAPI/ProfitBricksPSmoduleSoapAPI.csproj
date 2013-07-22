@@ -47,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CmdLet\Datacenter.cs" />
+    <Compile Include="CmdLet\Notifications.cs" />
+    <Compile Include="CmdLet\Server.cs" />
     <Compile Include="ProfitBricksPSmoduleSoapAPI.cs">
       <SubType>Code</SubType>
     </Compile>
