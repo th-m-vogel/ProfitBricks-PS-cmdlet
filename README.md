@@ -12,11 +12,12 @@ Load the Module:
 
 Initialise the API:
 
-	$var = New-PBApiService [-Username] Username [-Password] Password
+	Open-PBApiService [-Username] <string> [-Password] <string>
+	Open-PBApiService [-Credentials] <pscredential>
 
 Cmdlet usage:
 
-	Verb-PBNoun [-PBApiService] $var {-Parameters Value ...}
+	Verb-PBNoun {-Parameters Value , ...}
 
 ## LICENSE:
 
