@@ -111,9 +111,12 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Request.serverId = serverId;
             // If string value spezified is a valid enum
             // set Request.ParemeterSpecified and Parameter
-            if ((Request.busTypeSpecified = Enum.IsDefined(typeof(busType), busType.ToUpper())))
+            if (!(string.IsNullOrEmpty(busType)))
             {
-                Request.busType = (busType)Enum.Parse(typeof(busType), busType.ToUpper());
+                if ((Request.busTypeSpecified = Enum.IsDefined(typeof(busType), busType.ToUpper())))
+                {
+                    Request.busType = (busType)Enum.Parse(typeof(busType), busType.ToUpper());
+                }
             }
             Request.deviceNumber = deviceNumber;
             if (deviceNumber != 0)

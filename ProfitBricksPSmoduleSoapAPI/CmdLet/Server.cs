@@ -107,13 +107,20 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Request.internetAccess = internetAccess;
             // If string value spezified is a valid enum
             // set Request.ParemeterSpecified and Parameter
-            if ((Request.availabilityZoneSpecified = Enum.IsDefined(typeof(availabilityZone), availabilityZone.ToUpper())))
+            WriteVerbose(availabilityZone + " - " + osType);
+            if (!(string.IsNullOrEmpty(availabilityZone)))
             {
-                Request.availabilityZone = (availabilityZone)Enum.Parse(typeof(availabilityZone), availabilityZone.ToUpper());
+                if ((Request.availabilityZoneSpecified = Enum.IsDefined(typeof(availabilityZone), availabilityZone.ToUpper())))
+                {
+                    Request.availabilityZone = (availabilityZone)Enum.Parse(typeof(availabilityZone), availabilityZone.ToUpper());
+                }
             }
-            if ((Request.osTypeSpecified = Enum.IsDefined(typeof(osType), osType.ToUpper())))
+            if (!(string.IsNullOrEmpty(osType)))
             {
-                Request.osType = (osType)Enum.Parse(typeof(osType), osType.ToUpper());
+                if ((Request.osTypeSpecified = Enum.IsDefined(typeof(osType), osType.ToUpper())))
+                {
+                    Request.osType = (osType)Enum.Parse(typeof(osType), osType.ToUpper());
+                }
             }
 
             this.WriteObject(PBApi.Servive.createServer(Request));
@@ -252,13 +259,19 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Request.bootFromStorageId = bootFromStorageId;
             // If string value spezified is a valid enum
             // set Request.ParemeterSpecified and Parameter
-            if ((Request.availabilityZoneSpecified = Enum.IsDefined(typeof(availabilityZone), availabilityZone.ToUpper())))
+            if (!(string.IsNullOrEmpty(availabilityZone)))
             {
-                Request.availabilityZone = (availabilityZone)Enum.Parse(typeof(availabilityZone), availabilityZone.ToUpper());
+                if ((Request.availabilityZoneSpecified = Enum.IsDefined(typeof(availabilityZone), availabilityZone.ToUpper())))
+                {
+                    Request.availabilityZone = (availabilityZone)Enum.Parse(typeof(availabilityZone), availabilityZone.ToUpper());
+                }
             }
-            if ((Request.osTypeSpecified = Enum.IsDefined(typeof(osType), osType.ToUpper())))
+            if (!(string.IsNullOrEmpty(osType)))
             {
-                Request.osType = (osType)Enum.Parse(typeof(osType), osType.ToUpper());
+                if ((Request.osTypeSpecified = Enum.IsDefined(typeof(osType), osType.ToUpper())))
+                {
+                    Request.osType = (osType)Enum.Parse(typeof(osType), osType.ToUpper());
+                }
             }
 
             this.WriteObject(PBApi.Servive.updateServer(Request));
