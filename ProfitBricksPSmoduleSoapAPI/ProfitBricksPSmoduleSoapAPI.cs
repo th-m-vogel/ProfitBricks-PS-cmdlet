@@ -81,7 +81,7 @@ namespace ProfitBricksPSmoduleSoapAPI
                 break;
             }
             // hustvreturens true
-            this.WriteObject(true);
+            this.WriteObject(Username);
         }
     }
     #endregion

@@ -47,10 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CmdLet\CDRom.cs" />
     <Compile Include="CmdLet\Datacenter.cs" />
+    <Compile Include="CmdLet\Firewall.cs" />
     <Compile Include="CmdLet\Images.cs" />
+    <Compile Include="CmdLet\LoadBalancer.cs" />
+    <Compile Include="CmdLet\Nic.cs" />
     <Compile Include="CmdLet\Notifications.cs" />
+    <Compile Include="CmdLet\PublicIP.cs" />
     <Compile Include="CmdLet\Server.cs" />
+    <Compile Include="CmdLet\Storage.cs" />
     <Compile Include="ProfitBricksPSmoduleSoapAPI.cs">
       <SubType>Code</SubType>
     </Compile>
