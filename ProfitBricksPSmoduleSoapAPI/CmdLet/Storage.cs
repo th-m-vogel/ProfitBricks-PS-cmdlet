@@ -135,7 +135,6 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             ValueFromPipeline = true,
             ValueFromPipelineByPropertyName = true
         )]
-
         public string storageId;
 
         [Parameter(
