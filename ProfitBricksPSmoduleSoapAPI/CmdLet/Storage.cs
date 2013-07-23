@@ -74,9 +74,9 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
     }
     #endregion
 
-    #region Add_PBStorageConnection
-    [Cmdlet(VerbsCommon.Add, "PBStorageConnection")]
-    public class Add_PBStorageConnection : PBapiPSCmdlet
+    #region Join_PBStorageConnection
+    [Cmdlet(VerbsCommon.Join, "PBStorageConnection")]
+    public class Join_PBStorageConnection : PBapiPSCmdlet
     {
         [Parameter(
             Position = 0,
