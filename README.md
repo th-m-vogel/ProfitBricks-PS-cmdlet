@@ -8,7 +8,7 @@ This is a cummunitiy Project not maintained by ProfitBricks
 
 Load the Module:
 
-	Import-Module -name "Path_To\ProfitBricksPS.dll" [-verbose]
+	Import-Module -name "Path_To\ProfitBricksPSmoduleSoapAPI.dll" [-verbose]
 
 Initialise the API:
 

@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CmdLet\Datacenter.cs" />
+    <Compile Include="CmdLet\Images.cs" />
     <Compile Include="CmdLet\Notifications.cs" />
     <Compile Include="CmdLet\Server.cs" />
     <Compile Include="ProfitBricksPSmoduleSoapAPI.cs">
