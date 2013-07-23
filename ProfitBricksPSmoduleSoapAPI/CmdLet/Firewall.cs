@@ -10,4 +10,11 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
     class Firewall
     {
     }
+
+//Add Firewall Rules
+//Get Firewall
+//Remove Firewall Rules
+//Activate/Deactivate Firewall
+//Delete Firewall
+
 }
