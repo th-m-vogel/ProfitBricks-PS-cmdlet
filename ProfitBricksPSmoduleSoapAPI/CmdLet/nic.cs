@@ -7,7 +7,14 @@ using System.Text;
 
 namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 {
-    class Nic
-    {
-    }
+
+
+    
+    
+    
+//Create NIC
+//Get NIC
+//Set Internet Access
+//Update NIC
+//Delete NIC
 }

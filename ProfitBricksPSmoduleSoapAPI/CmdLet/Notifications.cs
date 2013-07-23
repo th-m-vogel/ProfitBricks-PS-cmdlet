@@ -21,7 +21,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApiServive.Servive.getNotifications(dataCenterId));
+            this.WriteObject(PBApi.Servive.getNotifications(dataCenterId));
         }
     }
     #endregion 
@@ -41,7 +41,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            PBApiServive.Servive.deleteNotifications(notificationsId);
+            PBApi.Servive.deleteNotifications(notificationsId);
         }
     }
     #endregion 

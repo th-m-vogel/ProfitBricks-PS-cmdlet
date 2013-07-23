@@ -13,7 +13,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
     {
         protected override void ProcessRecord()
         {
-            this.WriteObjects(PBApiServive.Servive.getAllImages());
+            this.WriteObjects(PBApi.Servive.getAllImages());
         }
     }
     #endregion
@@ -32,7 +32,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApiServive.Servive.getImage(imageId));
+            this.WriteObject(PBApi.Servive.getImage(imageId));
         }
     }
     #endregion
@@ -49,13 +49,13 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         [Parameter(
             Position = 1,
-            Mandatory = false
+            Mandatory = true
         )]
         public osType osType;
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApiServive.Servive.setImageOsType(imageId, osType));
+            this.WriteObject(PBApi.Servive.setImageOsType(imageId, osType));
         }
     }
     #endregion

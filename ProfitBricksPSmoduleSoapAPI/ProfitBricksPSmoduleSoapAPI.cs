@@ -25,9 +25,9 @@ namespace ProfitBricksPSmoduleSoapAPI
     #endregion
 
     #region Static_PBApiServive
-    public static class PBApiServive
+    public static class PBApi
     {
-        public static ProfitbricksApiServicePortTypeClient Servive;
+            public static ProfitbricksApiServicePortTypeClient Servive;
     }
     #endregion
 
@@ -62,20 +62,20 @@ namespace ProfitBricksPSmoduleSoapAPI
             binding.Security.Mode = BasicHttpSecurityMode.Transport;
             binding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Basic;
             // assin to the statc Class 
-            PBApiServive.Servive  = new ProfitbricksApiServicePortTypeClient(binding, EA);
+            PBApi.Servive  = new ProfitbricksApiServicePortTypeClient(binding, EA);
             // Set Credidentials
 
             switch (ParameterSetName)
             {
                 case "UserPass":
-                    PBApiServive.Servive.ClientCredentials.UserName.UserName = Username;
-                    PBApiServive.Servive.ClientCredentials.UserName.Password = Password;
+                    PBApi.Servive.ClientCredentials.UserName.UserName = Username;
+                    PBApi.Servive.ClientCredentials.UserName.Password = Password;
                     break;
 
                 case "PSCredentials":
-                    PBApiServive.Servive.ClientCredentials.UserName.UserName = Credentials.UserName;
+                    PBApi.Servive.ClientCredentials.UserName.UserName = Credentials.UserName;
                     // convert PSCredentiasl.password to decrypted password string
-                    PBApiServive.Servive.ClientCredentials.UserName.Password = Marshal.PtrToStringBSTR(
+                    PBApi.Servive.ClientCredentials.UserName.Password = Marshal.PtrToStringBSTR(
                         Marshal.SecureStringToBSTR(Credentials.Password)
                     );
                 break;
@@ -85,4 +85,19 @@ namespace ProfitBricksPSmoduleSoapAPI
         }
     }
     #endregion
+
+    #region Close-PBApiServive
+    [Cmdlet(VerbsCommon.Close, "PBApiService")]
+    public class Close_PBApiService : PSCmdlet
+    {
+        protected override void ProcessRecord()
+        {
+            PBApi.Servive.ClientCredentials.UserName.UserName = "";
+            PBApi.Servive.ClientCredentials.UserName.Password = "";
+
+            this.WriteObject("NoCredentials");
+        }
+    }
+    #endregion
+
 }

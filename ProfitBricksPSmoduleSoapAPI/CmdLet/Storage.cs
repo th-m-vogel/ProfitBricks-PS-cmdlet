@@ -21,7 +21,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApiServive.Servive.getStorage(storageId));
+            this.WriteObject(PBApi.Servive.getStorage(storageId));
         }
     }
     #endregion
@@ -69,7 +69,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Request.storageName = storageName;
             Request.mountImageId = mountImageId;
             Request.profitBricksImagePassword = profitBricksImagePassword;
-            this.WriteObject(PBApiServive.Servive.createStorage(Request));
+            this.WriteObject(PBApi.Servive.createStorage(Request));
         }
     }
     #endregion
@@ -92,13 +92,11 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         )]
         public string serverId;
 
-        // Mandatory=true --> Workarround. busType is enum and so will default 
-        // to IDE if if not set on command line
         [Parameter(
             Position = 2,
             Mandatory = true
         )]
-        public busType busType;
+        public string busType;
 
         [Parameter(
             Position = 3,
@@ -111,15 +109,18 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             connectStorageRequest Request = new connectStorageRequest();
             Request.storageId = storageId;
             Request.serverId = serverId;
-            Request.busType = busType;
-            // making busType mandatory does require Request.busTypeSpecified = true;
-            Request.busTypeSpecified = true;
+            // If string value spezified is a valid enum
+            // set Request.ParemeterSpecified and Parameter
+            if ((Request.busTypeSpecified = Enum.IsDefined(typeof(busType), busType.ToUpper())))
+            {
+                Request.busType = (busType)Enum.Parse(typeof(busType), busType.ToUpper());
+            }
             Request.deviceNumber = deviceNumber;
             if (deviceNumber != 0)
             {
                 Request.deviceNumberSpecified = true;
             }  
-            this.WriteObject(PBApiServive.Servive.connectStorageToServer(Request));
+            this.WriteObject(PBApi.Servive.connectStorageToServer(Request));
         }
     }
     #endregion
@@ -145,7 +146,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApiServive.Servive.disconnectStorageFromServer(storageId, serverId));
+            this.WriteObject(PBApi.Servive.disconnectStorageFromServer(storageId, serverId));
         }
     }
     #endregion
@@ -185,7 +186,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             {
                 Request.sizeSpecified = true;
             }
-            this.WriteObject(PBApiServive.Servive.updateStorage(Request));
+            this.WriteObject(PBApi.Servive.updateStorage(Request));
         }
     }
     #endregion
@@ -204,7 +205,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApiServive.Servive.deleteStorage(storageId));
+            this.WriteObject(PBApi.Servive.deleteStorage(storageId));
         }
     }
     #endregion
