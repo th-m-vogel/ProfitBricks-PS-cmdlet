@@ -51,6 +51,7 @@
     <Compile Include="CmdLet\Datacenter.cs" />
     <Compile Include="CmdLet\Firewall.cs" />
     <Compile Include="CmdLet\Images.cs" />
+    <Compile Include="CmdLet\Instance.cs" />
     <Compile Include="CmdLet\LoadBalancer.cs" />
     <Compile Include="CmdLet\Nic.cs" />
     <Compile Include="CmdLet\Notifications.cs" />
