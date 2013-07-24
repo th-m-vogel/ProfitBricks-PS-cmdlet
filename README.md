@@ -32,7 +32,7 @@ All parameters are defined as positional parameters, so the parameter name is op
 	Set-PBStorage -storageId xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx -storageName "New Name" -size 120
 	Set-PBStorage xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx "New Name" 120
 	
-[List of implemented CmdLet](Implemented Cmdlet short.md)
+[List of implemented CmdLet](Implemented Cmdlet short.txt)
 
 ## Example
 
@@ -89,7 +89,7 @@ Create a simple Datacenter
 
 ## To Do
 
-- Implement missing CmdLets
+- Implement missing CmdLets - **done**
 - asap implement new API features when published by ProfitBricks
 - create a dll-Help.xml and a module manifest
 - Add CmdLet New-Instance, create Server including up do 8 network connections and 8 storages
