@@ -31,6 +31,8 @@ All parameters are defined as positional parameters, so the parameter name is op
 
 	Set-PBStorage -storageId xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx -storageName "New Name" -size 120
 	Set-PBStorage xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx "New Name" 120
+	
+[List of implemented CmdLet](Implemented Cmdlet short.txt)
 
 ## Example
 
