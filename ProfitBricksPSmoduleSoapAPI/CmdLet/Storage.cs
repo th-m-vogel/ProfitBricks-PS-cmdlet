@@ -74,9 +74,9 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
     }
     #endregion
 
-    #region Join_PBStorageConnection
-    [Cmdlet(VerbsCommon.Join, "PBStorageConnection")]
-    public class Join_PBStorageConnection : PBapiPSCmdlet
+    #region Connect_PBStorageToServer
+    [Cmdlet("Connect", "PBStorageToServer")]
+    public class Connect_PBStorageToServer : PBapiPSCmdlet
     {
         [Parameter(
             Position = 0,
@@ -128,9 +128,9 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
     }
     #endregion
 
-    #region Remove_PBStorageConnection
-    [Cmdlet(VerbsCommon.Remove, "PBStorageConnection")]
-    public class Remove_PBStorageConnection : PBapiPSCmdlet
+    #region Remove_PBStorageFromServer
+    [Cmdlet(VerbsCommon.Remove, "PBStorageFromServer")]
+    public class Remove_PBStorageFromServer : PBapiPSCmdlet
     {
         [Parameter(
             Position = 0,

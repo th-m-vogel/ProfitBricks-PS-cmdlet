@@ -45,9 +45,9 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
     }
     #endregion
 
-    #region Join-PBIpToNic
-    [Cmdlet(VerbsCommon.Join, "PBIpToNic")]
-    public class Join_PBIpToNic : PBapiPSCmdlet
+    #region Add-PBIpToNic
+    [Cmdlet(VerbsCommon.Add, "PBIpToNic")]
+    public class Add_PBIpToNic : PBapiPSCmdlet
     {
         [Parameter(
             Position = 0,

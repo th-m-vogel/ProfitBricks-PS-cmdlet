@@ -7,9 +7,9 @@ using System.Text;
 
 namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 {
-    #region Join_PBRomdriveConnection
-    [Cmdlet(VerbsCommon.Join, "PBRomdriveConnection")]
-    public class Join_PBRomdriveConnection : PBapiPSCmdlet
+    #region Connect_PBRomdriveToServer
+    [Cmdlet("Connect", "PBRomdriveToServer")]
+    public class Connect_PBRomdriveToServer : PBapiPSCmdlet
     {
         [Parameter(
             Position = 0,
@@ -46,9 +46,9 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
     }
     #endregion
 
-    #region Remove_PBRomdriveConnection
-    [Cmdlet(VerbsCommon.Remove, "PBRomdriveConnection")]
-    public class Remove_PBRomdriveConnection : PBapiPSCmdlet
+    #region Remove_PBRomdriveFromServer
+    [Cmdlet(VerbsCommon.Remove, "PBRomdriveFromServer")]
+    public class Remove_PBRomdriveFromServer : PBapiPSCmdlet
     {
         [Parameter(
             Position = 0,
