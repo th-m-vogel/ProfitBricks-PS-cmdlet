@@ -23,6 +23,15 @@ Cmdlet usage:
 
 	Verb-PBNoun {-Parameters Value , ...}
 
+Supported command line parameters:
+
+	Get-Help Verb-PBNoun
+
+All parameters are defined as positional parameters, so the parameter name is optional as long as positioning is valid. So for instance the following Set-Server calls are valid
+
+	Set-PBStorage -storageId xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx -storageName "New Name" -size 120
+	Set-PBStorage xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx "New Name" 120
+
 ## Example
 
 see also Sample.ps1
@@ -51,9 +60,33 @@ Create a simple Datacenter
 	#    2 Gig RAM
 	#      using the above created Disk
 	#      connected to the Intrenet using LanId 1
-	$new_server = New-PBServer -cores 2 -ram 2048 -serverName "Win2012-01" -dataCenterId $new_dc.dataCenterId -lanId 1 -internetAccess $true -bootFromStorageId $new_disc.storageId -osType Windows
+    	$new_server = New-PBServer -cores 2 -ram 2048 -serverName "Win2012-01" -dataCenterId $new_dc.dataCenterId -lanId 1 -internetAccess $true -bootFromStorageId $new_disc.storageId -osType Windows
+    	write-host -NoNewline "Wait for provisioning to finish ..."
+	do {
+		write-host -NoNewline "." 
+		start-sleep -s 10
+	} while ((Get-PBDatacenterState -dataCenterId $new_dc.dataCenterId) -ne "AVAILABLE")
+	# get server information after provisioning
+	$new_server = Get-PBServer -serverId $new_server.serverId
+	# give the new server nic a friendly name
+	$new_nic = Set-PBNic -nicId $new_server.nics[0] -nicName "LAN 1"
+	# print the nic ip number
+	Write-host "Primary IP is: "$new_server.nics[0].Ips[0]
+	# Datacenter is ready
+	Write-Host "Your new Datacenter is ready for Use."
+	Write-Host "It may take additional time for your server to boot for the 1st time!"
+	# done
 
-## Lcense:
+## To Do
+
+- Implement missing CmdLets
+- asap implement new API features when published by ProfitBricks
+- create a dll-Help.xml and a module manifest
+- Add CmdLet New-Instance, create Server including up do 8 network connections and 8 storages
+- Add CmdLet Remove-Instance, delte server including all connected storages
+- Add support for -Verbos -Debug and -Confirm 
+
+## License:
 
 Copyright 2013 Thomas Vogel
 
