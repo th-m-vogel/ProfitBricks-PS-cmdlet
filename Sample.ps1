@@ -25,7 +25,7 @@ do {
 $new_server = Get-PBServer -serverId $new_server.serverId
 
 # give the new server nic a friendly name
-$new_nic = Set-PBNic -nicId $new_server.nics[0] -nicName "LAN 1"
+$new_nic = Set-PBNic -nicId $new_server.nics[0].nicId -nicName "LAN 1"
 
 # print the nic ip number
 Write-host "Primary IP is: "$new_server.nics[0].Ips[0]
