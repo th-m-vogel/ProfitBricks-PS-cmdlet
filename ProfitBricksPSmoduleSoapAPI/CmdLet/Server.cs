@@ -106,8 +106,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             }
             Request.internetAccess = internetAccess;
             // If string value spezified is a valid enum
-            // set Request.ParemeterSpecified and Parameter
-            WriteVerbose(availabilityZone + " - " + osType);
+            // set Request.ParemeterSpecified and Request.Parameter
             if (!(string.IsNullOrEmpty(availabilityZone)))
             {
                 if ((Request.availabilityZoneSpecified = Enum.IsDefined(typeof(availabilityZone), availabilityZone.ToUpper())))
