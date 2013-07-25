@@ -7,9 +7,32 @@ using System.Text;
 
 namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 {
-    #region New_PBFirewallRulesToNic
-    [Cmdlet(VerbsCommon.New, "PBFirewallRulesToNic")]
-    public class New_PBFirewallRulesToNic : PBapiPSCmdlet
+    #region New_PBFirewallRules
+    [Cmdlet(VerbsCommon.New, "PBFirewallRules")]
+    public class New_PBFirewallRules : PBapiPSCmdlet
+    {
+        [Parameter(
+            Position = 0,
+            Mandatory = true
+        )]
+        public string nicId;
+
+        [Parameter(
+            Position = 1,
+            Mandatory = false
+        )]
+        public firewallRuleRequest[] firewallRuleRequest;
+
+        protected override void ProcessRecord()
+        {
+            this.WriteObject(PBApi.Servive.addFirewallRulesToNic(firewallRuleRequest, nicId));
+        }
+    }
+    #endregion
+
+    #region New_PBFirewallRule
+    [Cmdlet(VerbsCommon.New, "PBFirewallRule")]
+    public class New_PBFirewallRule : PBapiPSCmdlet
     {
         [Parameter(
             Position = 0,
