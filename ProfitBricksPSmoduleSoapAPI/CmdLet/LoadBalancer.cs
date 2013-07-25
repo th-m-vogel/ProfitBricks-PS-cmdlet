@@ -64,7 +64,11 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             // Not Implemented yet, there does only exist the default ROUND_ROBIN algorithm
             //
             Request.ip = ip;
-            Request.lanId = lanId;
+            if (lanId > 0)
+            {
+                Request.lanId = lanId;
+                Request.lanIdSpecified = true;
+            } 
             Request.serverIds = serverIds;
             this.WriteObject(PBApi.Servive.createLoadBalancer(Request));
         }
