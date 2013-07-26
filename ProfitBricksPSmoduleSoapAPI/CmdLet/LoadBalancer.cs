@@ -70,7 +70,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
                 Request.lanIdSpecified = true;
             } 
             Request.serverIds = serverIds;
-            this.WriteObject(PBApi.Servive.createLoadBalancer(Request));
+            this.WriteObject(PBApi.Service.createLoadBalancer(Request));
         }
     }
     #endregion
@@ -89,7 +89,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.getLoadBalancer(loadBalancerId));
+            this.WriteObject(PBApi.Service.getLoadBalancer(loadBalancerId));
         }
     }
     #endregion
@@ -139,7 +139,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             // Not Implemented yet, there does only exist the default ROUND_ROBIN algorithm
             //
             Request.ip = ip;
-            this.WriteObject(PBApi.Servive.updateLoadBalancer(Request));
+            this.WriteObject(PBApi.Service.updateLoadBalancer(Request));
         }
     }
     #endregion
@@ -162,7 +162,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.registerServersOnLoadBalancer(serverIds, loadBalancerId));
+            this.WriteObject(PBApi.Service.registerServersOnLoadBalancer(serverIds, loadBalancerId));
         }
     }
     #endregion
@@ -185,7 +185,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.deregisterServersOnLoadBalancer(serverIds, loadBalancerId));
+            this.WriteObject(PBApi.Service.deregisterServersOnLoadBalancer(serverIds, loadBalancerId));
         }
     }
     #endregion
@@ -204,7 +204,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.deleteLoadBalancer(loadBalancerId));
+            this.WriteObject(PBApi.Service.deleteLoadBalancer(loadBalancerId));
         }
     }
     #endregion

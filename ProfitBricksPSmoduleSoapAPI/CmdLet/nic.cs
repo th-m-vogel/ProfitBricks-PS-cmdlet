@@ -42,7 +42,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Request.lanId = lanId;
             Request.ip = ip;
             Request.nicName = nicName;
-            this.WriteObject(PBApi.Servive.createNic(Request));
+            this.WriteObject(PBApi.Service.createNic(Request));
         }
     }
     #endregion
@@ -61,7 +61,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.getNic(nicId));
+            this.WriteObject(PBApi.Service.getNic(nicId));
         }
     }
     #endregion
@@ -80,7 +80,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.deleteNic(nicId));
+            this.WriteObject(PBApi.Service.deleteNic(nicId));
         }
     }
     #endregion
@@ -120,7 +120,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Request.lanId = lanId;
             Request.ip = ip;
             Request.nicName = nicName;
-            this.WriteObject(PBApi.Servive.updateNic(Request));
+            this.WriteObject(PBApi.Service.updateNic(Request));
         }
     }
     #endregion    
@@ -149,7 +149,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.setInternetAccess(datacenterId, lanId, internetAccess));
+            this.WriteObject(PBApi.Service.setInternetAccess(datacenterId, lanId, internetAccess));
         }
     }
     #endregion    

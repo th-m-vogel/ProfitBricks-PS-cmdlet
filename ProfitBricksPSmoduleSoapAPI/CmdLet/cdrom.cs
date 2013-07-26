@@ -41,7 +41,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             {
                 Request.deviceNumberSpecified = true;
             }  
-            this.WriteObject(PBApi.Servive.addRomDriveToServer(Request));
+            this.WriteObject(PBApi.Service.addRomDriveToServer(Request));
         }
     }
     #endregion
@@ -66,7 +66,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.removeRomDriveFromServer(imageId, serverId));
+            this.WriteObject(PBApi.Service.removeRomDriveFromServer(imageId, serverId));
         }
     }
     #endregion

@@ -13,7 +13,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
     {
         protected override void ProcessRecord()
         {
-            this.WriteObjects(PBApi.Servive.getAllPublicIpBlocks());
+            this.WriteObjects(PBApi.Service.getAllPublicIpBlocks());
         }
     }
     #endregion
@@ -40,7 +40,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.reservePublicIpBlock(blockSize,region));
+            this.WriteObject(PBApi.Service.reservePublicIpBlock(blockSize,region));
         }
     }
     #endregion
@@ -67,7 +67,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.addPublicIpToNic(ip,nicId));
+            this.WriteObject(PBApi.Service.addPublicIpToNic(ip,nicId));
         }
     }
     #endregion
@@ -94,7 +94,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.removePublicIpFromNic(ip, nicId));
+            this.WriteObject(PBApi.Service.removePublicIpFromNic(ip, nicId));
         }
     }
     #endregion
@@ -113,7 +113,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.releasePublicIpBlock(blockId));
+            this.WriteObject(PBApi.Service.releasePublicIpBlock(blockId));
         }
     }
     #endregion

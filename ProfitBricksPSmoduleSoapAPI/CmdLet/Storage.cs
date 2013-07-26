@@ -21,7 +21,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.getStorage(storageId));
+            this.WriteObject(PBApi.Service.getStorage(storageId));
         }
     }
     #endregion
@@ -69,7 +69,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Request.storageName = storageName;
             Request.mountImageId = mountImageId;
             Request.profitBricksImagePassword = profitBricksImagePassword;
-            this.WriteObject(PBApi.Servive.createStorage(Request));
+            this.WriteObject(PBApi.Service.createStorage(Request));
         }
     }
     #endregion
@@ -123,7 +123,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             {
                 Request.deviceNumberSpecified = true;
             }  
-            this.WriteObject(PBApi.Servive.connectStorageToServer(Request));
+            this.WriteObject(PBApi.Service.connectStorageToServer(Request));
         }
     }
     #endregion
@@ -148,7 +148,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.disconnectStorageFromServer(storageId, serverId));
+            this.WriteObject(PBApi.Service.disconnectStorageFromServer(storageId, serverId));
         }
     }
     #endregion
@@ -188,7 +188,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             {
                 Request.sizeSpecified = true;
             }
-            this.WriteObject(PBApi.Servive.updateStorage(Request));
+            this.WriteObject(PBApi.Service.updateStorage(Request));
         }
     }
     #endregion
@@ -207,7 +207,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.deleteStorage(storageId));
+            this.WriteObject(PBApi.Service.deleteStorage(storageId));
         }
     }
     #endregion

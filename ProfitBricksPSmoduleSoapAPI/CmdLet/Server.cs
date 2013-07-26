@@ -21,7 +21,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.getServer(serverId));
+            this.WriteObject(PBApi.Service.getServer(serverId));
         }
     }
     #endregion
@@ -122,7 +122,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
                 }
             }
 
-            this.WriteObject(PBApi.Servive.createServer(Request));
+            this.WriteObject(PBApi.Service.createServer(Request));
         }
     }
     #endregion
@@ -141,7 +141,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.resetServer(serverId));
+            this.WriteObject(PBApi.Service.resetServer(serverId));
         }
     }
     #endregion
@@ -160,7 +160,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.startServer(serverId));
+            this.WriteObject(PBApi.Service.startServer(serverId));
         }
     }
     #endregion
@@ -179,7 +179,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.stopServer(serverId));
+            this.WriteObject(PBApi.Service.stopServer(serverId));
         }
     }
     #endregion
@@ -273,7 +273,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
                 }
             }
 
-            this.WriteObject(PBApi.Servive.updateServer(Request));
+            this.WriteObject(PBApi.Service.updateServer(Request));
         }
     }
     #endregion
@@ -292,7 +292,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.deleteServer(serverId));
+            this.WriteObject(PBApi.Service.deleteServer(serverId));
         }
     }
     #endregion

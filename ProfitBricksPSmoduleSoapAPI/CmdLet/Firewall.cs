@@ -25,7 +25,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.addFirewallRulesToNic(firewallRuleRequest, nicId));
+            this.WriteObject(PBApi.Service.addFirewallRulesToNic(firewallRuleRequest, nicId));
         }
     }
     #endregion
@@ -118,7 +118,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             request[0].protocol = protocol;
             // request. = firewallRuleName;
             
-            this.WriteObject(PBApi.Servive.addFirewallRulesToNic(request, nicId));
+            this.WriteObject(PBApi.Service.addFirewallRulesToNic(request, nicId));
         }
     }
     #endregion
@@ -137,7 +137,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.getFirewall(firewallId));
+            this.WriteObject(PBApi.Service.getFirewall(firewallId));
         }
     }
     #endregion
@@ -156,7 +156,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.removeFirewallRules(firewallRuleIds));
+            this.WriteObject(PBApi.Service.removeFirewallRules(firewallRuleIds));
         }
     }
     #endregion
@@ -175,7 +175,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.activateFirewalls(firewallIds));
+            this.WriteObject(PBApi.Service.activateFirewalls(firewallIds));
         }
     }
     #endregion
@@ -194,7 +194,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.deleteFirewalls(firewallIds));
+            this.WriteObject(PBApi.Service.deleteFirewalls(firewallIds));
         }
     }
     #endregion

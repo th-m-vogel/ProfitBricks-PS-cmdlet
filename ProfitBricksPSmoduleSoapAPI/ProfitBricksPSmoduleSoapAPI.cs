@@ -27,7 +27,7 @@ namespace ProfitBricksPSmoduleSoapAPI
     #region Static_PBApiServive
     public static class PBApi
     {
-            public static ProfitbricksApiServicePortTypeClient Servive;
+            public static ProfitbricksApiServicePortTypeClient Service;
     }
     #endregion
 
@@ -62,20 +62,20 @@ namespace ProfitBricksPSmoduleSoapAPI
             binding.Security.Mode = BasicHttpSecurityMode.Transport;
             binding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Basic;
             // assin to the statc Class 
-            PBApi.Servive  = new ProfitbricksApiServicePortTypeClient(binding, EA);
+            PBApi.Service  = new ProfitbricksApiServicePortTypeClient(binding, EA);
             // Set Credidentials
 
             switch (ParameterSetName)
             {
                 case "UserPass":
-                    PBApi.Servive.ClientCredentials.UserName.UserName = Username;
-                    PBApi.Servive.ClientCredentials.UserName.Password = Password;
+                    PBApi.Service.ClientCredentials.UserName.UserName = Username;
+                    PBApi.Service.ClientCredentials.UserName.Password = Password;
                     break;
 
                 case "PSCredentials":
-                    PBApi.Servive.ClientCredentials.UserName.UserName = Credentials.UserName;
+                    PBApi.Service.ClientCredentials.UserName.UserName = Credentials.UserName;
                     // convert PSCredentiasl.password to decrypted password string
-                    PBApi.Servive.ClientCredentials.UserName.Password = Marshal.PtrToStringBSTR(
+                    PBApi.Service.ClientCredentials.UserName.Password = Marshal.PtrToStringBSTR(
                         Marshal.SecureStringToBSTR(Credentials.Password)
                     );
                 break;
@@ -92,8 +92,8 @@ namespace ProfitBricksPSmoduleSoapAPI
     {
         protected override void ProcessRecord()
         {
-            PBApi.Servive.ClientCredentials.UserName.UserName = "";
-            PBApi.Servive.ClientCredentials.UserName.Password = "";
+            PBApi.Service.ClientCredentials.UserName.UserName = "";
+            PBApi.Service.ClientCredentials.UserName.Password = "";
 
             this.WriteObject("NoCredentials");
         }

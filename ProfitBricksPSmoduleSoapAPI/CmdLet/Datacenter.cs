@@ -14,7 +14,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
     {
         protected override void ProcessRecord()
         {
-            this.WriteObjects(PBApi.Servive.getAllDataCenters());
+            this.WriteObjects(PBApi.Service.getAllDataCenters());
         }
     }
     #endregion
@@ -33,7 +33,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.getDataCenter(dataCenterId));
+            this.WriteObject(PBApi.Service.getDataCenter(dataCenterId));
         }
     }
     #endregion
@@ -53,7 +53,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.getDataCenterState(dataCenterId));
+            this.WriteObject(PBApi.Service.getDataCenterState(dataCenterId));
         }
     }
     #endregion
@@ -73,7 +73,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.clearDataCenter(dataCenterId));
+            this.WriteObject(PBApi.Service.clearDataCenter(dataCenterId));
         }
     }
     #endregion
@@ -92,7 +92,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Servive.deleteDataCenter(dataCenterId));
+            this.WriteObject(PBApi.Service.deleteDataCenter(dataCenterId));
         }
     }
     #endregion
@@ -116,7 +116,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         protected override void ProcessRecord()
         {
             this.WriteVerbose("Create Datacenter: " + dataCenterName + " in Region " + Region);
-            var response = PBApi.Servive.createDataCenter(dataCenterName, Region);
+            var response = PBApi.Service.createDataCenter(dataCenterName, Region);
             this.WriteVerbose("RequestID " + response.requestId + " created Dataceter using UUID " + response.dataCenterId);
             // return CreateDatacenterResponse
             this.WriteObject(response);
@@ -145,7 +145,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Request.dataCenterId = dataCenterId;
             Request.dataCenterName = dataCenterName;
 
-            this.WriteObject(PBApi.Servive.updateDataCenter(Request));
+            this.WriteObject(PBApi.Service.updateDataCenter(Request));
         }
     }
     #endregion
