@@ -7,7 +7,9 @@ This is a cummunitiy Project not maintained by ProfitBricks
 ## Download the DLL
 
 https://github.com/th-m-vogel/ProfitBricks-PS-cmdlet/blob/master/Psmodule.binary/ProfitBricksPSmoduleSoapAPI.dll?raw=true
+## Dependencies
 
+PowerShell V3 ($psversiontable.psversion)
 ## Usage
 
 Load the Module:
@@ -27,7 +29,7 @@ Supported command line parameters:
 
 	Get-Help Verb-PBNoun
 
-All parameters are defined as positional parameters, so the parameter name is optional as long as positioning is valid. So for instance the following Set-Server calls are valid
+All parameters are defined as positional parameters, so the parameter name is optional as long as positioning is valid. So for instance the following Set-Storage calls are valid
 
 	Set-PBStorage -storageId xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx -storageName "New Name" -size 120
 	Set-PBStorage xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx "New Name" 120
