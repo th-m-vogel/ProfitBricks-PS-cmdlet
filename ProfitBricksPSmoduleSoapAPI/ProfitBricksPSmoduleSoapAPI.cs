@@ -41,12 +41,14 @@ namespace ProfitBricksPSmoduleSoapAPI
             Mandatory = true
         )]
         public string Username;
+
         [Parameter(
             ParameterSetName = "UserPass",
             Position = 1,
             Mandatory = true
         )]
         public string Password;
+
         [Parameter(
             ParameterSetName = "PSCredentials",
             Position = 0,
@@ -54,10 +56,20 @@ namespace ProfitBricksPSmoduleSoapAPI
         )]
         public PSCredential Credentials;
 
+        [Parameter(
+            Mandatory = false
+        )]
+        public string WsUri;
+
+
         protected override void ProcessRecord()
         {
+            if (string.IsNullOrEmpty(WsUri))
+            {
+                WsUri = "https://api.profitbricks.com/1.2";
+            }
+            EndpointAddress EA = new EndpointAddress(WsUri);
             // We want to use Basic Auth via SSL to the Webservice
-            EndpointAddress EA = new EndpointAddress("https://api.profitbricks.com/1.2");
             BasicHttpBinding binding = new BasicHttpBinding();
             binding.Security.Mode = BasicHttpSecurityMode.Transport;
             binding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Basic;
@@ -96,6 +108,17 @@ namespace ProfitBricksPSmoduleSoapAPI
             PBApi.Service.ClientCredentials.UserName.Password = "";
 
             this.WriteObject("NoCredentials");
+        }
+    }
+    #endregion
+
+    #region Get-PBApiServive
+    [Cmdlet(VerbsCommon.Get, "PBApiService")]
+    public class Get_PBApiService : PSCmdlet
+    {
+        protected override void ProcessRecord()
+        {
+            this.WriteObject(PBApi.Service);
         }
     }
     #endregion
