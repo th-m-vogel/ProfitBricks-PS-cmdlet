@@ -2,7 +2,7 @@
 
 Power Shell Module to access the ProfitBricks SOAP API. Manage you ProfitBricks Clous Services using PowerShell or integrate to your client management soltion.
 
-This is a cummunitiy Project not maintained by ProfitBricks
+This is a communitiy Project not maintained by ProfitBricks
 
 ## Download the DLL
 
