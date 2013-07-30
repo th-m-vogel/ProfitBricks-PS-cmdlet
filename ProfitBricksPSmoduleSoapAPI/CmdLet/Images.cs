@@ -57,7 +57,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         {
             // prepared for future argument extensions
             //if (
-            //    string.IsNullOrWhiteSpace(StringParam) && 
+            //    string.IsNullOrEmpty(StringParam) && 
             //    IntParam == 0)
             //{
             //    throw new System.ArgumentException("at leat on of the following parameters must have a valid value: StringParam, IntParam");

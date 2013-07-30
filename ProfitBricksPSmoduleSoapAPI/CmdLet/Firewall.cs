@@ -100,26 +100,26 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         {
             firewallRuleRequest[] request = { new firewallRuleRequest() }; 
             if (
-                string.IsNullOrWhiteSpace(sourceMac) &&
-                string.IsNullOrWhiteSpace(sourceIp) &&
-                string.IsNullOrWhiteSpace(targetIp) &&
+                string.IsNullOrEmpty(sourceMac) &&
+                string.IsNullOrEmpty(sourceIp) &&
+                string.IsNullOrEmpty(targetIp) &&
                 portRangeStart == 0 &&
                 portRangeEnd == 0 &&
-                string.IsNullOrWhiteSpace(icmpType) &&
-                string.IsNullOrWhiteSpace(icmpCode)
+                string.IsNullOrEmpty(icmpType) &&
+                string.IsNullOrEmpty(icmpCode)
                 )
             {
                 throw new System.ArgumentException("at leat on of the following parameters must have a valid value: sourceMac, sourceIp, targetIp, portRangeStart, portRangeEnd, icmpType, icmpCode");
             }
-            if (!string.IsNullOrWhiteSpace(sourceMac))
+            if (!string.IsNullOrEmpty(sourceMac))
             {
                 PBapiChecks.IsMAC(sourceMac);
             }
-            if (!string.IsNullOrWhiteSpace(sourceIp))
+            if (!string.IsNullOrEmpty(sourceIp))
             {
                 PBapiChecks.IsIP(sourceIp);
             }
-            if (!string.IsNullOrWhiteSpace(targetIp))
+            if (!string.IsNullOrEmpty(targetIp))
             {
                 PBapiChecks.IsIP(targetIp);
             }
@@ -127,7 +127,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             {
                 throw new System.ArgumentException("maximum allowed value for portRangeStart and portRangeEnd is 65534");
             }
-            if (!string.IsNullOrWhiteSpace(icmpCode)) 
+            if (!string.IsNullOrEmpty(icmpCode)) 
             {
                 if (Convert.ToInt32(icmpCode) > 255)
                 {
@@ -136,7 +136,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
                 request[0].icmpCode = Convert.ToInt32(icmpCode);
                 request[0].icmpCodeSpecified = true;
             }
-            if (!string.IsNullOrWhiteSpace(icmpType))
+            if (!string.IsNullOrEmpty(icmpType))
             {
                 if (Convert.ToInt32(icmpType) > 255)
                 {
@@ -149,11 +149,11 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             {
                 if (protocol != protocol.TCP || protocol != protocol.UDP)
                 {
-                    throw new System.ArgumentException("if portRangeEnd(Start) is specified, protocoll must be TCP or UDP");
+                    throw new System.ArgumentException("if portRange[End,Start] is specified, protocoll must be TCP or UDP");
                 }
                 if ((portRangeEnd == 0) || (portRangeStart == 0))
                 {
-                    throw new System.ArgumentException("if portRangeEnd(start) is specified, portRangeStart(end) must have a value from 1 to 65534 also");
+                    throw new System.ArgumentException("if portRange[End,Start] is specified, portRange[Start,End] must have a value from 1 to 65534 also");
                 }
                 if (portRangeEnd < portRangeStart)
                 {

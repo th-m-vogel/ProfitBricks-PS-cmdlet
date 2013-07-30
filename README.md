@@ -9,7 +9,9 @@ This is a communitiy Project not maintained by ProfitBricks
 https://github.com/th-m-vogel/ProfitBricks-PS-cmdlet/blob/master/Psmodule.binary/ProfitBricksPSmoduleSoapAPI.dll?raw=true
 ## Dependencies
 
-PowerShell V3 (`$psversiontable.psversion`)
+PowerShell V2 (`$psversiontable.psversion`)
+.NET Framework 2.0 (recommendet 3.5.1)
+
 ## Usage
 
 Load the Module:

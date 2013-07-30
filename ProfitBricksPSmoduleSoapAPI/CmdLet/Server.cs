@@ -241,11 +241,11 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         {
             updateServerRequest Request = new updateServerRequest();
             if (
-                string.IsNullOrWhiteSpace(serverName) &&
-                string.IsNullOrWhiteSpace(bootFromImageId) &&
-                string.IsNullOrWhiteSpace(bootFromStorageId) &&
-                string.IsNullOrWhiteSpace(availabilityZone) &&
-                string.IsNullOrWhiteSpace(osType) &&
+                string.IsNullOrEmpty(serverName) &&
+                string.IsNullOrEmpty(bootFromImageId) &&
+                string.IsNullOrEmpty(bootFromStorageId) &&
+                string.IsNullOrEmpty(availabilityZone) &&
+                string.IsNullOrEmpty(osType) &&
                 cores == 0 &&
                 ram == 0
                 )

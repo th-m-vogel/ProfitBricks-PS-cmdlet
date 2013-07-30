@@ -127,9 +127,9 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         {
             updateLbRequest Request = new updateLbRequest();
             if (
-                string.IsNullOrWhiteSpace(loadBalancerName) &&
-                // string.IsNullOrWhiteSpace(loadBalancerAlgorithm) &&
-                string.IsNullOrWhiteSpace(ip)
+                string.IsNullOrEmpty(loadBalancerName) &&
+                // string.IsNullOrEmpty(loadBalancerAlgorithm) &&
+                string.IsNullOrEmpty(ip)
                 )
             {
                 // Algorithm is not implemented yet, ther is only the default algorithm

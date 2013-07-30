@@ -8,7 +8,6 @@ using System.Management.Automation;
 using System.Runtime.InteropServices;
 using System.ServiceModel;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ProfitBricksPSmoduleSoapAPI
 {
@@ -25,7 +24,7 @@ namespace ProfitBricksPSmoduleSoapAPI
 
         protected override void BeginProcessing()
         {
-            if (String.IsNullOrWhiteSpace(PBApi.Service.ClientCredentials.UserName.UserName))
+            if (String.IsNullOrEmpty(PBApi.Service.ClientCredentials.UserName.UserName))
             {
                 throw new System.ApplicationException("soap API is not initialized or no credentials given. please use Open-PBApiService first!");
             }
@@ -107,7 +106,7 @@ namespace ProfitBricksPSmoduleSoapAPI
 
         protected override void ProcessRecord()
         {
-            if (string.IsNullOrWhiteSpace(WsUri))
+            if (string.IsNullOrEmpty(WsUri))
             {
                 WsUri = "https://api.profitbricks.com/1.2";
             }

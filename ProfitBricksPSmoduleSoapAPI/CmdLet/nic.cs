@@ -118,8 +118,8 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         {
             updateNicRequest Request = new updateNicRequest();
             if (
-                string.IsNullOrWhiteSpace(nicName) &&
-                string.IsNullOrWhiteSpace(ip) &&
+                string.IsNullOrEmpty(nicName) &&
+                string.IsNullOrEmpty(ip) &&
                 lanId == 0
                 )
             {
