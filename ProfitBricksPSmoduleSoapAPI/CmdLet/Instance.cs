@@ -10,5 +10,6 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 {
     class Instance
     {
+        // not implemented yet
     }
 }

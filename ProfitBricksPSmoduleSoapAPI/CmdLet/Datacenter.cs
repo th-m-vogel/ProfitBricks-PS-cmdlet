@@ -135,7 +135,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         public string dataCenterId;
 
         [Parameter(
-            Mandatory = false
+            Mandatory = true
         )]
         public string dataCenterName;
 

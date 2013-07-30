@@ -49,6 +49,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
+            PBapiChecks.IsIP(ip);
             createLbRequest Request = new createLbRequest();
             Request.dataCenterId = dataCenterId;
             Request.loadBalancerName = loadBalancerName;
@@ -125,6 +126,17 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         protected override void ProcessRecord()
         {
             updateLbRequest Request = new updateLbRequest();
+            if (
+                string.IsNullOrWhiteSpace(loadBalancerName) &&
+                // string.IsNullOrWhiteSpace(loadBalancerAlgorithm) &&
+                string.IsNullOrWhiteSpace(ip)
+                )
+            {
+                // Algorithm is not implemented yet, ther is only the default algorithm
+                //throw new System.ArgumentException("at leat on of the following parameters must have a valid value: loadBalancerName, loadBalancerAlgorithm, ip");
+                throw new System.ArgumentException("at leat on of the following parameters must have a valid value: loadBalancerName, ip");
+            }
+            PBapiChecks.IsIP(ip);
             Request.loadBalancerId = loadBalancerId;
             Request.loadBalancerName = loadBalancerName;
             //// If string value spezified is a valid enum

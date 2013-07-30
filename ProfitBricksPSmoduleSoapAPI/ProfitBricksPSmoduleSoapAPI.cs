@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Management.Automation;
 using System.Runtime.InteropServices;
 using System.ServiceModel;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace ProfitBricksPSmoduleSoapAPI
 {
-    #region PBapiPSCmdlet
+    #region PBapiPSCmdlet : PSCmdlet
     public class PBapiPSCmdlet : PSCmdlet
     {
         protected void WriteObjects(IEnumerable objects)
@@ -21,6 +22,48 @@ namespace ProfitBricksPSmoduleSoapAPI
                 WriteObject(obj);
             }
         }
+
+        protected override void BeginProcessing()
+        {
+            if (String.IsNullOrWhiteSpace(PBApi.Service.ClientCredentials.UserName.UserName))
+            {
+                throw new System.ApplicationException("soap API is not initialized or no credentials given. please use Open-PBApiService first!");
+            }
+        }
+    }
+    #endregion
+
+    #region PBapiChecks
+    public class PBapiChecks
+    {
+        public static void IsIP(string IP)
+        {
+            IPAddress _IP;
+            try
+            {
+                _IP = IPAddress.Parse(IP);
+            }
+            catch (FormatException e)
+            {
+                throw new System.FormatException(e.Message + " \"" + IP + "\"");
+            }
+        }
+      
+        public static void IsMAC(string MAC)
+        {
+            {
+                if (!System.Text.RegularExpressions.Regex.IsMatch(MAC, @"(([a-f]|[0-9]|[A-F]){2}\:){5}([a-f]|[0-9]|[A-F]){2}\b"))
+                {
+                    throw new System.FormatException("An invalid MAC address was specified. \"" + MAC + "\" valid format is xx:xx:xx:xx:xx:xx");
+                }
+            }
+        }
+
+        public static void IsFWrule(firewallRuleRequest[] Request)
+        {
+            // not implemented yet
+        }
+
     }
     #endregion
 
@@ -64,7 +107,7 @@ namespace ProfitBricksPSmoduleSoapAPI
 
         protected override void ProcessRecord()
         {
-            if (string.IsNullOrEmpty(WsUri))
+            if (string.IsNullOrWhiteSpace(WsUri))
             {
                 WsUri = "https://api.profitbricks.com/1.2";
             }
@@ -106,8 +149,8 @@ namespace ProfitBricksPSmoduleSoapAPI
         {
             PBApi.Service.ClientCredentials.UserName.UserName = "";
             PBApi.Service.ClientCredentials.UserName.Password = "";
-
-            this.WriteObject("NoCredentials");
+            
+            this.WriteObject(null);
         }
     }
     #endregion

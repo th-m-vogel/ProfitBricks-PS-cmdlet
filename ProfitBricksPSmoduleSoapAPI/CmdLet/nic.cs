@@ -37,6 +37,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
+            PBapiChecks.IsIP(ip);
             createNicRequest Request = new createNicRequest();
             Request.serverId = serverId;
             Request.lanId = lanId;
@@ -116,6 +117,15 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         protected override void ProcessRecord()
         {
             updateNicRequest Request = new updateNicRequest();
+            if (
+                string.IsNullOrWhiteSpace(nicName) &&
+                string.IsNullOrWhiteSpace(ip) &&
+                lanId == 0
+                )
+            {
+                throw new System.ArgumentException("at leat on of the following parameters must have a valid value: nicName, ip, lanId");
+            }
+            PBapiChecks.IsIP(ip);
             Request.nicId = nicId;
             Request.lanId = lanId;
             Request.ip = ip;
@@ -153,6 +163,5 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         }
     }
     #endregion    
-//Update NIC
 
 }

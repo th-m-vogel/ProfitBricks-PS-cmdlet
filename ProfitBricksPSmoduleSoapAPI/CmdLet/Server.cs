@@ -240,6 +240,18 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         protected override void ProcessRecord()
         {
             updateServerRequest Request = new updateServerRequest();
+            if (
+                string.IsNullOrWhiteSpace(serverName) &&
+                string.IsNullOrWhiteSpace(bootFromImageId) &&
+                string.IsNullOrWhiteSpace(bootFromStorageId) &&
+                string.IsNullOrWhiteSpace(availabilityZone) &&
+                string.IsNullOrWhiteSpace(osType) &&
+                cores == 0 &&
+                ram == 0
+                )
+            {
+                throw new System.ArgumentException("at leat on of the following parameters must have a valid value: serverName, cores, ram, bootFromImageId, bootFromStorageId, availabilityZone, osType");
+            }
             Request.serverId = serverId;
             //  if cores is not 0, cores is a valid value and has to submit in soap request
             Request.cores = cores;

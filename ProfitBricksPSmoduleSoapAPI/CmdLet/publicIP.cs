@@ -67,6 +67,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
+            PBapiChecks.IsIP(ip);
             this.WriteObject(PBApi.Service.addPublicIpToNic(ip,nicId));
         }
     }
@@ -94,6 +95,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
+            PBapiChecks.IsIP(ip);
             this.WriteObject(PBApi.Service.removePublicIpFromNic(ip, nicId));
         }
     }

@@ -180,6 +180,10 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         protected override void ProcessRecord()
         {
             updateStorageRequest Request = new updateStorageRequest();
+            if (string.IsNullOrWhiteSpace(storageName) && size == 0)
+            {
+                throw new System.ArgumentException("at leat on of the following parameters must have a valid value: storageName, size"); 
+            }
             Request.storageId = storageId;
             Request.storageName = storageName;
             Request.size = size;

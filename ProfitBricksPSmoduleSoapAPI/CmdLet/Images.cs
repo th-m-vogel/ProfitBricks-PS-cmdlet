@@ -55,6 +55,13 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
+            // prepared for future argument extensions
+            //if (
+            //    string.IsNullOrWhiteSpace(StringParam) && 
+            //    IntParam == 0)
+            //{
+            //    throw new System.ArgumentException("at leat on of the following parameters must have a valid value: StringParam, IntParam");
+            //}
             this.WriteObject(PBApi.Service.setImageOsType(imageId, osType));
         }
     }

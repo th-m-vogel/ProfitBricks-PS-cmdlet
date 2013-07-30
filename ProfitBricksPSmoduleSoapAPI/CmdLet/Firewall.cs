@@ -25,6 +25,8 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         protected override void ProcessRecord()
         {
+            // not implemented yet
+            // PBapiChecks.IsFWrule(request)
             this.WriteObject(PBApi.Service.addFirewallRulesToNic(firewallRuleRequest, nicId));
         }
     }
@@ -86,27 +88,78 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Position = 8,
             Mandatory = false
         )]
-        public int icmpType;
+        public string icmpType;
 
         [Parameter(
             Position = 9,
             Mandatory = false
         )]
-        public int icmpCode;
+        public string icmpCode;
 
         protected override void ProcessRecord()
         {
-            firewallRuleRequest[] request = {new firewallRuleRequest()};
-            if (icmpCode > 0) {
-                request[0].icmpCode = icmpCode;
+            firewallRuleRequest[] request = { new firewallRuleRequest() }; 
+            if (
+                string.IsNullOrWhiteSpace(sourceMac) &&
+                string.IsNullOrWhiteSpace(sourceIp) &&
+                string.IsNullOrWhiteSpace(targetIp) &&
+                portRangeStart == 0 &&
+                portRangeEnd == 0 &&
+                string.IsNullOrWhiteSpace(icmpType) &&
+                string.IsNullOrWhiteSpace(icmpCode)
+                )
+            {
+                throw new System.ArgumentException("at leat on of the following parameters must have a valid value: sourceMac, sourceIp, targetIp, portRangeStart, portRangeEnd, icmpType, icmpCode");
+            }
+            if (!string.IsNullOrWhiteSpace(sourceMac))
+            {
+                PBapiChecks.IsMAC(sourceMac);
+            }
+            if (!string.IsNullOrWhiteSpace(sourceIp))
+            {
+                PBapiChecks.IsIP(sourceIp);
+            }
+            if (!string.IsNullOrWhiteSpace(targetIp))
+            {
+                PBapiChecks.IsIP(targetIp);
+            }
+            if ((portRangeStart > 65534) || (portRangeEnd > 65534))
+            {
+                throw new System.ArgumentException("maximum allowed value for portRangeStart and portRangeEnd is 65534");
+            }
+            if (!string.IsNullOrWhiteSpace(icmpCode)) 
+            {
+                if (Convert.ToInt32(icmpCode) > 255)
+                {
+                    throw new System.ArgumentException("maximum allowed value for icmpCode is 255");
+                }    
+                request[0].icmpCode = Convert.ToInt32(icmpCode);
                 request[0].icmpCodeSpecified = true;
             }
-            if (icmpType > 0) {
-                request[0].icmpType = icmpType; 
-                request[0].icmpTypeSpecified = true;
-            }
-            if ((portRangeEnd > 0) && (portRangeEnd > portRangeStart))
+            if (!string.IsNullOrWhiteSpace(icmpType))
             {
+                if (Convert.ToInt32(icmpType) > 255)
+                {
+                    throw new System.ArgumentException("maximum allowed value for icmpType is 255");
+                }    
+                request[0].icmpType = Convert.ToInt32(icmpType); 
+                request[0].icmpTypeSpecified = true;
+             }
+            if ((portRangeEnd > 0) || (portRangeStart > 0))
+            {
+                if (protocol != protocol.TCP || protocol != protocol.UDP)
+                {
+                    throw new System.ArgumentException("if portRangeEnd(Start) is specified, protocoll must be TCP or UDP");
+                }
+                if ((portRangeEnd == 0) || (portRangeStart == 0))
+                {
+                    throw new System.ArgumentException("if portRangeEnd(start) is specified, portRangeStart(end) must have a value from 1 to 65534 also");
+                }
+                if (portRangeEnd < portRangeStart)
+                {
+                    throw new System.ArgumentException("portRangeEnd less than portRangeStart is not allowed");
+                }
+                if (protocol == protocol.TCP)
                 request[0].portRangeEnd = portRangeEnd;
                 request[0].portRangeEndSpecified = true;
                 request[0].portRangeStart = portRangeStart;
@@ -116,8 +169,11 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             request[0].targetIp = targetIp;
             request[0].sourceMac = sourceMac;
             request[0].protocol = protocol;
-            // request. = firewallRuleName;
+            // not implemented yet in wsdl
+            // request[0].firewallRuleName = firewallRuleName;
             
+            // not implemented yet
+            // PBapiChecks.IsFWrule(request)
             this.WriteObject(PBApi.Service.addFirewallRulesToNic(request, nicId));
         }
     }
