@@ -1,6 +1,6 @@
 ## DESCRIPTION:
 
-Power Shell Module to access the ProfitBricks SOAP API. Manage you ProfitBricks Clous Services using PowerShell or integrate to your client management soltion.
+Power Shell Module to access the ProfitBricks SOAP API. Manage you ProfitBricks Cloud Services using PowerShell or integrate to your client management solution.
 
 This is a communitiy Project not maintained by ProfitBricks
 
@@ -27,7 +27,9 @@ Cmdlet usage:
 
 Supported command line parameters:
 
-	Get-Help Verb-PBNoun
+For full list of all Verb-PBNoun CmdLet use  `get-help *-PB*` or open [Implemented Cmdlet.txt](Implemented Cmdlet.txt) 
+
+Use `Get-Help Verb-PBNoun` for parameter List
 
 All parameters are defined as positional parameters, so the parameter name is optional as long as positioning is valid. So for instance the following Set-Storage calls are valid
 
