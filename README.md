@@ -1,6 +1,6 @@
 ## DESCRIPTION:
 
-Power Shell Module to access the ProfitBricks SOAP API. Manage you ProfitBricks Cloud Services using PowerShell or integrate to your client management solution.
+PowerShell binary Module to access the ProfitBricks SOAP API. Manage you ProfitBricks Cloud Services using PowerShell or integrate to your client management solution.
 
 This is a communitiy Project not maintained by ProfitBricks
 
@@ -53,7 +53,7 @@ Get your ressources:
 
 	$DC_Ressources = Get-PBDatacenterIdentifiers | Get-PBDatacenter
 	$DC_Images = Get-PBImages
-	$DC_ReservedIpBlocks = $DC_ReservedIpBlocks = Get-PBIpBlocks
+	$DC_ReservedIpBlocks = Get-PBIpBlocks
 
 Create a simple Datacenter
 
