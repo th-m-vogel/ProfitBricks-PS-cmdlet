@@ -95,6 +95,9 @@
     <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createSnapshotResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -135,6 +138,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.server.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.snapshot.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\WsProfitBricksApi\ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.storage.datasource">
