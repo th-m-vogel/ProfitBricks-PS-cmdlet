@@ -35,6 +35,12 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         )]
         public string nicName;
 
+        [Parameter(
+            Position = 4,
+            Mandatory = false
+        )]
+        public bool? dhcpActive;
+
         protected override void ProcessRecord()
         {
             PBapiChecks.IsIP(ip);
@@ -43,6 +49,11 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Request.lanId = lanId;
             Request.ip = ip;
             Request.nicName = nicName;
+            if (dhcpActive.HasValue)
+            {
+                Request.dhcpActive = (bool)dhcpActive;
+                Request.dhcpActiveSpecified = true;
+            }
             this.WriteObject(PBApi.Service.createNic(Request));
         }
     }
@@ -100,7 +111,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Position = 1,
             Mandatory = false
         )]
-        public int lanId;
+        public int? lanId;
 
         [Parameter(
             Position = 2,
@@ -114,22 +125,38 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         )]
         public string nicName;
 
+        [Parameter(
+            Position = 4,
+            Mandatory = false
+        )]
+        public bool? dhcpActive;
+
         protected override void ProcessRecord()
         {
             updateNicRequest Request = new updateNicRequest();
             if (
                 string.IsNullOrEmpty(nicName) &&
                 string.IsNullOrEmpty(ip) &&
-                lanId == 0
+                !lanId.HasValue &&
+                !dhcpActive.HasValue
                 )
             {
-                throw new System.ArgumentException("at leat on of the following parameters must have a valid value: nicName, ip, lanId");
+                throw new System.ArgumentException("at leat on of the following parameters must have a valid value: nicName, ip, lanId, dhcpActive");
             }
             PBapiChecks.IsIP(ip);
             Request.nicId = nicId;
-            Request.lanId = lanId;
+            if (lanId.HasValue)
+            {
+                Request.lanId = (int)lanId;
+                Request.lanIdSpecified = true;
+            }
             Request.ip = ip;
             Request.nicName = nicName;
+            if (dhcpActive.HasValue)
+            {
+                Request.dhcpActive = (bool)dhcpActive;
+                Request.dhcpActiveSpecified = true;
+            }
             this.WriteObject(PBApi.Service.updateNic(Request));
         }
     }

@@ -53,6 +53,10 @@ namespace ProfitBricksPSmoduleSoapAPI
         public static void IsIP(string IP)
         {
             IPAddress _IP;
+            if (string.IsNullOrEmpty(IP))
+            {
+                return ;
+            }
             try
             {
                 _IP = IPAddress.Parse(IP);
@@ -65,11 +69,13 @@ namespace ProfitBricksPSmoduleSoapAPI
       
         public static void IsMAC(string MAC)
         {
+            if (string.IsNullOrEmpty(MAC))
             {
-                if (!System.Text.RegularExpressions.Regex.IsMatch(MAC, @"(([a-f]|[0-9]|[A-F]){2}\:){5}([a-f]|[0-9]|[A-F]){2}\b"))
-                {
-                    throw new System.FormatException("An invalid MAC address was specified. \"" + MAC + "\" valid format is xx:xx:xx:xx:xx:xx");
-                }
+                return;
+            }
+            if (!System.Text.RegularExpressions.Regex.IsMatch(MAC, @"(([a-f]|[0-9]|[A-F]){2}\:){5}([a-f]|[0-9]|[A-F]){2}\b"))
+            {
+                throw new System.FormatException("An invalid MAC address was specified. \"" + MAC + "\" valid format is xx:xx:xx:xx:xx:xx");
             }
         }
 
