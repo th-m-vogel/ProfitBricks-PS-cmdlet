@@ -70,25 +70,25 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Position = 7,
             Mandatory = false
         )]
-        public int lanId;
+        public int? lanId;
 
         [Parameter(
             Position = 8,
             Mandatory = false
         )]
-        public bool internetAccess;
+        public bool? internetAccess;
 
         [Parameter(
             Position = 9,
             Mandatory = false
         )]
-        public string availabilityZone;
+        public availabilityZone? availabilityZone;
 
         [Parameter(
             Position = 10,
             Mandatory = false
         )]
-        public string osType;
+        public osType? osType;
 
         protected override void ProcessRecord()
         {
@@ -99,27 +99,25 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Request.serverName = serverName;
             Request.bootFromImageId = bootFromImageId;
             Request.bootFromStorageId = bootFromStorageId;
-            Request.lanId = lanId ;
-            if (lanId != 0)
+            
+            if (lanId.HasValue)
             {
+                Request.lanId = (int)lanId ;
                 Request.lanIdSpecified = true;
             }
-            Request.internetAccess = internetAccess;
-            // If string value spezified is a valid enum
-            // set Request.ParemeterSpecified and Request.Parameter
-            if (!(string.IsNullOrEmpty(availabilityZone)))
+            if (internetAccess.HasValue)
             {
-                if ((Request.availabilityZoneSpecified = Enum.IsDefined(typeof(availabilityZone), availabilityZone.ToUpper())))
-                {
-                    Request.availabilityZone = (availabilityZone)Enum.Parse(typeof(availabilityZone), availabilityZone.ToUpper());
-                }
+                Request.internetAccess = (bool)internetAccess;
             }
-            if (!(string.IsNullOrEmpty(osType)))
+            if (availabilityZone.HasValue)
             {
-                if ((Request.osTypeSpecified = Enum.IsDefined(typeof(osType), osType.ToUpper())))
-                {
-                    Request.osType = (osType)Enum.Parse(typeof(osType), osType.ToUpper());
-                }
+                Request.availabilityZone = (availabilityZone)availabilityZone;
+                Request.availabilityZoneSpecified = true ;
+            }
+            if (osType.HasValue)
+            {
+                Request.osType = (osType)osType;
+                Request.osTypeSpecified = true ;
             }
 
             this.WriteObject(PBApi.Service.createServer(Request));
@@ -204,13 +202,13 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Position = 2,
             Mandatory = false
         )]
-        public int cores;
+        public int? cores;
 
         [Parameter(
             Position = 3,
             Mandatory = false
         )]
-        public int ram;
+        public int? ram;
 
         [Parameter(
             Position = 4,
@@ -228,13 +226,13 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Position = 6,
             Mandatory = false
         )]
-        public string availabilityZone;
+        public availabilityZone? availabilityZone;
 
         [Parameter(
             Position = 7,
             Mandatory = false
         )]
-        public string osType;
+        public osType? osType;
 
         protected override void ProcessRecord()
         {
@@ -243,45 +241,37 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
                 string.IsNullOrEmpty(serverName) &&
                 string.IsNullOrEmpty(bootFromImageId) &&
                 string.IsNullOrEmpty(bootFromStorageId) &&
-                string.IsNullOrEmpty(availabilityZone) &&
-                string.IsNullOrEmpty(osType) &&
-                cores == 0 &&
-                ram == 0
+                !availabilityZone.HasValue &&
+                !osType.HasValue &&
+                !cores.HasValue &&
+                !ram.HasValue
                 )
             {
                 throw new System.ArgumentException("at leat on of the following parameters must have a valid value: serverName, cores, ram, bootFromImageId, bootFromStorageId, availabilityZone, osType");
             }
             Request.serverId = serverId;
-            //  if cores is not 0, cores is a valid value and has to submit in soap request
-            Request.cores = cores;
-            if (cores != 0)
+            if (cores.HasValue)
             {
+                Request.cores = (int)cores;
                 Request.coresSpecified = true;
             }
-            //  if ram is not 0, ram is a valid value and has to submit in soap request
-            Request.ram = ram;
-            if (ram != 0)
+            if (ram.HasValue)
             {
+                Request.ram = (int)ram;
                 Request.ramSpecified = true;
             }
             Request.serverName = serverName;
             Request.bootFromImageId = bootFromImageId;
             Request.bootFromStorageId = bootFromStorageId;
-            // If string value spezified is a valid enum
-            // set Request.ParemeterSpecified and Parameter
-            if (!(string.IsNullOrEmpty(availabilityZone)))
+            if (availabilityZone.HasValue)
             {
-                if ((Request.availabilityZoneSpecified = Enum.IsDefined(typeof(availabilityZone), availabilityZone.ToUpper())))
-                {
-                    Request.availabilityZone = (availabilityZone)Enum.Parse(typeof(availabilityZone), availabilityZone.ToUpper());
-                }
+                Request.availabilityZone = (availabilityZone)availabilityZone;
+                Request.availabilityZoneSpecified = true;
             }
-            if (!(string.IsNullOrEmpty(osType)))
+            if (osType.HasValue)
             {
-                if ((Request.osTypeSpecified = Enum.IsDefined(typeof(osType), osType.ToUpper())))
-                {
-                    Request.osType = (osType)Enum.Parse(typeof(osType), osType.ToUpper());
-                }
+                Request.osType = (osType)osType;
+                Request.osTypeSpecified = true ;
             }
 
             this.WriteObject(PBApi.Service.updateServer(Request));

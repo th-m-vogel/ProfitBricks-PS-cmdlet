@@ -116,6 +116,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         protected override void ProcessRecord()
         {
             this.WriteVerbose("Create Datacenter: " + dataCenterName + " in Region " + Region);
+
             var response = PBApi.Service.createDataCenter(dataCenterName, Region);
             this.WriteVerbose("RequestID " + response.requestId + " created Dataceter using UUID " + response.dataCenterId);
             // return CreateDatacenterResponse

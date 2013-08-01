@@ -55,6 +55,7 @@
     <Compile Include="CmdLet\Notifications.cs" />
     <Compile Include="CmdLet\PublicIP.cs" />
     <Compile Include="CmdLet\Server.cs" />
+    <Compile Include="CmdLet\Snapshot.cs" />
     <Compile Include="CmdLet\Storage.cs" />
     <Compile Include="ProfitBricksPSmoduleSoapAPI.cs">
       <SubType>Code</SubType>

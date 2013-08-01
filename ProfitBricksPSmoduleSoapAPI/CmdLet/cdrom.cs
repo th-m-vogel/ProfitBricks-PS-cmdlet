@@ -7,9 +7,9 @@ using System.Text;
 
 namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 {
-    #region Connect_PBRomdriveToServer
-    [Cmdlet("Connect", "PBRomdriveToServer")]
-    public class Connect_PBRomdriveToServer : PBapiPSCmdlet
+    #region Mount_PBRomdrive
+    [Cmdlet(VerbsData.Mount, "PBRomdrive")]
+    public class Mount_PBRomdrive : PBapiPSCmdlet
     {
         [Parameter(
             Position = 0,
@@ -29,26 +29,27 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Position = 2,
             Mandatory = false
         )]
-        public int deviceNumber;
+        public int? deviceNumber;
 
         protected override void ProcessRecord()
         {
             romDriveRequest Request = new romDriveRequest();
             Request.imageId = imageId;
             Request.serverId = serverId;
-            Request.deviceNumber = deviceNumber;
-            if (deviceNumber != 0)
+            if (deviceNumber.HasValue)
             {
+                Request.deviceNumber = (int)deviceNumber;
                 Request.deviceNumberSpecified = true;
-            }  
+            }
+ 
             this.WriteObject(PBApi.Service.addRomDriveToServer(Request));
         }
     }
     #endregion
 
-    #region Remove_PBRomdriveFromServer
-    [Cmdlet(VerbsCommon.Remove, "PBRomdriveFromServer")]
-    public class Remove_PBRomdriveFromServer : PBapiPSCmdlet
+    #region Dismount_PBRomdrive
+    [Cmdlet(VerbsData.Dismount, "PBRomdrive")]
+    public class Dismount_PBRomdrive : PBapiPSCmdlet
     {
         [Parameter(
             Position = 0,

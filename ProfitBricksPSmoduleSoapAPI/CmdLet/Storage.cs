@@ -94,15 +94,15 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
 
         [Parameter(
             Position = 2,
-            Mandatory = true
+            Mandatory = false
         )]
-        public string busType;
+        public busType? busType;
 
         [Parameter(
             Position = 3,
             Mandatory = false
         )]
-        public int deviceNumber;
+        public int? deviceNumber;
 
         protected override void ProcessRecord()
         {
@@ -111,18 +111,18 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Request.serverId = serverId;
             // If string value spezified is a valid enum
             // set Request.ParemeterSpecified and Parameter
-            if (!(string.IsNullOrEmpty(busType)))
+
+            if (busType.HasValue)
             {
-                if ((Request.busTypeSpecified = Enum.IsDefined(typeof(busType), busType.ToUpper())))
-                {
-                    Request.busType = (busType)Enum.Parse(typeof(busType), busType.ToUpper());
-                }
+                Request.busType = (busType)busType;
+                Request.busTypeSpecified = true;
             }
-            Request.deviceNumber = deviceNumber;
-            if (deviceNumber != 0)
+            if (deviceNumber.HasValue)
             {
+                Request.deviceNumber = (int)deviceNumber;
                 Request.deviceNumberSpecified = true;
-            }  
+            }
+
             this.WriteObject(PBApi.Service.connectStorageToServer(Request));
         }
     }
@@ -159,9 +159,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
     {
         [Parameter(
             Position = 0,
-            Mandatory = true,
-            ValueFromPipeline = true,
-            ValueFromPipelineByPropertyName = true
+            Mandatory = true
         )]
         public string storageId;
 
@@ -175,23 +173,24 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Position = 2,
             Mandatory = false
         )]
-        public int size;
+        public int? size;
 
         protected override void ProcessRecord()
         {
             updateStorageRequest Request = new updateStorageRequest();
-            if (string.IsNullOrEmpty(storageName) && size == 0)
+            if (string.IsNullOrEmpty(storageName) && !size.HasValue)
             {
                 throw new System.ArgumentException("at leat on of the following parameters must have a valid value: storageName, size"); 
             }
             Request.storageId = storageId;
             Request.storageName = storageName;
-            Request.size = size;
 
-            if (size != 0)
+            if (size.HasValue)
             {
+                Request.size = (int)size;
                 Request.sizeSpecified = true;
             }
+
             this.WriteObject(PBApi.Service.updateStorage(Request));
         }
     }

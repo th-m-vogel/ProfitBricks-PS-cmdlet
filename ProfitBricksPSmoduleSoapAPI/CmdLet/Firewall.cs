@@ -52,7 +52,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Position = 2,
             Mandatory = false
         )]
-        public protocol protocol;
+        public protocol? protocol;
 
         [Parameter(
             Position = 3,
@@ -76,40 +76,41 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Position = 6,
             Mandatory = false
         )]
-        public int portRangeStart;
+        public int? portRangeStart;
 
         [Parameter(
             Position = 7,
             Mandatory = false
         )]
-        public int portRangeEnd;
+        public int? portRangeEnd;
 
         [Parameter(
             Position = 8,
             Mandatory = false
         )]
-        public string icmpType;
+        public int? icmpType;
 
         [Parameter(
             Position = 9,
             Mandatory = false
         )]
-        public string icmpCode;
+        public int? icmpCode;
 
         protected override void ProcessRecord()
         {
             firewallRuleRequest[] request = { new firewallRuleRequest() }; 
             if (
+                !protocol.HasValue &&
                 string.IsNullOrEmpty(sourceMac) &&
                 string.IsNullOrEmpty(sourceIp) &&
                 string.IsNullOrEmpty(targetIp) &&
-                portRangeStart == 0 &&
-                portRangeEnd == 0 &&
-                string.IsNullOrEmpty(icmpType) &&
-                string.IsNullOrEmpty(icmpCode)
+                !portRangeStart.HasValue &&
+                !portRangeEnd.HasValue &&
+                !icmpType.HasValue &&
+                !icmpCode.HasValue
                 )
             {
-                throw new System.ArgumentException("at leat on of the following parameters must have a valid value: sourceMac, sourceIp, targetIp, portRangeStart, portRangeEnd, icmpType, icmpCode");
+                throw new System.ArgumentException("at leat on of the following parameters must have a valid value: protocol, sourceMac, sourceIp, targetIp, portRangeStart, portRangeEnd, icmpType, icmpCode");
             }
             if (!string.IsNullOrEmpty(sourceMac))
             {
@@ -123,52 +124,57 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             {
                 PBapiChecks.IsIP(targetIp);
             }
-            if ((portRangeStart > 65534) || (portRangeEnd > 65534))
+
+            if (((int)portRangeStart > 65534) || ((int)portRangeEnd > 65534))
             {
                 throw new System.ArgumentException("maximum allowed value for portRangeStart and portRangeEnd is 65534");
             }
-            if (!string.IsNullOrEmpty(icmpCode)) 
+            if (icmpCode.HasValue) 
             {
-                if (Convert.ToInt32(icmpCode) > 255)
+                if ((int)icmpCode > 255)
                 {
                     throw new System.ArgumentException("maximum allowed value for icmpCode is 255");
                 }    
-                request[0].icmpCode = Convert.ToInt32(icmpCode);
+                request[0].icmpCode = (int)icmpCode;
                 request[0].icmpCodeSpecified = true;
             }
-            if (!string.IsNullOrEmpty(icmpType))
+            if (icmpType.HasValue)
             {
-                if (Convert.ToInt32(icmpType) > 255)
+                if ((int)icmpType > 255)
                 {
                     throw new System.ArgumentException("maximum allowed value for icmpType is 255");
                 }    
-                request[0].icmpType = Convert.ToInt32(icmpType); 
+                request[0].icmpType = (int)icmpType; 
                 request[0].icmpTypeSpecified = true;
-             }
-            if ((portRangeEnd > 0) || (portRangeStart > 0))
+            }
+            if (protocol.HasValue)
             {
-                if (protocol != protocol.TCP || protocol != protocol.UDP)
+                request[0].protocol = (protocol)protocol;
+                request[0].protocolSpecified = true;
+            }
+            if (((int)portRangeEnd > 0) || ((int)portRangeStart > 0))
+            {
+                WriteObject(string.Compare(request[0].protocol.ToString(), "TCP") );
+                if (request[0].protocolSpecified && string.Compare(request[0].protocol.ToString(), "TCP") != 0 && string.Compare(request[0].protocol.ToString(), "UDP") != 0)
                 {
-                    throw new System.ArgumentException("if portRange[End,Start] is specified, protocoll must be TCP or UDP");
+                    throw new System.ArgumentException("if portRange[End,Start] is specified, protocol must be TCP or UDP");
                 }
-                if ((portRangeEnd == 0) || (portRangeStart == 0))
+                if (((int)portRangeEnd == 0) || ((int)portRangeStart == 0))
                 {
                     throw new System.ArgumentException("if portRange[End,Start] is specified, portRange[Start,End] must have a value from 1 to 65534 also");
                 }
-                if (portRangeEnd < portRangeStart)
+                if ((int)portRangeEnd < (int)portRangeStart)
                 {
                     throw new System.ArgumentException("portRangeEnd less than portRangeStart is not allowed");
                 }
-                if (protocol == protocol.TCP)
-                request[0].portRangeEnd = portRangeEnd;
+                request[0].portRangeEnd = (int)portRangeEnd;
                 request[0].portRangeEndSpecified = true;
-                request[0].portRangeStart = portRangeStart;
+                request[0].portRangeStart = (int)portRangeStart;
                 request[0].portRangeStartSpecified = true;
             }
             request[0].sourceIp = sourceIp;
             request[0].targetIp = targetIp;
             request[0].sourceMac = sourceMac;
-            request[0].protocol = protocol;
             // not implemented yet in wsdl
             // request[0].firewallRuleName = firewallRuleName;
             
@@ -217,9 +223,9 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
     }
     #endregion
 
-    #region Switch_PBFirewallStatus
-    [Cmdlet(VerbsCommon.Switch, "PBFirewallStatus")]
-    public class Switch_PBFirewallStatus : PBapiPSCmdlet
+    #region Update_PBFirewallStatus
+    [Cmdlet(VerbsData.Update, "PBFirewallStatus")]
+    public class Update_PBFirewallStatus : PBapiPSCmdlet
     {
         [Parameter(
             Position = 0,

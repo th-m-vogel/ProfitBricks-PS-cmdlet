@@ -27,7 +27,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Position = 2,
             Mandatory = false
         )]
-        public string loadBalancerAlgorithm;
+        public loadBalancerAlgorithm? loadBalancerAlgorithm;
 
         [Parameter(
             Position = 3,
@@ -39,7 +39,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Position = 3,
             Mandatory = false
         )]
-        public int lanId;
+        public int? lanId;
 
         [Parameter(
             Position = 3,
@@ -53,23 +53,18 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             createLbRequest Request = new createLbRequest();
             Request.dataCenterId = dataCenterId;
             Request.loadBalancerName = loadBalancerName;
-            //// If string value spezified is a valid enum
-            //// set Request.ParemeterSpecified and Request.Parameter
-            //if (!(string.IsNullOrEmpty(loadBalancerAlgorithm)))
-            //{
-            //    if ((Request.loadBalancerAlgorithmSpecified = Enum.IsDefined(typeof(loadBalancerAlgorithm), loadBalancerAlgorithm.ToUpper())))
-            //    {
-            //        Request.loadBalancerAlgorithm = (loadBalancerAlgorithm)Enum.Parse(typeof(loadBalancerAlgorithm), loadBalancerAlgorithm.ToUpper());
-            //    }
-            //}
-            // Not Implemented yet, there does only exist the default ROUND_ROBIN algorithm
-            //
             Request.ip = ip;
-            if (lanId > 0)
+            if (lanId.HasValue)
             {
-                Request.lanId = lanId;
+                Request.lanId = (int)lanId;
                 Request.lanIdSpecified = true;
-            } 
+            }
+            if (loadBalancerAlgorithm.HasValue)
+            {
+                Request.loadBalancerAlgorithm = (loadBalancerAlgorithm)loadBalancerAlgorithm;
+                // not yet specified by wsdl
+                // Request.loadBalancerAlgorithmSpecified = true;
+            }
             Request.serverIds = serverIds;
             this.WriteObject(PBApi.Service.createLoadBalancer(Request));
         }
@@ -115,7 +110,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Position = 2,
             Mandatory = false
         )]
-        public string loadBalancerAlgorithm;
+        public loadBalancerAlgorithm? loadBalancerAlgorithm;
 
         [Parameter(
             Position = 3,
@@ -128,37 +123,32 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             updateLbRequest Request = new updateLbRequest();
             if (
                 string.IsNullOrEmpty(loadBalancerName) &&
-                // string.IsNullOrEmpty(loadBalancerAlgorithm) &&
+                // not yet implemented by wsdl // !loadBalancerAlgorithm.HasValue &&
                 string.IsNullOrEmpty(ip)
                 )
             {
                 // Algorithm is not implemented yet, ther is only the default algorithm
                 //throw new System.ArgumentException("at leat on of the following parameters must have a valid value: loadBalancerName, loadBalancerAlgorithm, ip");
-                throw new System.ArgumentException("at leat on of the following parameters must have a valid value: loadBalancerName, ip");
+                throw new System.ArgumentException("at least on of the following parameters must have a valid value: loadBalancerName, ip");
             }
             PBapiChecks.IsIP(ip);
             Request.loadBalancerId = loadBalancerId;
             Request.loadBalancerName = loadBalancerName;
-            //// If string value spezified is a valid enum
-            //// set Request.ParemeterSpecified and Request.Parameter
-            //if (!(string.IsNullOrEmpty(loadBalancerAlgorithm)))
-            //{
-            //    if ((Request.loadBalancerAlgorithmSpecified = Enum.IsDefined(typeof(loadBalancerAlgorithm), loadBalancerAlgorithm.ToUpper())))
-            //    {
-            //        Request.loadBalancerAlgorithm = (loadBalancerAlgorithm)Enum.Parse(typeof(loadBalancerAlgorithm), loadBalancerAlgorithm.ToUpper());
-            //    }
-            //}
-            // Not Implemented yet, there does only exist the default ROUND_ROBIN algorithm
-            //
+            if (loadBalancerAlgorithm.HasValue)
+            {
+                Request.loadBalancerAlgorithm = (loadBalancerAlgorithm)loadBalancerAlgorithm;
+                // not yet specified by wsdl
+                // Request.loadBalancerAlgorithmSpecified = true;
+            }
             Request.ip = ip;
             this.WriteObject(PBApi.Service.updateLoadBalancer(Request));
         }
     }
     #endregion
 
-    #region Connect_PBServerToLoadBalancer
-    [Cmdlet("Connect", "PBServerToLoadBalancer")]
-    public class Connect_PBServerToLoadBalancer : PBapiPSCmdlet
+    #region Register_PBServerToLoadBalancer
+    [Cmdlet(VerbsLifecycle.Register, "PBServerToLoadBalancer")]
+    public class Register_PBServerToLoadBalancer : PBapiPSCmdlet
     {
         [Parameter(
             Position = 0,
