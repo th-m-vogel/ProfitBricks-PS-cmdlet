@@ -15,7 +15,7 @@ $new_disc = New-PBStorage -size 30 -dataCenterId $new_dc.dataCenterId -storageNa
 $new_server = New-PBServer -cores 2 -ram 2048 -serverName "Win2012-01" -dataCenterId $new_dc.dataCenterId -lanId 1 -internetAccess $true -bootFromStorageId $new_disc.storageId -osType Windows
 
 # done so far, just wait antil provisioning finished
-write-host -NoNewline "Wait for provisioning to finish ..."
+write-host -NoNewline "Wait for provisioning to finish, check every 10 seconds "
 do {
         write-host -NoNewline "." 
         start-sleep -s 10
@@ -24,11 +24,13 @@ do {
 # get server information after provisioning
 $new_server = Get-PBServer -serverId $new_server.serverId
 
-# give the new server nic a friendly name
+# give the new server nic an friendly name
 $new_nic = Set-PBNic -nicId $new_server.nics[0].nicId -nicName "LAN 1"
 
-# print the nic ip number
-Write-host "Primary IP is: "$new_server.nics[0].Ips[0]
+# print the nic information
+Write-Host "Primary IP is     :" $new_server.nics[0].Ips[0]
+Write-Host "Gatewy IP is      :" $new_server.nics[0].gatewayIp
+Write-Host "MAC Address is    :" $new_server.nics[0].macAddress
 
 # Datacenter is ready
 Write-Host "Your new Datacenter is ready for Use."

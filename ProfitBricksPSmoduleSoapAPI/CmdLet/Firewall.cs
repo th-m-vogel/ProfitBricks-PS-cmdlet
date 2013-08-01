@@ -243,7 +243,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
     #endregion
 
     #region Remove_PBFirewalls
-    [Cmdlet(VerbsCommon.Switch, "PBFirewalls")]
+    [Cmdlet(VerbsCommon.Remove, "PBFirewalls")]
     public class Remove_PBFirewalls : PBapiPSCmdlet
     {
         [Parameter(
