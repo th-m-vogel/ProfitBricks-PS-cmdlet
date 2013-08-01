@@ -31,6 +31,9 @@
       <xs:element name="createServer" type="tns:createServer" />
       <xs:element name="createServerRequest" type="tns:createServerRequest" />
       <xs:element name="createServerReturn" type="tns:createServerReturn" />
+      <xs:element name="createSnapshot" type="tns:createSnapshot" />
+      <xs:element name="createSnapshotRequest" type="tns:createSnapshotRequest" />
+      <xs:element name="createSnapshotReturn" type="tns:createSnapshotReturn" />
       <xs:element name="createStorage" type="tns:createStorage" />
       <xs:element name="createStorageRequest" type="tns:createStorageRequest" />
       <xs:element name="createStorageReturn" type="tns:createStorageReturn" />
@@ -50,19 +53,22 @@
       <xs:element name="deleteNotificationsResponse" type="tns:deleteNotificationsResponse" />
       <xs:element name="deleteServer" type="tns:deleteServer" />
       <xs:element name="deleteServerResponse" type="tns:deleteServerResponse" />
+      <xs:element name="deleteSnapshot" type="tns:deleteSnapshot" />
+      <xs:element name="deleteSnapshotResponse" type="tns:deleteSnapshotResponse" />
       <xs:element name="deleteStorage" type="tns:deleteStorage" />
       <xs:element name="deleteStorageResponse" type="tns:deleteStorageResponse" />
       <xs:element name="deregisterServersOnLoadBalancer" type="tns:deregisterServersOnLoadBalancer" />
       <xs:element name="deregisterServersOnLoadBalancerResponse" type="tns:deregisterServersOnLoadBalancerResponse" />
       <xs:element name="disconnectStorageFromServer" type="tns:disconnectStorageFromServer" />
       <xs:element name="disconnectStorageFromServerResponse" type="tns:disconnectStorageFromServerResponse" />
-      <xs:element name="firewallRule" type="tns:firewallRule" />
       <xs:element name="getAllDataCenters" type="tns:getAllDataCenters" />
       <xs:element name="getAllDataCentersResponse" type="tns:getAllDataCentersResponse" />
       <xs:element name="getAllImages" type="tns:getAllImages" />
       <xs:element name="getAllImagesResponse" type="tns:getAllImagesResponse" />
       <xs:element name="getAllPublicIpBlocks" type="tns:getAllPublicIpBlocks" />
       <xs:element name="getAllPublicIpBlocksResponse" type="tns:getAllPublicIpBlocksResponse" />
+      <xs:element name="getAllSnapshots" type="tns:getAllSnapshots" />
+      <xs:element name="getAllSnapshotsResponse" type="tns:getAllSnapshotsResponse" />
       <xs:element name="getDataCenter" type="tns:getDataCenter" />
       <xs:element name="getDataCenterResponse" type="tns:getDataCenterResponse" />
       <xs:element name="getDataCenterState" type="tns:getDataCenterState" />
@@ -81,7 +87,6 @@
       <xs:element name="getServerResponse" type="tns:getServerResponse" />
       <xs:element name="getStorage" type="tns:getStorage" />
       <xs:element name="getStorageResponse" type="tns:getStorageResponse" />
-      <xs:element name="notification" type="tns:notification" />
       <xs:element name="registerServersOnLoadBalancer" type="tns:registerServersOnLoadBalancer" />
       <xs:element name="registerServersOnLoadBalancerResponse" type="tns:registerServersOnLoadBalancerResponse" />
       <xs:element name="releasePublicIpBlock" type="tns:releasePublicIpBlock" />
@@ -96,6 +101,9 @@
       <xs:element name="reservePublicIpBlockResponse" type="tns:reservePublicIpBlockResponse" />
       <xs:element name="resetServer" type="tns:resetServer" />
       <xs:element name="resetServerResponse" type="tns:resetServerResponse" />
+      <xs:element name="rollbackSnapshot" type="tns:rollbackSnapshot" />
+      <xs:element name="rollbackSnapshotRequest" type="tns:rollbackSnapshotRequest" />
+      <xs:element name="rollbackSnapshotResponse" type="tns:rollbackSnapshotResponse" />
       <xs:element name="romDriveRequest" type="tns:romDriveRequest" />
       <xs:element name="setImageOsType" type="tns:setImageOsType" />
       <xs:element name="setImageOsTypeResponse" type="tns:setImageOsTypeResponse" />
@@ -117,18 +125,37 @@
       <xs:element name="updateServer" type="tns:updateServer" />
       <xs:element name="updateServerRequest" type="tns:updateServerRequest" />
       <xs:element name="updateServerResponse" type="tns:updateServerResponse" />
+      <xs:element name="updateSnapshot" type="tns:updateSnapshot" />
+      <xs:element name="updateSnapshotRequest" type="tns:updateSnapshotRequest" />
+      <xs:element name="updateSnapshotResponse" type="tns:updateSnapshotResponse" />
       <xs:element name="updateStorage" type="tns:updateStorage" />
       <xs:element name="updateStorageRequest" type="tns:updateStorageRequest" />
       <xs:element name="updateStorageResponse" type="tns:updateStorageResponse" />
-      <xs:complexType name="releasePublicIpBlock">
+      <xs:complexType name="createSnapshot">
         <xs:sequence>
-          <xs:element minOccurs="0" name="blockId" type="xs:string" />
+          <xs:element minOccurs="0" name="request" type="tns:createSnapshotRequest" />
         </xs:sequence>
       </xs:complexType>
-      <xs:complexType name="releasePublicIpBlockResponse">
+      <xs:complexType name="createSnapshotRequest">
         <xs:sequence>
-          <xs:element minOccurs="0" name="return" type="tns:requestResponse" />
+          <xs:element name="storageId" type="xs:string" />
+          <xs:element minOccurs="0" name="description" type="xs:string" />
+          <xs:element minOccurs="0" name="snapshotName" type="xs:string" />
         </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createSnapshotReturn">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:createSnapshotResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createSnapshotResponse">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:requestResponse">
+            <xs:sequence>
+              <xs:element name="snapshotId" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
       </xs:complexType>
       <xs:complexType name="requestResponse">
         <xs:sequence>
@@ -141,6 +168,16 @@
           <xs:element minOccurs="0" name="httpCode" type="xs:string" />
           <xs:element minOccurs="0" name="message" type="xs:string" />
           <xs:element minOccurs="0" name="requestId" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="releasePublicIpBlock">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="blockId" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="releasePublicIpBlockResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:requestResponse" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="getNic">
@@ -165,6 +202,9 @@
               <xs:element minOccurs="0" maxOccurs="unbounded" name="ips" nillable="true" type="xs:string" />
               <xs:element minOccurs="0" name="macAddress" type="xs:string" />
               <xs:element minOccurs="0" name="firewall" type="tns:firewall" />
+              <xs:element minOccurs="0" name="dhcpActive" type="xs:boolean" />
+              <xs:element minOccurs="0" name="gatewayIp" type="xs:string" />
+              <xs:element minOccurs="0" name="provisioningState" type="tns:provisioningState" />
             </xs:sequence>
           </xs:extension>
         </xs:complexContent>
@@ -191,14 +231,13 @@
       <xs:complexType name="firewallRule">
         <xs:sequence>
           <xs:element minOccurs="0" name="firewallRuleId" type="xs:string" />
-          <xs:element minOccurs="0" name="protocol" type="tns:protocol" />
-          <xs:element minOccurs="0" name="sourceMac" type="xs:string" />
-          <xs:element minOccurs="0" name="sourceIp" type="xs:string" />
-          <xs:element minOccurs="0" name="targetIp" type="xs:string" />
-          <xs:element minOccurs="0" name="portRangeStart" type="xs:int" />
-          <xs:element minOccurs="0" name="portRangeEnd" type="xs:int" />
-          <xs:element minOccurs="0" name="icmpType" type="xs:int" />
           <xs:element minOccurs="0" name="icmpCode" type="xs:int" />
+          <xs:element minOccurs="0" name="icmpType" type="xs:int" />
+          <xs:element minOccurs="0" name="portRangeEnd" type="xs:int" />
+          <xs:element minOccurs="0" name="portRangeStart" type="xs:int" />
+          <xs:element minOccurs="0" name="sourceIp" type="xs:string" />
+          <xs:element minOccurs="0" name="sourceMac" type="xs:string" />
+          <xs:element minOccurs="0" name="targetIp" type="xs:string" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="getServer">
@@ -412,7 +451,7 @@
       </xs:complexType>
       <xs:complexType name="updateServer">
         <xs:sequence>
-          <xs:element minOccurs="0" name="arg0" type="tns:updateServerRequest" />
+          <xs:element minOccurs="0" name="request" type="tns:updateServerRequest" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="updateServerRequest">
@@ -467,7 +506,7 @@
       </xs:complexType>
       <xs:complexType name="createNic">
         <xs:sequence>
-          <xs:element minOccurs="0" name="arg0" type="tns:createNicRequest" />
+          <xs:element minOccurs="0" name="request" type="tns:createNicRequest" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="createNicRequest">
@@ -476,6 +515,7 @@
           <xs:element name="lanId" type="xs:int" />
           <xs:element minOccurs="0" name="nicName" type="xs:string" />
           <xs:element minOccurs="0" name="ip" type="xs:string" />
+          <xs:element minOccurs="0" name="dhcpActive" type="xs:boolean" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="createNicReturn">
@@ -528,7 +568,7 @@
       </xs:complexType>
       <xs:complexType name="createLoadBalancer">
         <xs:sequence>
-          <xs:element minOccurs="0" name="arg0" type="tns:createLbRequest" />
+          <xs:element minOccurs="0" name="request" type="tns:createLbRequest" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="createLbRequest">
@@ -578,7 +618,7 @@
       </xs:complexType>
       <xs:complexType name="updateStorage">
         <xs:sequence>
-          <xs:element minOccurs="0" name="arg0" type="tns:updateStorageRequest" />
+          <xs:element minOccurs="0" name="request" type="tns:updateStorageRequest" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="updateStorageRequest">
@@ -592,6 +632,27 @@
       <xs:complexType name="updateStorageResponse">
         <xs:sequence>
           <xs:element minOccurs="0" name="return" type="tns:versionResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateSnapshot">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:updateSnapshotRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateSnapshotRequest">
+        <xs:sequence>
+          <xs:element name="snapshotId" type="xs:string" />
+          <xs:element minOccurs="0" name="description" type="xs:string" />
+          <xs:element minOccurs="0" name="snapshotName" type="xs:string" />
+          <xs:element minOccurs="0" name="bootable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="osType" type="tns:osType" />
+          <xs:element minOccurs="0" name="cpuHotPlug" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ramHotPlug" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateSnapshotResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:requestResponse" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="getLoadBalancer">
@@ -629,6 +690,22 @@
           <xs:element minOccurs="0" name="balancedNicId" type="xs:string" />
           <xs:element minOccurs="0" name="serverId" type="xs:string" />
           <xs:element minOccurs="0" name="serverName" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="rollbackSnapshot">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:rollbackSnapshotRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="rollbackSnapshotRequest">
+        <xs:sequence>
+          <xs:element name="storageId" type="xs:string" />
+          <xs:element name="snapshotId" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="rollbackSnapshotResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:versionResponse" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="registerServersOnLoadBalancer">
@@ -674,9 +751,35 @@
           <xs:element minOccurs="0" name="return" type="tns:versionResponse" />
         </xs:sequence>
       </xs:complexType>
+      <xs:complexType name="getAllSnapshots">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="getAllSnapshotsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:snapshot" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="snapshot">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:requestResponse">
+            <xs:sequence>
+              <xs:element name="snapshotId" type="xs:string" />
+              <xs:element minOccurs="0" name="description" type="xs:string" />
+              <xs:element name="snapshotSize" type="xs:long" />
+              <xs:element minOccurs="0" name="snapshotName" type="xs:string" />
+              <xs:element name="provisioningState" type="tns:provisioningState" />
+              <xs:element minOccurs="0" name="bootable" type="xs:boolean" />
+              <xs:element minOccurs="0" name="osType" type="tns:osType" />
+              <xs:element minOccurs="0" name="cpuHotPlug" type="xs:boolean" />
+              <xs:element minOccurs="0" name="ramHotPlug" type="xs:boolean" />
+              <xs:element name="region" type="tns:region" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
       <xs:complexType name="createStorage">
         <xs:sequence>
-          <xs:element minOccurs="0" name="arg0" type="tns:createStorageRequest" />
+          <xs:element minOccurs="0" name="request" type="tns:createStorageRequest" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="createStorageRequest">
@@ -715,7 +818,7 @@
       </xs:complexType>
       <xs:complexType name="updateDataCenter">
         <xs:sequence>
-          <xs:element minOccurs="0" name="arg0" type="tns:updateDcRequest" />
+          <xs:element minOccurs="0" name="request" type="tns:updateDcRequest" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="updateDcRequest">
@@ -731,7 +834,7 @@
       </xs:complexType>
       <xs:complexType name="addRomDriveToServer">
         <xs:sequence>
-          <xs:element minOccurs="0" name="arg0" type="tns:romDriveRequest" />
+          <xs:element minOccurs="0" name="request" type="tns:romDriveRequest" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="romDriveRequest">
@@ -748,7 +851,7 @@
       </xs:complexType>
       <xs:complexType name="updateNic">
         <xs:sequence>
-          <xs:element minOccurs="0" name="arg0" type="tns:updateNicRequest" />
+          <xs:element minOccurs="0" name="request" type="tns:updateNicRequest" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="updateNicRequest">
@@ -757,6 +860,7 @@
           <xs:element minOccurs="0" name="lanId" type="xs:int" />
           <xs:element minOccurs="0" name="nicName" type="xs:string" />
           <xs:element minOccurs="0" name="ip" type="xs:string" />
+          <xs:element minOccurs="0" name="dhcpActive" type="xs:boolean" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="updateNicResponse">
@@ -781,7 +885,7 @@
       </xs:complexType>
       <xs:complexType name="createServer">
         <xs:sequence>
-          <xs:element minOccurs="0" name="arg0" type="tns:createServerRequest" />
+          <xs:element minOccurs="0" name="request" type="tns:createServerRequest" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="createServerRequest">
@@ -853,7 +957,6 @@
               <xs:element minOccurs="0" name="provisioningState" type="tns:provisioningState" />
               <xs:element minOccurs="0" name="creationTime" type="xs:dateTime" />
               <xs:element minOccurs="0" name="lastModificationTime" type="xs:dateTime" />
-              <xs:element minOccurs="0" name="osType" type="tns:osType" />
             </xs:sequence>
           </xs:extension>
         </xs:complexContent>
@@ -898,9 +1001,19 @@
           <xs:element minOccurs="0" name="return" type="tns:versionResponse" />
         </xs:sequence>
       </xs:complexType>
+      <xs:complexType name="deleteSnapshot">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="snapshotId" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="deleteSnapshotResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:requestResponse" />
+        </xs:sequence>
+      </xs:complexType>
       <xs:complexType name="updateLoadBalancer">
         <xs:sequence>
-          <xs:element minOccurs="0" name="arg0" type="tns:updateLbRequest" />
+          <xs:element minOccurs="0" name="request" type="tns:updateLbRequest" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="updateLbRequest">
@@ -928,7 +1041,7 @@
       </xs:complexType>
       <xs:complexType name="connectStorageToServer">
         <xs:sequence>
-          <xs:element minOccurs="0" name="arg0" type="tns:connectStorageRequest" />
+          <xs:element minOccurs="0" name="request" type="tns:connectStorageRequest" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="connectStorageRequest">
@@ -1050,14 +1163,6 @@
           <xs:enumeration value="SERVICE_UNAVAILABLE" />
         </xs:restriction>
       </xs:simpleType>
-      <xs:simpleType name="protocol">
-        <xs:restriction base="xs:string">
-          <xs:enumeration value="TCP" />
-          <xs:enumeration value="UDP" />
-          <xs:enumeration value="ICMP" />
-          <xs:enumeration value="ANY" />
-        </xs:restriction>
-      </xs:simpleType>
       <xs:simpleType name="provisioningState">
         <xs:restriction base="xs:string">
           <xs:enumeration value="INACTIVE" />
@@ -1089,6 +1194,7 @@
         <xs:restriction base="xs:string">
           <xs:enumeration value="UNKNOWN" />
           <xs:enumeration value="WINDOWS" />
+          <xs:enumeration value="LINUX" />
           <xs:enumeration value="OTHER" />
         </xs:restriction>
       </xs:simpleType>
@@ -1110,6 +1216,14 @@
         <xs:restriction base="xs:string">
           <xs:enumeration value="HDD" />
           <xs:enumeration value="CDROM" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="protocol">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="TCP" />
+          <xs:enumeration value="UDP" />
+          <xs:enumeration value="ICMP" />
+          <xs:enumeration value="ANY" />
         </xs:restriction>
       </xs:simpleType>
       <xs:simpleType name="loadBalancerAlgorithm">
@@ -1229,11 +1343,11 @@
   <message name="createNicResponse">
     <part name="parameters" element="tns:createNicReturn" />
   </message>
-  <message name="getNotifications">
-    <part name="parameters" element="tns:getNotifications" />
+  <message name="deleteSnapshot">
+    <part name="parameters" element="tns:deleteSnapshot" />
   </message>
-  <message name="getNotificationsResponse">
-    <part name="parameters" element="tns:getNotificationsResponse" />
+  <message name="deleteSnapshotResponse">
+    <part name="parameters" element="tns:deleteSnapshotResponse" />
   </message>
   <message name="startServer">
     <part name="parameters" element="tns:startServer" />
@@ -1276,6 +1390,12 @@
   </message>
   <message name="stopServerResponse">
     <part name="parameters" element="tns:stopServerResponse" />
+  </message>
+  <message name="createSnapshot">
+    <part name="parameters" element="tns:createSnapshot" />
+  </message>
+  <message name="createSnapshotResponse">
+    <part name="parameters" element="tns:createSnapshotReturn" />
   </message>
   <message name="deleteLoadBalancer">
     <part name="parameters" element="tns:deleteLoadBalancer" />
@@ -1331,6 +1451,12 @@
   <message name="deactivateLoadBalancingOnServersResponse">
     <part name="parameters" element="tns:deactivateLoadBalancingOnServersResponse" />
   </message>
+  <message name="updateSnapshot">
+    <part name="parameters" element="tns:updateSnapshot" />
+  </message>
+  <message name="updateSnapshotResponse">
+    <part name="parameters" element="tns:updateSnapshotResponse" />
+  </message>
   <message name="updateLoadBalancer">
     <part name="parameters" element="tns:updateLoadBalancer" />
   </message>
@@ -1378,6 +1504,12 @@
   </message>
   <message name="getFirewallResponse">
     <part name="parameters" element="tns:getFirewallResponse" />
+  </message>
+  <message name="getNotifications">
+    <part name="parameters" element="tns:getNotifications" />
+  </message>
+  <message name="getNotificationsResponse">
+    <part name="parameters" element="tns:getNotificationsResponse" />
   </message>
   <message name="createDataCenter">
     <part name="parameters" element="tns:createDataCenter" />
@@ -1444,6 +1576,18 @@
   </message>
   <message name="getDataCenterStateResponse">
     <part name="parameters" element="tns:getDataCenterStateResponse" />
+  </message>
+  <message name="getAllSnapshots">
+    <part name="parameters" element="tns:getAllSnapshots" />
+  </message>
+  <message name="getAllSnapshotsResponse">
+    <part name="parameters" element="tns:getAllSnapshotsResponse" />
+  </message>
+  <message name="rollbackSnapshot">
+    <part name="parameters" element="tns:rollbackSnapshot" />
+  </message>
+  <message name="rollbackSnapshotResponse">
+    <part name="parameters" element="tns:rollbackSnapshotResponse" />
   </message>
   <message name="deleteNotifications">
     <part name="parameters" element="tns:deleteNotifications" />
@@ -1527,9 +1671,9 @@
       <output message="tns:createNicResponse" />
       <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
-    <operation name="getNotifications">
-      <input message="tns:getNotifications" />
-      <output message="tns:getNotificationsResponse" />
+    <operation name="deleteSnapshot">
+      <input message="tns:deleteSnapshot" />
+      <output message="tns:deleteSnapshotResponse" />
       <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
     <operation name="startServer">
@@ -1565,6 +1709,11 @@
     <operation name="stopServer">
       <input message="tns:stopServer" />
       <output message="tns:stopServerResponse" />
+      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="createSnapshot">
+      <input message="tns:createSnapshot" />
+      <output message="tns:createSnapshotResponse" />
       <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
     <operation name="deleteLoadBalancer">
@@ -1612,6 +1761,11 @@
       <output message="tns:deactivateLoadBalancingOnServersResponse" />
       <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
+    <operation name="updateSnapshot">
+      <input message="tns:updateSnapshot" />
+      <output message="tns:updateSnapshotResponse" />
+      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
     <operation name="updateLoadBalancer">
       <input message="tns:updateLoadBalancer" />
       <output message="tns:updateLoadBalancerResponse" />
@@ -1650,6 +1804,11 @@
     <operation name="getFirewall">
       <input message="tns:getFirewall" />
       <output message="tns:getFirewallResponse" />
+      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="getNotifications">
+      <input message="tns:getNotifications" />
+      <output message="tns:getNotificationsResponse" />
       <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
     <operation name="createDataCenter">
@@ -1705,6 +1864,16 @@
     <operation name="getDataCenterState">
       <input message="tns:getDataCenterState" />
       <output message="tns:getDataCenterStateResponse" />
+      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="getAllSnapshots">
+      <input message="tns:getAllSnapshots" />
+      <output message="tns:getAllSnapshotsResponse" />
+      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="rollbackSnapshot">
+      <input message="tns:rollbackSnapshot" />
+      <output message="tns:rollbackSnapshotResponse" />
       <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
     <operation name="deleteNotifications">
@@ -1895,7 +2064,7 @@
         <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
       </fault>
     </operation>
-    <operation name="getNotifications">
+    <operation name="deleteSnapshot">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1980,6 +2149,18 @@
       </fault>
     </operation>
     <operation name="stopServer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="createSnapshot">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -2099,6 +2280,18 @@
         <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
       </fault>
     </operation>
+    <operation name="updateSnapshot">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
     <operation name="updateLoadBalancer">
       <soap:operation soapAction="" />
       <input>
@@ -2184,6 +2377,18 @@
       </fault>
     </operation>
     <operation name="getFirewall">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getNotifications">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -2316,6 +2521,30 @@
       </fault>
     </operation>
     <operation name="getDataCenterState">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAllSnapshots">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="rollbackSnapshot">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

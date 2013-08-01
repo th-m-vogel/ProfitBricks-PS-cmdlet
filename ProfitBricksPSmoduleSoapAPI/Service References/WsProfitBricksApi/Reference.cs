@@ -486,31 +486,27 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         private string firewallRuleIdField;
         
-        private protocol protocolField;
+        private int icmpCodeField;
         
-        private bool protocolFieldSpecified;
-        
-        private string sourceMacField;
-        
-        private string sourceIpField;
-        
-        private string targetIpField;
-        
-        private int portRangeStartField;
-        
-        private bool portRangeStartFieldSpecified;
-        
-        private int portRangeEndField;
-        
-        private bool portRangeEndFieldSpecified;
+        private bool icmpCodeFieldSpecified;
         
         private int icmpTypeField;
         
         private bool icmpTypeFieldSpecified;
         
-        private int icmpCodeField;
+        private int portRangeEndField;
         
-        private bool icmpCodeFieldSpecified;
+        private bool portRangeEndFieldSpecified;
+        
+        private int portRangeStartField;
+        
+        private bool portRangeStartFieldSpecified;
+        
+        private string sourceIpField;
+        
+        private string sourceMacField;
+        
+        private string targetIpField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -526,114 +522,30 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public protocol protocol {
+        public int icmpCode {
             get {
-                return this.protocolField;
+                return this.icmpCodeField;
             }
             set {
-                this.protocolField = value;
-                this.RaisePropertyChanged("protocol");
+                this.icmpCodeField = value;
+                this.RaisePropertyChanged("icmpCode");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool protocolSpecified {
+        public bool icmpCodeSpecified {
             get {
-                return this.protocolFieldSpecified;
+                return this.icmpCodeFieldSpecified;
             }
             set {
-                this.protocolFieldSpecified = value;
-                this.RaisePropertyChanged("protocolSpecified");
+                this.icmpCodeFieldSpecified = value;
+                this.RaisePropertyChanged("icmpCodeSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string sourceMac {
-            get {
-                return this.sourceMacField;
-            }
-            set {
-                this.sourceMacField = value;
-                this.RaisePropertyChanged("sourceMac");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string sourceIp {
-            get {
-                return this.sourceIpField;
-            }
-            set {
-                this.sourceIpField = value;
-                this.RaisePropertyChanged("sourceIp");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string targetIp {
-            get {
-                return this.targetIpField;
-            }
-            set {
-                this.targetIpField = value;
-                this.RaisePropertyChanged("targetIp");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int portRangeStart {
-            get {
-                return this.portRangeStartField;
-            }
-            set {
-                this.portRangeStartField = value;
-                this.RaisePropertyChanged("portRangeStart");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool portRangeStartSpecified {
-            get {
-                return this.portRangeStartFieldSpecified;
-            }
-            set {
-                this.portRangeStartFieldSpecified = value;
-                this.RaisePropertyChanged("portRangeStartSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public int portRangeEnd {
-            get {
-                return this.portRangeEndField;
-            }
-            set {
-                this.portRangeEndField = value;
-                this.RaisePropertyChanged("portRangeEnd");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool portRangeEndSpecified {
-            get {
-                return this.portRangeEndFieldSpecified;
-            }
-            set {
-                this.portRangeEndFieldSpecified = value;
-                this.RaisePropertyChanged("portRangeEndSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public int icmpType {
             get {
                 return this.icmpTypeField;
@@ -657,26 +569,86 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public int icmpCode {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int portRangeEnd {
             get {
-                return this.icmpCodeField;
+                return this.portRangeEndField;
             }
             set {
-                this.icmpCodeField = value;
-                this.RaisePropertyChanged("icmpCode");
+                this.portRangeEndField = value;
+                this.RaisePropertyChanged("portRangeEnd");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool icmpCodeSpecified {
+        public bool portRangeEndSpecified {
             get {
-                return this.icmpCodeFieldSpecified;
+                return this.portRangeEndFieldSpecified;
             }
             set {
-                this.icmpCodeFieldSpecified = value;
-                this.RaisePropertyChanged("icmpCodeSpecified");
+                this.portRangeEndFieldSpecified = value;
+                this.RaisePropertyChanged("portRangeEndSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int portRangeStart {
+            get {
+                return this.portRangeStartField;
+            }
+            set {
+                this.portRangeStartField = value;
+                this.RaisePropertyChanged("portRangeStart");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool portRangeStartSpecified {
+            get {
+                return this.portRangeStartFieldSpecified;
+            }
+            set {
+                this.portRangeStartFieldSpecified = value;
+                this.RaisePropertyChanged("portRangeStartSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string sourceIp {
+            get {
+                return this.sourceIpField;
+            }
+            set {
+                this.sourceIpField = value;
+                this.RaisePropertyChanged("sourceIp");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string sourceMac {
+            get {
+                return this.sourceMacField;
+            }
+            set {
+                this.sourceMacField = value;
+                this.RaisePropertyChanged("sourceMac");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string targetIp {
+            get {
+                return this.targetIpField;
+            }
+            set {
+                this.targetIpField = value;
+                this.RaisePropertyChanged("targetIp");
             }
         }
         
@@ -688,25 +660,6 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18053")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
-    public enum protocol {
-        
-        /// <remarks/>
-        TCP,
-        
-        /// <remarks/>
-        UDP,
-        
-        /// <remarks/>
-        ICMP,
-        
-        /// <remarks/>
-        ANY,
     }
     
     /// <remarks/>
@@ -834,6 +787,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(snapshot))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(createDcResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ipBlockResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(versionResponse))]
@@ -847,6 +801,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(createNicResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(server))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(nic))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(createSnapshotResponse))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18053")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -876,6 +831,246 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18053")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
+    public partial class snapshot : requestResponse {
+        
+        private string snapshotIdField;
+        
+        private string descriptionField;
+        
+        private long snapshotSizeField;
+        
+        private string snapshotNameField;
+        
+        private provisioningState provisioningStateField;
+        
+        private bool bootableField;
+        
+        private bool bootableFieldSpecified;
+        
+        private osType osTypeField;
+        
+        private bool osTypeFieldSpecified;
+        
+        private bool cpuHotPlugField;
+        
+        private bool cpuHotPlugFieldSpecified;
+        
+        private bool ramHotPlugField;
+        
+        private bool ramHotPlugFieldSpecified;
+        
+        private region regionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string snapshotId {
+            get {
+                return this.snapshotIdField;
+            }
+            set {
+                this.snapshotIdField = value;
+                this.RaisePropertyChanged("snapshotId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("description");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public long snapshotSize {
+            get {
+                return this.snapshotSizeField;
+            }
+            set {
+                this.snapshotSizeField = value;
+                this.RaisePropertyChanged("snapshotSize");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string snapshotName {
+            get {
+                return this.snapshotNameField;
+            }
+            set {
+                this.snapshotNameField = value;
+                this.RaisePropertyChanged("snapshotName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public provisioningState provisioningState {
+            get {
+                return this.provisioningStateField;
+            }
+            set {
+                this.provisioningStateField = value;
+                this.RaisePropertyChanged("provisioningState");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public bool bootable {
+            get {
+                return this.bootableField;
+            }
+            set {
+                this.bootableField = value;
+                this.RaisePropertyChanged("bootable");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool bootableSpecified {
+            get {
+                return this.bootableFieldSpecified;
+            }
+            set {
+                this.bootableFieldSpecified = value;
+                this.RaisePropertyChanged("bootableSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public osType osType {
+            get {
+                return this.osTypeField;
+            }
+            set {
+                this.osTypeField = value;
+                this.RaisePropertyChanged("osType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool osTypeSpecified {
+            get {
+                return this.osTypeFieldSpecified;
+            }
+            set {
+                this.osTypeFieldSpecified = value;
+                this.RaisePropertyChanged("osTypeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public bool cpuHotPlug {
+            get {
+                return this.cpuHotPlugField;
+            }
+            set {
+                this.cpuHotPlugField = value;
+                this.RaisePropertyChanged("cpuHotPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool cpuHotPlugSpecified {
+            get {
+                return this.cpuHotPlugFieldSpecified;
+            }
+            set {
+                this.cpuHotPlugFieldSpecified = value;
+                this.RaisePropertyChanged("cpuHotPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public bool ramHotPlug {
+            get {
+                return this.ramHotPlugField;
+            }
+            set {
+                this.ramHotPlugField = value;
+                this.RaisePropertyChanged("ramHotPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ramHotPlugSpecified {
+            get {
+                return this.ramHotPlugFieldSpecified;
+            }
+            set {
+                this.ramHotPlugFieldSpecified = value;
+                this.RaisePropertyChanged("ramHotPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public region region {
+            get {
+                return this.regionField;
+            }
+            set {
+                this.regionField = value;
+                this.RaisePropertyChanged("region");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18053")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
+    public enum osType {
+        
+        /// <remarks/>
+        UNKNOWN,
+        
+        /// <remarks/>
+        WINDOWS,
+        
+        /// <remarks/>
+        LINUX,
+        
+        /// <remarks/>
+        OTHER,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18053")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
+    public enum region {
+        
+        /// <remarks/>
+        DEFAULT,
+        
+        /// <remarks/>
+        NORTH_AMERICA,
+        
+        /// <remarks/>
+        EUROPE,
     }
     
     /// <remarks/>
@@ -955,22 +1150,6 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
                 this.RaisePropertyChanged("regionSpecified");
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18053")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
-    public enum region {
-        
-        /// <remarks/>
-        DEFAULT,
-        
-        /// <remarks/>
-        NORTH_AMERICA,
-        
-        /// <remarks/>
-        EUROPE,
     }
     
     /// <remarks/>
@@ -1577,6 +1756,16 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         private firewall firewallField;
         
+        private bool dhcpActiveField;
+        
+        private bool dhcpActiveFieldSpecified;
+        
+        private string gatewayIpField;
+        
+        private provisioningState provisioningStateField;
+        
+        private bool provisioningStateFieldSpecified;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public string nicId {
@@ -1684,6 +1873,66 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
                 this.RaisePropertyChanged("firewall");
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public bool dhcpActive {
+            get {
+                return this.dhcpActiveField;
+            }
+            set {
+                this.dhcpActiveField = value;
+                this.RaisePropertyChanged("dhcpActive");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool dhcpActiveSpecified {
+            get {
+                return this.dhcpActiveFieldSpecified;
+            }
+            set {
+                this.dhcpActiveFieldSpecified = value;
+                this.RaisePropertyChanged("dhcpActiveSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public string gatewayIp {
+            get {
+                return this.gatewayIpField;
+            }
+            set {
+                this.gatewayIpField = value;
+                this.RaisePropertyChanged("gatewayIp");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public provisioningState provisioningState {
+            get {
+                return this.provisioningStateField;
+            }
+            set {
+                this.provisioningStateField = value;
+                this.RaisePropertyChanged("provisioningState");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool provisioningStateSpecified {
+            get {
+                return this.provisioningStateFieldSpecified;
+            }
+            set {
+                this.provisioningStateFieldSpecified = value;
+                this.RaisePropertyChanged("provisioningStateSpecified");
+            }
+        }
     }
     
     /// <remarks/>
@@ -1712,22 +1961,6 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         /// <remarks/>
         CRASHED,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18053")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
-    public enum osType {
-        
-        /// <remarks/>
-        UNKNOWN,
-        
-        /// <remarks/>
-        WINDOWS,
-        
-        /// <remarks/>
-        OTHER,
     }
     
     /// <remarks/>
@@ -1777,10 +2010,6 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         private System.DateTime lastModificationTimeField;
         
         private bool lastModificationTimeFieldSpecified;
-        
-        private osType osTypeField;
-        
-        private bool osTypeFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -1923,30 +2152,6 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
             set {
                 this.lastModificationTimeFieldSpecified = value;
                 this.RaisePropertyChanged("lastModificationTimeSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public osType osType {
-            get {
-                return this.osTypeField;
-            }
-            set {
-                this.osTypeField = value;
-                this.RaisePropertyChanged("osType");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool osTypeSpecified {
-            get {
-                return this.osTypeFieldSpecified;
-            }
-            set {
-                this.osTypeFieldSpecified = value;
-                this.RaisePropertyChanged("osTypeSpecified");
             }
         }
     }
@@ -2323,6 +2528,29 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18053")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
+    public partial class createSnapshotResponse : requestResponse {
+        
+        private string snapshotIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string snapshotId {
+            get {
+                return this.snapshotIdField;
+            }
+            set {
+                this.snapshotIdField = value;
+                this.RaisePropertyChanged("snapshotId");
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://ws.api.profitbricks.com/", ConfigurationName="WsProfitBricksApi.ProfitbricksApiServicePortType")]
     public interface ProfitbricksApiServicePortType {
@@ -2452,7 +2680,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNotificationsResponse getNotifications(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNotificationsRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteSnapshotResponse deleteSnapshot(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteSnapshotRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
@@ -2508,6 +2736,13 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.stopServerResponse stopServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.stopServerRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (createSnapshotReturn) of message createSnapshotResponse does not match the default value (createSnapshot)
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createSnapshotResponse1 createSnapshot(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createSnapshotRequest1 request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
@@ -2587,6 +2822,14 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateSnapshotResponse updateSnapshot(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateSnapshotRequest1 request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLoadBalancerResponse updateLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLoadBalancerRequest request);
         
         // CODEGEN: Generating message contract since the wrapper name (createServerReturn) of message createServerResponse does not match the default value (createServer)
@@ -2643,6 +2886,14 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getFirewallResponse getFirewall(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getFirewallRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNotificationsResponse getNotifications(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNotificationsRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
@@ -2731,6 +2982,22 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getDataCenterStateResponse getDataCenterState(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getDataCenterStateRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllSnapshotsResponse getAllSnapshots(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllSnapshotsRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksServiceFault), Action="", Name="ProfitbricksServiceFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.rollbackSnapshotResponse rollbackSnapshot(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.rollbackSnapshotRequest1 request);
         
         // CODEGEN: Parameter 'notificationId' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
@@ -3461,6 +3728,25 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18053")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
+    public enum protocol {
+        
+        /// <remarks/>
+        TCP,
+        
+        /// <remarks/>
+        UDP,
+        
+        /// <remarks/>
+        ICMP,
+        
+        /// <remarks/>
+        ANY,
+    }
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3737,13 +4023,13 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateServerRequest arg0;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateServerRequest request;
         
         public updateServerRequest1() {
         }
         
-        public updateServerRequest1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateServerRequest arg0) {
-            this.arg0 = arg0;
+        public updateServerRequest1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateServerRequest request) {
+            this.request = request;
         }
     }
     
@@ -3896,13 +4182,13 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLbRequest arg0;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLbRequest request;
         
         public createLoadBalancerRequest() {
         }
         
-        public createLoadBalancerRequest(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLbRequest arg0) {
-            this.arg0 = arg0;
+        public createLoadBalancerRequest(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLbRequest request) {
+            this.request = request;
         }
     }
     
@@ -4063,6 +4349,10 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         private string ipField;
         
+        private bool dhcpActiveField;
+        
+        private bool dhcpActiveFieldSpecified;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public string serverId {
@@ -4111,6 +4401,30 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
             }
         }
         
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public bool dhcpActive {
+            get {
+                return this.dhcpActiveField;
+            }
+            set {
+                this.dhcpActiveField = value;
+                this.RaisePropertyChanged("dhcpActive");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool dhcpActiveSpecified {
+            get {
+                return this.dhcpActiveFieldSpecified;
+            }
+            set {
+                this.dhcpActiveFieldSpecified = value;
+                this.RaisePropertyChanged("dhcpActiveSpecified");
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -4129,13 +4443,13 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicRequest arg0;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicRequest request;
         
         public createNicRequest1() {
         }
         
-        public createNicRequest1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicRequest arg0) {
-            this.arg0 = arg0;
+        public createNicRequest1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicRequest request) {
+            this.request = request;
         }
     }
     
@@ -4157,237 +4471,38 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18053")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
-    public partial class notification : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string idField;
-        
-        private string networkUUidField;
-        
-        private string relatedItemUuidField;
-        
-        private System.DateTime timestampField;
-        
-        private bool timestampFieldSpecified;
-        
-        private notificationCode messageCodeField;
-        
-        private bool messageCodeFieldSpecified;
-        
-        private virtualItemType relatedItemTypeField;
-        
-        private bool relatedItemTypeFieldSpecified;
-        
-        private string messageField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string networkUUid {
-            get {
-                return this.networkUUidField;
-            }
-            set {
-                this.networkUUidField = value;
-                this.RaisePropertyChanged("networkUUid");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string relatedItemUuid {
-            get {
-                return this.relatedItemUuidField;
-            }
-            set {
-                this.relatedItemUuidField = value;
-                this.RaisePropertyChanged("relatedItemUuid");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public System.DateTime timestamp {
-            get {
-                return this.timestampField;
-            }
-            set {
-                this.timestampField = value;
-                this.RaisePropertyChanged("timestamp");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool timestampSpecified {
-            get {
-                return this.timestampFieldSpecified;
-            }
-            set {
-                this.timestampFieldSpecified = value;
-                this.RaisePropertyChanged("timestampSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public notificationCode messageCode {
-            get {
-                return this.messageCodeField;
-            }
-            set {
-                this.messageCodeField = value;
-                this.RaisePropertyChanged("messageCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool messageCodeSpecified {
-            get {
-                return this.messageCodeFieldSpecified;
-            }
-            set {
-                this.messageCodeFieldSpecified = value;
-                this.RaisePropertyChanged("messageCodeSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public virtualItemType relatedItemType {
-            get {
-                return this.relatedItemTypeField;
-            }
-            set {
-                this.relatedItemTypeField = value;
-                this.RaisePropertyChanged("relatedItemType");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool relatedItemTypeSpecified {
-            get {
-                return this.relatedItemTypeFieldSpecified;
-            }
-            set {
-                this.relatedItemTypeFieldSpecified = value;
-                this.RaisePropertyChanged("relatedItemTypeSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string message {
-            get {
-                return this.messageField;
-            }
-            set {
-                this.messageField = value;
-                this.RaisePropertyChanged("message");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18053")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
-    public enum notificationCode {
-        
-        /// <remarks/>
-        OTHER,
-        
-        /// <remarks/>
-        SHUTDOWN_SERVER_FAILED,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18053")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
-    public enum virtualItemType {
-        
-        /// <remarks/>
-        TYPE_OTHER,
-        
-        /// <remarks/>
-        TYPE_SERVER,
-        
-        /// <remarks/>
-        TYPE_STORAGE,
-        
-        /// <remarks/>
-        TYPE_IMAGE,
-        
-        /// <remarks/>
-        TYPE_LOADBALANCER,
-        
-        /// <remarks/>
-        TYPE_NIC,
-        
-        /// <remarks/>
-        TYPE_FIREWALL,
-    }
-    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getNotifications", WrapperNamespace="http://ws.api.profitbricks.com/", IsWrapped=true)]
-    public partial class getNotificationsRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="deleteSnapshot", WrapperNamespace="http://ws.api.profitbricks.com/", IsWrapped=true)]
+    public partial class deleteSnapshotRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string networkUUID;
+        public string snapshotId;
         
-        public getNotificationsRequest() {
+        public deleteSnapshotRequest() {
         }
         
-        public getNotificationsRequest(string networkUUID) {
-            this.networkUUID = networkUUID;
+        public deleteSnapshotRequest(string snapshotId) {
+            this.snapshotId = snapshotId;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getNotificationsResponse", WrapperNamespace="http://ws.api.profitbricks.com/", IsWrapped=true)]
-    public partial class getNotificationsResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="deleteSnapshotResponse", WrapperNamespace="http://ws.api.profitbricks.com/", IsWrapped=true)]
+    public partial class deleteSnapshotResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.notification[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse @return;
         
-        public getNotificationsResponse() {
+        public deleteSnapshotResponse() {
         }
         
-        public getNotificationsResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.notification[] @return) {
+        public deleteSnapshotResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse @return) {
             this.@return = @return;
         }
     }
@@ -4487,6 +4602,10 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         private string ipField;
         
+        private bool dhcpActiveField;
+        
+        private bool dhcpActiveFieldSpecified;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public string nicId {
@@ -4547,6 +4666,30 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
             }
         }
         
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public bool dhcpActive {
+            get {
+                return this.dhcpActiveField;
+            }
+            set {
+                this.dhcpActiveField = value;
+                this.RaisePropertyChanged("dhcpActive");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool dhcpActiveSpecified {
+            get {
+                return this.dhcpActiveFieldSpecified;
+            }
+            set {
+                this.dhcpActiveFieldSpecified = value;
+                this.RaisePropertyChanged("dhcpActiveSpecified");
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -4565,13 +4708,13 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateNicRequest arg0;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateNicRequest request;
         
         public updateNicRequest1() {
         }
         
-        public updateNicRequest1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateNicRequest arg0) {
-            this.arg0 = arg0;
+        public updateNicRequest1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateNicRequest request) {
+            this.request = request;
         }
     }
     
@@ -4766,13 +4909,13 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageRequest arg0;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageRequest request;
         
         public createStorageRequest1() {
         }
         
-        public createStorageRequest1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageRequest arg0) {
-            this.arg0 = arg0;
+        public createStorageRequest1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageRequest request) {
+            this.request = request;
         }
     }
     
@@ -4826,6 +4969,102 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         public stopServerResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse @return) {
+            this.@return = @return;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18053")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
+    public partial class createSnapshotRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string storageIdField;
+        
+        private string descriptionField;
+        
+        private string snapshotNameField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string storageId {
+            get {
+                return this.storageIdField;
+            }
+            set {
+                this.storageIdField = value;
+                this.RaisePropertyChanged("storageId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("description");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string snapshotName {
+            get {
+                return this.snapshotNameField;
+            }
+            set {
+                this.snapshotNameField = value;
+                this.RaisePropertyChanged("snapshotName");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="createSnapshot", WrapperNamespace="http://ws.api.profitbricks.com/", IsWrapped=true)]
+    public partial class createSnapshotRequest1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createSnapshotRequest request;
+        
+        public createSnapshotRequest1() {
+        }
+        
+        public createSnapshotRequest1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createSnapshotRequest request) {
+            this.request = request;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="createSnapshotReturn", WrapperNamespace="http://ws.api.profitbricks.com/", IsWrapped=true)]
+    public partial class createSnapshotResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createSnapshotResponse @return;
+        
+        public createSnapshotResponse1() {
+        }
+        
+        public createSnapshotResponse1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createSnapshotResponse @return) {
             this.@return = @return;
         }
     }
@@ -5157,13 +5396,13 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateStorageRequest arg0;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateStorageRequest request;
         
         public updateStorageRequest1() {
         }
         
-        public updateStorageRequest1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateStorageRequest arg0) {
-            this.arg0 = arg0;
+        public updateStorageRequest1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateStorageRequest request) {
+            this.request = request;
         }
     }
     
@@ -5268,6 +5507,214 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
+    public partial class updateSnapshotRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string snapshotIdField;
+        
+        private string descriptionField;
+        
+        private string snapshotNameField;
+        
+        private bool bootableField;
+        
+        private bool bootableFieldSpecified;
+        
+        private osType osTypeField;
+        
+        private bool osTypeFieldSpecified;
+        
+        private bool cpuHotPlugField;
+        
+        private bool cpuHotPlugFieldSpecified;
+        
+        private bool ramHotPlugField;
+        
+        private bool ramHotPlugFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string snapshotId {
+            get {
+                return this.snapshotIdField;
+            }
+            set {
+                this.snapshotIdField = value;
+                this.RaisePropertyChanged("snapshotId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("description");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string snapshotName {
+            get {
+                return this.snapshotNameField;
+            }
+            set {
+                this.snapshotNameField = value;
+                this.RaisePropertyChanged("snapshotName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public bool bootable {
+            get {
+                return this.bootableField;
+            }
+            set {
+                this.bootableField = value;
+                this.RaisePropertyChanged("bootable");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool bootableSpecified {
+            get {
+                return this.bootableFieldSpecified;
+            }
+            set {
+                this.bootableFieldSpecified = value;
+                this.RaisePropertyChanged("bootableSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public osType osType {
+            get {
+                return this.osTypeField;
+            }
+            set {
+                this.osTypeField = value;
+                this.RaisePropertyChanged("osType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool osTypeSpecified {
+            get {
+                return this.osTypeFieldSpecified;
+            }
+            set {
+                this.osTypeFieldSpecified = value;
+                this.RaisePropertyChanged("osTypeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public bool cpuHotPlug {
+            get {
+                return this.cpuHotPlugField;
+            }
+            set {
+                this.cpuHotPlugField = value;
+                this.RaisePropertyChanged("cpuHotPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool cpuHotPlugSpecified {
+            get {
+                return this.cpuHotPlugFieldSpecified;
+            }
+            set {
+                this.cpuHotPlugFieldSpecified = value;
+                this.RaisePropertyChanged("cpuHotPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public bool ramHotPlug {
+            get {
+                return this.ramHotPlugField;
+            }
+            set {
+                this.ramHotPlugField = value;
+                this.RaisePropertyChanged("ramHotPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ramHotPlugSpecified {
+            get {
+                return this.ramHotPlugFieldSpecified;
+            }
+            set {
+                this.ramHotPlugFieldSpecified = value;
+                this.RaisePropertyChanged("ramHotPlugSpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateSnapshot", WrapperNamespace="http://ws.api.profitbricks.com/", IsWrapped=true)]
+    public partial class updateSnapshotRequest1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateSnapshotRequest request;
+        
+        public updateSnapshotRequest1() {
+        }
+        
+        public updateSnapshotRequest1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateSnapshotRequest request) {
+            this.request = request;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateSnapshotResponse", WrapperNamespace="http://ws.api.profitbricks.com/", IsWrapped=true)]
+    public partial class updateSnapshotResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse @return;
+        
+        public updateSnapshotResponse() {
+        }
+        
+        public updateSnapshotResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse @return) {
+            this.@return = @return;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18053")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
     public partial class updateLbRequest : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string loadBalancerIdField;
@@ -5358,13 +5805,13 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLbRequest arg0;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLbRequest request;
         
         public updateLoadBalancerRequest() {
         }
         
-        public updateLoadBalancerRequest(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLbRequest arg0) {
-            this.arg0 = arg0;
+        public updateLoadBalancerRequest(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLbRequest request) {
+            this.request = request;
         }
     }
     
@@ -5599,13 +6046,13 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerRequest arg0;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerRequest request;
         
         public createServerRequest1() {
         }
         
-        public createServerRequest1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerRequest arg0) {
-            this.arg0 = arg0;
+        public createServerRequest1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerRequest request) {
+            this.request = request;
         }
     }
     
@@ -5952,6 +6399,241 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18053")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
+    public partial class notification : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string idField;
+        
+        private string networkUUidField;
+        
+        private string relatedItemUuidField;
+        
+        private System.DateTime timestampField;
+        
+        private bool timestampFieldSpecified;
+        
+        private notificationCode messageCodeField;
+        
+        private bool messageCodeFieldSpecified;
+        
+        private virtualItemType relatedItemTypeField;
+        
+        private bool relatedItemTypeFieldSpecified;
+        
+        private string messageField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string networkUUid {
+            get {
+                return this.networkUUidField;
+            }
+            set {
+                this.networkUUidField = value;
+                this.RaisePropertyChanged("networkUUid");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string relatedItemUuid {
+            get {
+                return this.relatedItemUuidField;
+            }
+            set {
+                this.relatedItemUuidField = value;
+                this.RaisePropertyChanged("relatedItemUuid");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public System.DateTime timestamp {
+            get {
+                return this.timestampField;
+            }
+            set {
+                this.timestampField = value;
+                this.RaisePropertyChanged("timestamp");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool timestampSpecified {
+            get {
+                return this.timestampFieldSpecified;
+            }
+            set {
+                this.timestampFieldSpecified = value;
+                this.RaisePropertyChanged("timestampSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public notificationCode messageCode {
+            get {
+                return this.messageCodeField;
+            }
+            set {
+                this.messageCodeField = value;
+                this.RaisePropertyChanged("messageCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool messageCodeSpecified {
+            get {
+                return this.messageCodeFieldSpecified;
+            }
+            set {
+                this.messageCodeFieldSpecified = value;
+                this.RaisePropertyChanged("messageCodeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public virtualItemType relatedItemType {
+            get {
+                return this.relatedItemTypeField;
+            }
+            set {
+                this.relatedItemTypeField = value;
+                this.RaisePropertyChanged("relatedItemType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool relatedItemTypeSpecified {
+            get {
+                return this.relatedItemTypeFieldSpecified;
+            }
+            set {
+                this.relatedItemTypeFieldSpecified = value;
+                this.RaisePropertyChanged("relatedItemTypeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string message {
+            get {
+                return this.messageField;
+            }
+            set {
+                this.messageField = value;
+                this.RaisePropertyChanged("message");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18053")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
+    public enum notificationCode {
+        
+        /// <remarks/>
+        OTHER,
+        
+        /// <remarks/>
+        SHUTDOWN_SERVER_FAILED,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18053")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
+    public enum virtualItemType {
+        
+        /// <remarks/>
+        TYPE_OTHER,
+        
+        /// <remarks/>
+        TYPE_SERVER,
+        
+        /// <remarks/>
+        TYPE_STORAGE,
+        
+        /// <remarks/>
+        TYPE_IMAGE,
+        
+        /// <remarks/>
+        TYPE_LOADBALANCER,
+        
+        /// <remarks/>
+        TYPE_NIC,
+        
+        /// <remarks/>
+        TYPE_FIREWALL,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getNotifications", WrapperNamespace="http://ws.api.profitbricks.com/", IsWrapped=true)]
+    public partial class getNotificationsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string networkUUID;
+        
+        public getNotificationsRequest() {
+        }
+        
+        public getNotificationsRequest(string networkUUID) {
+            this.networkUUID = networkUUID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getNotificationsResponse", WrapperNamespace="http://ws.api.profitbricks.com/", IsWrapped=true)]
+    public partial class getNotificationsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.notification[] @return;
+        
+        public getNotificationsResponse() {
+        }
+        
+        public getNotificationsResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.notification[] @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6047,13 +6729,13 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateDcRequest arg0;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateDcRequest request;
         
         public updateDataCenterRequest() {
         }
         
-        public updateDataCenterRequest(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateDcRequest arg0) {
-            this.arg0 = arg0;
+        public updateDataCenterRequest(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateDcRequest request) {
+            this.request = request;
         }
     }
     
@@ -6359,13 +7041,13 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.connectStorageRequest arg0;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.connectStorageRequest request;
         
         public connectStorageToServerRequest() {
         }
         
-        public connectStorageToServerRequest(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.connectStorageRequest arg0) {
-            this.arg0 = arg0;
+        public connectStorageToServerRequest(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.connectStorageRequest request) {
+            this.request = request;
         }
     }
     
@@ -6510,13 +7192,13 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.romDriveRequest arg0;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.romDriveRequest request;
         
         public addRomDriveToServerRequest() {
         }
         
-        public addRomDriveToServerRequest(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.romDriveRequest arg0) {
-            this.arg0 = arg0;
+        public addRomDriveToServerRequest(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.romDriveRequest request) {
+            this.request = request;
         }
     }
     
@@ -6647,6 +7329,116 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         public getDataCenterStateResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.provisioningState @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getAllSnapshots", WrapperNamespace="http://ws.api.profitbricks.com/", IsWrapped=true)]
+    public partial class getAllSnapshotsRequest {
+        
+        public getAllSnapshotsRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getAllSnapshotsResponse", WrapperNamespace="http://ws.api.profitbricks.com/", IsWrapped=true)]
+    public partial class getAllSnapshotsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.snapshot[] @return;
+        
+        public getAllSnapshotsResponse() {
+        }
+        
+        public getAllSnapshotsResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.snapshot[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18053")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
+    public partial class rollbackSnapshotRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string storageIdField;
+        
+        private string snapshotIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string storageId {
+            get {
+                return this.storageIdField;
+            }
+            set {
+                this.storageIdField = value;
+                this.RaisePropertyChanged("storageId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string snapshotId {
+            get {
+                return this.snapshotIdField;
+            }
+            set {
+                this.snapshotIdField = value;
+                this.RaisePropertyChanged("snapshotId");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="rollbackSnapshot", WrapperNamespace="http://ws.api.profitbricks.com/", IsWrapped=true)]
+    public partial class rollbackSnapshotRequest1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.rollbackSnapshotRequest request;
+        
+        public rollbackSnapshotRequest1() {
+        }
+        
+        public rollbackSnapshotRequest1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.rollbackSnapshotRequest request) {
+            this.request = request;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="rollbackSnapshotResponse", WrapperNamespace="http://ws.api.profitbricks.com/", IsWrapped=true)]
+    public partial class rollbackSnapshotResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return;
+        
+        public rollbackSnapshotResponse() {
+        }
+        
+        public rollbackSnapshotResponse(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse @return) {
             this.@return = @return;
         }
     }
@@ -6821,9 +7613,9 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
             return base.Channel.updateServer(request);
         }
         
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse updateServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateServerRequest arg0) {
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse updateServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateServerRequest request) {
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateServerRequest1 inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateServerRequest1();
-            inValue.arg0 = arg0;
+            inValue.request = request;
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateServerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).updateServer(inValue);
             return retVal.@return;
         }
@@ -6833,9 +7625,9 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
             return base.Channel.createLoadBalancer(request);
         }
         
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLbResponse createLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLbRequest arg0) {
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLbResponse createLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLbRequest request) {
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLoadBalancerRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLoadBalancerRequest();
-            inValue.arg0 = arg0;
+            inValue.request = request;
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLoadBalancerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).createLoadBalancer(inValue);
             return retVal.@return;
         }
@@ -6884,22 +7676,22 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
             return base.Channel.createNic(request);
         }
         
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicResponse createNic(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicRequest arg0) {
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicResponse createNic(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicRequest request) {
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicRequest1 inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicRequest1();
-            inValue.arg0 = arg0;
+            inValue.request = request;
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicResponse1 retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).createNic(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNotificationsResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.getNotifications(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNotificationsRequest request) {
-            return base.Channel.getNotifications(request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteSnapshotResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.deleteSnapshot(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteSnapshotRequest request) {
+            return base.Channel.deleteSnapshot(request);
         }
         
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.notification[] getNotifications(string networkUUID) {
-            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNotificationsRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNotificationsRequest();
-            inValue.networkUUID = networkUUID;
-            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNotificationsResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getNotifications(inValue);
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse deleteSnapshot(string snapshotId) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteSnapshotRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteSnapshotRequest();
+            inValue.snapshotId = snapshotId;
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.deleteSnapshotResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).deleteSnapshot(inValue);
             return retVal.@return;
         }
         
@@ -6933,9 +7725,9 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
             return base.Channel.updateNic(request);
         }
         
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse updateNic(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateNicRequest arg0) {
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse updateNic(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateNicRequest request) {
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateNicRequest1 inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateNicRequest1();
-            inValue.arg0 = arg0;
+            inValue.request = request;
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateNicResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).updateNic(inValue);
             return retVal.@return;
         }
@@ -6970,9 +7762,9 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
             return base.Channel.createStorage(request);
         }
         
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageResponse createStorage(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageRequest arg0) {
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageResponse createStorage(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageRequest request) {
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageRequest1 inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageRequest1();
-            inValue.arg0 = arg0;
+            inValue.request = request;
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageResponse1 retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).createStorage(inValue);
             return retVal.@return;
         }
@@ -6986,6 +7778,18 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.stopServerRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.stopServerRequest();
             inValue.serverId = serverId;
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.stopServerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).stopServer(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createSnapshotResponse1 ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.createSnapshot(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createSnapshotRequest1 request) {
+            return base.Channel.createSnapshot(request);
+        }
+        
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createSnapshotResponse createSnapshot(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createSnapshotRequest request) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createSnapshotRequest1 inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createSnapshotRequest1();
+            inValue.request = request;
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createSnapshotResponse1 retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).createSnapshot(inValue);
             return retVal.@return;
         }
         
@@ -7069,9 +7873,9 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
             return base.Channel.updateStorage(request);
         }
         
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse updateStorage(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateStorageRequest arg0) {
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse updateStorage(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateStorageRequest request) {
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateStorageRequest1 inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateStorageRequest1();
-            inValue.arg0 = arg0;
+            inValue.request = request;
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateStorageResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).updateStorage(inValue);
             return retVal.@return;
         }
@@ -7102,13 +7906,25 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateSnapshotResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.updateSnapshot(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateSnapshotRequest1 request) {
+            return base.Channel.updateSnapshot(request);
+        }
+        
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse updateSnapshot(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateSnapshotRequest request) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateSnapshotRequest1 inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateSnapshotRequest1();
+            inValue.request = request;
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateSnapshotResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).updateSnapshot(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLoadBalancerResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.updateLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLoadBalancerRequest request) {
             return base.Channel.updateLoadBalancer(request);
         }
         
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse updateLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLbRequest arg0) {
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse updateLoadBalancer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLbRequest request) {
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLoadBalancerRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLoadBalancerRequest();
-            inValue.arg0 = arg0;
+            inValue.request = request;
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateLoadBalancerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).updateLoadBalancer(inValue);
             return retVal.@return;
         }
@@ -7118,9 +7934,9 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
             return base.Channel.createServer(request);
         }
         
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerResponse createServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerRequest arg0) {
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerResponse createServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerRequest request) {
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerRequest1 inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerRequest1();
-            inValue.arg0 = arg0;
+            inValue.request = request;
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerResponse1 retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).createServer(inValue);
             return retVal.@return;
         }
@@ -7197,6 +8013,18 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNotificationsResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.getNotifications(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNotificationsRequest request) {
+            return base.Channel.getNotifications(request);
+        }
+        
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.notification[] getNotifications(string networkUUID) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNotificationsRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNotificationsRequest();
+            inValue.networkUUID = networkUUID;
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getNotificationsResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getNotifications(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.createDataCenter(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterRequest request) {
             return base.Channel.createDataCenter(request);
         }
@@ -7214,9 +8042,9 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
             return base.Channel.updateDataCenter(request);
         }
         
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse updateDataCenter(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateDcRequest arg0) {
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse updateDataCenter(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateDcRequest request) {
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateDataCenterRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateDataCenterRequest();
-            inValue.arg0 = arg0;
+            inValue.request = request;
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.updateDataCenterResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).updateDataCenter(inValue);
             return retVal.@return;
         }
@@ -7261,9 +8089,9 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
             return base.Channel.connectStorageToServer(request);
         }
         
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse connectStorageToServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.connectStorageRequest arg0) {
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse connectStorageToServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.connectStorageRequest request) {
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.connectStorageToServerRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.connectStorageToServerRequest();
-            inValue.arg0 = arg0;
+            inValue.request = request;
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.connectStorageToServerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).connectStorageToServer(inValue);
             return retVal.@return;
         }
@@ -7286,9 +8114,9 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
             return base.Channel.addRomDriveToServer(request);
         }
         
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse addRomDriveToServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.romDriveRequest arg0) {
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse addRomDriveToServer(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.romDriveRequest request) {
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addRomDriveToServerRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addRomDriveToServerRequest();
-            inValue.arg0 = arg0;
+            inValue.request = request;
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.addRomDriveToServerResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).addRomDriveToServer(inValue);
             return retVal.@return;
         }
@@ -7327,6 +8155,29 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getDataCenterStateRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getDataCenterStateRequest();
             inValue.dataCenterId = dataCenterId;
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getDataCenterStateResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getDataCenterState(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllSnapshotsResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.getAllSnapshots(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllSnapshotsRequest request) {
+            return base.Channel.getAllSnapshots(request);
+        }
+        
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.snapshot[] getAllSnapshots() {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllSnapshotsRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllSnapshotsRequest();
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.getAllSnapshotsResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).getAllSnapshots(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.rollbackSnapshotResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.rollbackSnapshot(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.rollbackSnapshotRequest1 request) {
+            return base.Channel.rollbackSnapshot(request);
+        }
+        
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse rollbackSnapshot(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.rollbackSnapshotRequest request) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.rollbackSnapshotRequest1 inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.rollbackSnapshotRequest1();
+            inValue.request = request;
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.rollbackSnapshotResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).rollbackSnapshot(inValue);
             return retVal.@return;
         }
         

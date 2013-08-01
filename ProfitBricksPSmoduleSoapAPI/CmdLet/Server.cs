@@ -184,7 +184,6 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
     }
     #endregion
 
-
     #region Set_PBServer
     [Cmdlet(VerbsCommon.Set, "PBServer")]
     public class Set_PBServer : PBapiPSCmdlet
