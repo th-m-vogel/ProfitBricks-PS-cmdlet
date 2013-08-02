@@ -102,6 +102,10 @@ Create a simple Datacenter
 - Add CmdLet Remove-Instance, delte server including all connected storages
 - Add support for -Verbos -Debug and -Confirm 
 
+## Contribute
+
+Send patches, feature requests etc. to thomas.m.vogel(at)outlook.com.
+
 ## License:
 
 Copyright 2013 Thomas Vogel
