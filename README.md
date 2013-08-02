@@ -1,23 +1,43 @@
 ## DESCRIPTION:
 
-PowerShell binary Module to access the ProfitBricks SOAP API. Manage you ProfitBricks Cloud Services using PowerShell or integrate to your client management solution.
+PowerShell binary Module to access the ProfitBricks SOAP API. Manage you ProfitBricks Cloud Services using PowerShell or integrate ProfitBricks IaaS to your client management solution using PowerShell scripts.
 
 This is a communitiy Project not maintained by ProfitBricks
 
-## Download the DLL
+## Download 
+
+### just the the DLL
 
 https://github.com/th-m-vogel/ProfitBricks-PS-cmdlet/blob/master/Psmodule.binary/ProfitBricksPSmoduleSoapAPI.dll?raw=true
+
+### binary module as zip-file
+
+https://github.com/th-m-vogel/ProfitBricks-PS-cmdlet/blob/master/Psmodule.binary/ProfitBricksSoapApi.zip?raw=true
+
 ## Dependencies
 
 PowerShell V2 (`$psversiontable.psversion`)
 .NET Framework 2.0 (recommendet 3.5.1)
 
-## Usage
-
+## Installation
+### Simple DLL load
 Load the Module:
 
 	Import-Module -name "Path_To\ProfitBricksPSmoduleSoapAPI.dll" [-verbose]
 
+### PSmodule load using manifest (prefered)
+
+	Import-Module -name "Path_To\ProfitBricksSoapApi.psd1" [-verbose]
+
+### Module installation
+
+Download the [ProfitBricksSoapApi.Zip-File](Psmodule.binary/ProfitBricksSoapApi.zip?raw=true) and extract all.
+
+1. Place the resulting folder `ProfitBricksSoapApi` (does contain 3 Files) in `%USERPROFILE%\Documents\WindowsPowerShell\Modules\` will auto load the module on PowerShell start for the User.
+2. Place the resulting folder `ProfitBricksSoapApi` (does contain 3 Files) in `%SYSTEMROT%\System32\WindowsPowerShell\v1.0\Modules\` will make the module system wide availible (not recomendet)
+3. Place the resulting folder in any folder ouf your choice and extend the eviromet variable `PSModulePath` by this folder will make the module system wide availible. 
+
+## Usage
 Initialise the API:
 
 	Open-PBApiService [-Username] <string> [-Password] <string>
@@ -97,7 +117,7 @@ Create a simple Datacenter
 
 - Implement missing CmdLets - **done**
 - asap implement new API features when published by ProfitBricks - **Last Update Snapshot / DHCP 08/01/2013**
-- create a dll-Help.xml and a module manifest
+- create a dll-Help.xml and a module manifest - ongoing
 - Add CmdLet New-Instance, create Server including up do 8 network connections and 8 storages
 - Add CmdLet Remove-Instance, delte server including all connected storages
 - Add support for -Verbos -Debug and -Confirm 

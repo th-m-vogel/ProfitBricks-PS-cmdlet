@@ -119,19 +119,9 @@ namespace ProfitBricksPSmoduleSoapAPI
         )]
         public PSCredential Credentials;
 
-        [Parameter(
-            Mandatory = false
-        )]
-        public string WsUri;
-
-
         protected override void ProcessRecord()
         {
-            if (string.IsNullOrEmpty(WsUri))
-            {
-                WsUri = "https://api.profitbricks.com/1.2";
-            }
-            EndpointAddress EA = new EndpointAddress(WsUri);
+            EndpointAddress EA = new EndpointAddress("https://api.profitbricks.com/1.2");
             // We want to use Basic Auth via SSL to the Webservice
             BasicHttpBinding binding = new BasicHttpBinding();
             binding.Security.Mode = BasicHttpSecurityMode.Transport;
@@ -167,8 +157,14 @@ namespace ProfitBricksPSmoduleSoapAPI
     {
         protected override void ProcessRecord()
         {
-            PBApi.Service.ClientCredentials.UserName.UserName = "";
-            PBApi.Service.ClientCredentials.UserName.Password = "";
+            EndpointAddress EA = new EndpointAddress("https://api.profitbricks.com/1.2");
+            // We want to use Basic Auth via SSL to the Webservice
+            BasicHttpBinding binding = new BasicHttpBinding();
+            binding.Security.Mode = BasicHttpSecurityMode.Transport;
+            binding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Basic;
+            // assin to the statc Class 
+
+            PBApi.Service = new ProfitbricksApiServicePortTypeClient(binding, EA);
             
             this.WriteObject(null);
         }

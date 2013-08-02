@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die mit einer Assembly verknüpft sind.
 [assembly: AssemblyTitle("ProfitBricksPSmoduleSoapAPI")]
-[assembly: AssemblyDescription("PSModulw for ProfitBricks SOAP API 1.2")]
+[assembly: AssemblyDescription("PSModule for ProfitBricks SOAP API 1.2")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Thomas Vogel")]
 [assembly: AssemblyProduct("ProfitBricksPSmodule")]
