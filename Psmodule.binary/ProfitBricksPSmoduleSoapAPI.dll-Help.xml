@@ -110,7 +110,7 @@
 	<command:details>
 		<command:name>Clear-PBDataCenter</command:name>
 		<maml:description>
-			<maml:para></maml:para>
+			<maml:para>Removes all components from an existing Virtual Data Center.</maml:para>
 		</maml:description>
 		<maml:copyright>
            <maml:para />
@@ -123,14 +123,14 @@
 	</command:details>
 	<maml:description>
 	<!--This is the Description section-->
-		<maml:para></maml:para>
+		<maml:para>does invoke the soap methode clearDataCenter</maml:para>
 	</maml:description>
 	<command:syntax>		<command:syntaxItem>
 			<maml:name>Clear-PBDataCenter</maml:name>
 			<command:parameter required = "true" variableLength = "false" globbing = "false" pipelineInput = "true (ByValue, ByPropertyName)" position = "1" >
 				<maml:name>dataCenterId</maml:name>
 				<maml:description>
-					<maml:para></maml:para>
+					<maml:para>Identifier of the virtual data center (UUID) to clear</maml:para>
 				</maml:description>
 			<command:parameterValue required="true" variableLength = "false" >String</command:parameterValue>
 			</command:parameter>
@@ -140,7 +140,7 @@
 		<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="1">
 			<maml:name>dataCenterId</maml:name>
 			<maml:description>
-				<maml:para></maml:para>
+				<maml:para>Identifier of the virtual data center (UUID) to clear</maml:para>
 			</maml:description>
 			<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
 			<dev:type>
@@ -165,10 +165,15 @@
 	<command:returnValues>
 		<command:returnValue>
 			<dev:type>
-				<maml:name></maml:name>
+				<maml:name>versionResponse</maml:name>
 				<maml:uri />
 				<maml:description>
-					<maml:para></maml:para>
+					<maml:para>Name                       MemberType Definition
+----                       ---------- ----------
+dataCenterId               Property   string dataCenterId {get;set;}
+dataCenterVersion          Property   int dataCenterVersion {get;set;}
+dataCenterVersionSpecified Property   bool dataCenterVersionSpecified {get;set;}
+requestId                  Property   string requestId {get;set;}</maml:para>
 				</maml:description>
 			</dev:type>
 			<maml:description></maml:description>
@@ -181,12 +186,40 @@
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para></maml:para>
+			<maml:para>This will remove all ressources (servers, storages, netwoerks, loadbalancers) for the given datacenter. there is NO option to undo a clearDataCenter request. All data on the storages within the given datacenter will scurely delete and is lost!</maml:para>
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
+		<command:example>
+			<maml:title>
+--------------  Example 1 --------------			</maml:title>
+			<maml:introduction>
+				<maml:para>C:\PS&gt;</maml:para>
+C:\PS&gt;			</maml:introduction>
+  			<dev:code>Clear-PBDataCenter -dataCenterId a1d19c16-c17a-4a2b-8e0c-95f41d59b682</dev:code>
+  			<dev:remarks>
+				<maml:para>Does clear all ressources from datacenter by given ID (UUID)</maml:para>
+				<maml:para></maml:para>
+				<maml:para></maml:para>
+				<maml:para>dataCenterId                              dataCenterVersion    dataCenterVersionSpecified requestId
+------------                              -----------------    -------------------------- ---------
+a1d19c16-c17a-4a2b-8e0c-95...                             2                          True 76192
+				</maml:para>
+				<maml:para></maml:para>
+  			</dev:remarks>
+			<command:commandLines>
+				<command:commandLine>
+					<command:commandText>
+					</command:commandText>
+				</command:commandLine>
+			</command:commandLines>
+		</command:example>
 	</command:examples>
 	<maml:relatedLinks>
+		<maml:navigationLink>
+			<maml:linkText>http://www.profitbricks.com/de/en/iaas-developer-center/profitbricks-api/apidoc/ClearDataCenter.html</maml:linkText>
+			<maml:uri/>
+		</maml:navigationLink>
 	</maml:relatedLinks>
 </command:command>
 <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
@@ -540,10 +573,10 @@ See also Example 1</maml:para>
 	<command:returnValues>
 		<command:returnValue>
 			<dev:type>
-				<maml:name></maml:name>
+				<maml:name>ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortTypeClien</maml:name>
 				<maml:uri />
 				<maml:description>
-					<maml:para></maml:para>
+					<maml:para>Webservice object for ProfitBricks soap API</maml:para>
 				</maml:description>
 			</dev:type>
 			<maml:description></maml:description>
@@ -1737,7 +1770,7 @@ bc8e3220-0668-4f4b-... Datacenter01                                             
 	<command:details>
 		<command:name>New-PBDatacenter</command:name>
 		<maml:description>
-			<maml:para></maml:para>
+			<maml:para>Creates and saves a new, empty Virtual Data Center. Returns its identifier for further reference.</maml:para>
 		</maml:description>
 		<maml:copyright>
            <maml:para />
@@ -1750,21 +1783,30 @@ bc8e3220-0668-4f4b-... Datacenter01                                             
 	</command:details>
 	<maml:description>
 	<!--This is the Description section-->
-		<maml:para></maml:para>
+		<maml:para>does invoke the soap methode createDataCenter
+
+Naming Restrictions
+Data center names cannot start with or contain (@, /, \, |, ‘’, ‘)
+
+Important Information about a Data Centers Region
+The default region is set according to the location stated in the registration process. You can set the region explicitly while creating a data center.
+Once set and applied, a data center&#39;s location cannot be changed anymore. Also, be aware that data centers from different regions are isolated from each other. It is not possible to move a data center or elements of a data center from one region to another. 
+</maml:para>
 	</maml:description>
 	<command:syntax>		<command:syntaxItem>
 			<maml:name>New-PBDatacenter</maml:name>
 			<command:parameter required = "false" variableLength = "false" globbing = "false" pipelineInput = "false" position = "1" >
 				<maml:name>dataCenterName</maml:name>
 				<maml:description>
-					<maml:para></maml:para>
+					<maml:para>Names the new virtual data center. If no name is specified, the data center will be named “Unnamed Data Center” by default.</maml:para>
 				</maml:description>
 			<command:parameterValue required="true" variableLength = "false" >String</command:parameterValue>
 			</command:parameter>
 			<command:parameter required = "false" variableLength = "false" globbing = "false" pipelineInput = "false" position = "2" >
 				<maml:name>Region</maml:name>
 				<maml:description>
-					<maml:para></maml:para>
+					<maml:para>Select region to create the data center (NORTH_AMERICA, EUROPE, DEFAULT). 
+If set to DEFAULT or left empty, data center will be created in the default region of the customer</maml:para>
 				</maml:description>
 			<command:parameterValue required="true" variableLength = "false" >region</command:parameterValue>
 			</command:parameter>
@@ -1774,7 +1816,7 @@ bc8e3220-0668-4f4b-... Datacenter01                                             
 		<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1">
 			<maml:name>dataCenterName</maml:name>
 			<maml:description>
-				<maml:para></maml:para>
+				<maml:para>Names the new virtual data center. If no name is specified, the data center will be named “Unnamed Data Center” by default.</maml:para>
 			</maml:description>
 			<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
 			<dev:type>
@@ -1786,7 +1828,8 @@ bc8e3220-0668-4f4b-... Datacenter01                                             
 		<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="2">
 			<maml:name>Region</maml:name>
 			<maml:description>
-				<maml:para></maml:para>
+				<maml:para>Select region to create the data center (NORTH_AMERICA, EUROPE, DEFAULT). 
+If set to DEFAULT or left empty, data center will be created in the default region of the customer</maml:para>
 			</maml:description>
 			<command:parameterValue required="true" variableLength="false">region</command:parameterValue>
 			<dev:type>
@@ -1811,10 +1854,17 @@ bc8e3220-0668-4f4b-... Datacenter01                                             
 	<command:returnValues>
 		<command:returnValue>
 			<dev:type>
-				<maml:name></maml:name>
+				<maml:name>createDcResponse</maml:name>
 				<maml:uri />
 				<maml:description>
-					<maml:para></maml:para>
+					<maml:para>Name                       MemberType Definition
+----                       ---------- ----------
+dataCenterId               Property   string dataCenterId {get;set;}
+dataCenterVersion          Property   int dataCenterVersion {get;set;}
+dataCenterVersionSpecified Property   bool dataCenterVersionSpecified {get;set;}
+region                     Property   ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.region region {get;set;}
+regionSpecified            Property   bool regionSpecified {get;set;}
+requestId                  Property   string requestId {get;set;}</maml:para>
 				</maml:description>
 			</dev:type>
 			<maml:description></maml:description>
@@ -3190,7 +3240,7 @@ bc8e3220-0668-4f4b-... Datacenter01                                             
 	</command:details>
 	<maml:description>
 	<!--This is the Description section-->
-		<maml:para></maml:para>
+		<maml:para>Must invoked before any othet ProfitBricks CmdLet is used. Given credentials persist in current PowerShell session.</maml:para>
 	</maml:description>
 	<command:syntax>		<command:syntaxItem>
 			<maml:name>Open-PBApiService</maml:name>
@@ -3289,7 +3339,8 @@ bc8e3220-0668-4f4b-... Datacenter01                                             
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para></maml:para>
+			<maml:para>Use Close-PBApiService to clear credentials for current PowerShell session. You can give credentials using cleartext usernam and password or using PScredentials. Even if you use PScredentials the password ist used as cleartext password within the created APIsession object.
+Communication to the ProfitBricks API service is protected by SSL.</maml:para>
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -3345,7 +3396,7 @@ C:\PS&gt;			</maml:introduction>
 C:\PS&gt;			</maml:introduction>
   			<dev:code>Open-PBApiService test.user@email.domain NoMoreSecrets!</dev:code>
   			<dev:remarks>
-				<maml:para>Open the API using the given usernam and password credentials. It is also possible to use the parameters as possitional parameters(without -parametername).</maml:para>
+				<maml:para>Open the API using the given usernam and password credentials. It is also possible to use the parameters as possitional parameters (without -parametername).</maml:para>
 				<maml:para></maml:para>
 				<maml:para></maml:para>
 				<maml:para>
