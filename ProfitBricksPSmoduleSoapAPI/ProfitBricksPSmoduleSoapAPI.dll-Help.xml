@@ -123,7 +123,7 @@
 	</command:details>
 	<maml:description>
 	<!--This is the Description section-->
-		<maml:para>does invoke the soap methode clearDataCenter</maml:para>
+		<maml:para>does invoke the soap method clearDataCenter</maml:para>
 	</maml:description>
 	<command:syntax>		<command:syntaxItem>
 			<maml:name>Clear-PBDataCenter</maml:name>
@@ -186,7 +186,7 @@ requestId                  Property   string requestId {get;set;}</maml:para>
 	<maml:alertSet>
 		<maml:title></maml:title>
 		<maml:alert>
-			<maml:para>This will remove all ressources (servers, storages, netwoerks, loadbalancers) for the given datacenter. there is NO option to undo a clearDataCenter request. All data on the storages within the given datacenter will scurely delete and is lost!</maml:para>
+			<maml:para>This will remove all resources (servers, storages, networks, load balancers) for the given datacenter. there is NO option to undo a clearDataCenter request. All data on the storages within the given datacenter will securely delete and is lost!</maml:para>
 		</maml:alert>
 	</maml:alertSet>
 	<command:examples>
@@ -573,7 +573,7 @@ See also Example 1</maml:para>
 	<command:returnValues>
 		<command:returnValue>
 			<dev:type>
-				<maml:name>ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortTypeClien</maml:name>
+				<maml:name>ProfitbricksApiServicePortTypeClient</maml:name>
 				<maml:uri />
 				<maml:description>
 					<maml:para>Webservice object for ProfitBricks soap API</maml:para>
@@ -1783,15 +1783,14 @@ bc8e3220-0668-4f4b-... Datacenter01                                             
 	</command:details>
 	<maml:description>
 	<!--This is the Description section-->
-		<maml:para>does invoke the soap methode createDataCenter
+		<maml:para>does invoke the soap method createDataCenter
 
 Naming Restrictions
 Data center names cannot start with or contain (@, /, \, |, ‘’, ‘)
 
 Important Information about a Data Centers Region
 The default region is set according to the location stated in the registration process. You can set the region explicitly while creating a data center.
-Once set and applied, a data center&#39;s location cannot be changed anymore. Also, be aware that data centers from different regions are isolated from each other. It is not possible to move a data center or elements of a data center from one region to another. 
-</maml:para>
+Once set and applied, a data center&#39;s location cannot be changed anymore. Also, be aware that data centers from different regions are isolated from each other. It is not possible to move a data center or elements of a data center from one region to another.</maml:para>
 	</maml:description>
 	<command:syntax>		<command:syntaxItem>
 			<maml:name>New-PBDatacenter</maml:name>
