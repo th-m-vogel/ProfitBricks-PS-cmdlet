@@ -1,4 +1,38 @@
-﻿# Find the Windows Server 2012 Image in Europe Dcatacenter
+﻿########################################################################
+# Copyright 2013 Thomas Vogel
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+########################################################################
+
+####
+#
+# It is required to import the ProfitBricksSoapApi Powershell Module
+#
+# If the Module is not loaded by your PowerShell Profile
+# 1st load the Module using
+#
+# Import-Module [[PathTo]ProfitBricksSoapApi
+#
+####
+
+# For authentication in this sample script Pscredential are used 
+# and requested interactive at runtime
+$creds = Get-Credential -Message "ProfitBricks Account"
+# OPent the PBApiService using the given Credentials
+
+Open-PBApiService -Credentials $creds
+
+# Find the Windows Server 2012 Image in Europe Dcatacenter
 $hdd_image = Get-PBImages | where {$_.imagename -like "windows-2012-server*" -and $_.region -eq "EUROPE"}
 
 # create a new and empty Datacenter in Europe
