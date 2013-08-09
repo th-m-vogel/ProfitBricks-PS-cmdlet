@@ -37,6 +37,18 @@ Download the [ProfitBricksSoapApi.Zip-File](Psmodule.binary/ProfitBricksSoapApi.
 2. Place the resulting folder `ProfitBricksSoapApi` (does contain 3 Files) in `%SYSTEMROT%\System32\WindowsPowerShell\v1.0\Modules\` will make the module system wide availible (not recomendet)
 3. Place the resulting folder in any folder ouf your choice and extend the eviromet variable `PSModulePath` by this folder will make the module system wide availible. 
 
+### PSmodule load using manifest (prefered)
+
+If you use PowerShell v3 (Windows Server 2012 / Windows 8) and the module folder is placed in a directory listet in %PSModulePath=%, the module will be availible without additional effort.
+
+If you use PowerShell v2 (Windows Server 2008 / Windows Vista) and the module folder is placed in a directory listet in %PSModulePath=%, load the module using:
+
+	Import-Module ProfitBricksSoapApi [-verbose]
+
+If you use PowerShell v2 (Windows Server 2008 / Windows Vista) and the module folder is NOT placed in a directory listet in %PSModulePath=%, load the module using: 
+
+	Import-Module -name "Path_To\ProfitBricksSoapApi" [-verbose]
+
 ## Usage
 Initialise the API:
 
