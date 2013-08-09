@@ -25,10 +25,6 @@ Load the Module:
 
 	Import-Module -name "Path_To\ProfitBricksPSmoduleSoapAPI.dll" [-verbose]
 
-### PSmodule load using manifest (prefered)
-
-	Import-Module -name "Path_To\ProfitBricksSoapApi.psd1" [-verbose]
-
 ### Module installation
 
 Download the [ProfitBricksSoapApi.Zip-File](Psmodule.binary/ProfitBricksSoapApi.zip?raw=true) and extract all. Use one of the followimg options to make the module availible for PowerShell:
