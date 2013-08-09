@@ -39,9 +39,11 @@ $hdd_image = Get-PBImages | where {$_.imagename -like "windows-2012-server*" -an
 $new_dc = New-PBDatacenter -dataCenterName "My New datacenter" -Region EUROPE
 
 # create a new 30 Gig Storage based on the above selected Image
+# and set the initial password
 $new_disc = New-PBStorage -size 30 -dataCenterId $new_dc.dataCenterId -storageName "Disk1" -mountImageId $hdd_image.imageId -profitBricksImagePassword "ExtremeSecret"
 
 # Create a Server
+#    inside the newly created Datacenter
 #    2 Cores
 #    2 Gig RAM
 #      using the above created Disk
@@ -54,6 +56,7 @@ do {
         write-host -NoNewline "." 
         start-sleep -s 10
 } while ((Get-PBDatacenterState -dataCenterId $new_dc.dataCenterId) -ne "AVAILABLE")
+write-host " done!"
 
 # get server information after provisioning
 $new_server = Get-PBServer -serverId $new_server.serverId

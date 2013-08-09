@@ -31,7 +31,7 @@ Load the Module:
 
 ### Module installation
 
-Download the [ProfitBricksSoapApi.Zip-File](Psmodule.binary/ProfitBricksSoapApi.zip?raw=true) and extract all.
+Download the [ProfitBricksSoapApi.Zip-File](Psmodule.binary/ProfitBricksSoapApi.zip?raw=true) and extract all. Use one of the followimg options to make the module availible for PowerShell:
 
 1. Place the resulting folder `ProfitBricksSoapApi` (does contain 3 Files) in `%USERPROFILE%\Documents\WindowsPowerShell\Modules\` will auto load the module on PowerShell start for the User.
 2. Place the resulting folder `ProfitBricksSoapApi` (does contain 3 Files) in `%SYSTEMROT%\System32\WindowsPowerShell\v1.0\Modules\` will make the module system wide availible (not recomendet)
