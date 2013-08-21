@@ -1858,12 +1858,12 @@ If set to DEFAULT or left empty, data center will be created in the default regi
 				<maml:description>
 					<maml:para>Name                       MemberType Definition
 ----                       ---------- ----------
-dataCenterId               Property   string dataCenterId {get;set;}
-dataCenterVersion          Property   int dataCenterVersion {get;set;}
-dataCenterVersionSpecified Property   bool dataCenterVersionSpecified {get;set;}
-region                     Property   ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.region region {get;set;}
-regionSpecified            Property   bool regionSpecified {get;set;}
-requestId                  Property   string requestId {get;set;}</maml:para>
+dataCenterId               Property   string dataCenterId {get;}
+dataCenterVersion          Property   int dataCenterVersion {get;}
+dataCenterVersionSpecified Property   bool dataCenterVersionSpecified {get;}
+region                     Property   ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.region region {get;}
+regionSpecified            Property   bool regionSpecified {get;}
+requestId                  Property   string requestId {get;}</maml:para>
 				</maml:description>
 			</dev:type>
 			<maml:description></maml:description>

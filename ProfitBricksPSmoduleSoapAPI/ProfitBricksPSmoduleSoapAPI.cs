@@ -31,9 +31,16 @@ namespace ProfitBricksPSmoduleSoapAPI
     {
         protected void WriteObjects(IEnumerable objects)
         {
-            foreach (var obj in objects)
+            if (objects == null)
             {
-                WriteObject(obj);
+                this.WriteObject(null);
+            }
+            else
+            {
+                foreach (var obj in objects)
+                {
+                    WriteObject(obj);
+                }
             }
         }
 
