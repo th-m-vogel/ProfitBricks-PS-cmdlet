@@ -116,6 +116,19 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         )]
         public bool? ramHotPlug;
 
+        [Parameter(
+            Position = 6,
+            Mandatory = false
+        )]
+        public bool? nicHotPlug;
+
+        [Parameter(
+            Position = 7,
+            Mandatory = false
+        )]
+        public bool? nicHotUnPlug;
+
+
         protected override void ProcessRecord()
         {
             updateSnapshotRequest Request = new updateSnapshotRequest();
@@ -124,10 +137,12 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
                 !bootable.HasValue &&
                 !osType.HasValue &&
                 !cpuHotPlug.HasValue &&
-                !ramHotPlug.HasValue
+                !ramHotPlug.HasValue &&
+                !nicHotPlug.HasValue &&
+                !nicHotUnPlug.HasValue
                 )
             {
-                throw new System.ArgumentException("at leat on of the following parameters must have a valid value: snapshotName, description, bootable, osType, cpuHotPlug, ramHotPlug");
+                throw new System.ArgumentException("at leat on of the following parameters must have a valid value: snapshotName, description, bootable, osType, cpuHotPlug, ramHotPlug, nicHotPlug, nicHotUnPlug");
             }
             Request.snapshotId = snapshotID;
             Request.description = description;
@@ -151,6 +166,16 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             {
                 Request.ramHotPlug = (bool)ramHotPlug;
                 Request.ramHotPlugSpecified = true;
+            }
+            if (nicHotPlug.HasValue)
+            {
+                Request.nicHotPlug = (bool)nicHotPlug;
+                Request.nicHotPlugSpecified = true;
+            }
+            if (nicHotUnPlug.HasValue)
+            {
+                Request.nicHotUnPlug = (bool)nicHotUnPlug;
+                Request.nicHotUnPlugSpecified = true;
             }
 
             this.WriteObject(PBApi.Service.updateSnapshot(Request));
