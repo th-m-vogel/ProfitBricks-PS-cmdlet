@@ -51,6 +51,25 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
     }
     #endregion
 
+    #region Get_PBSnapshot
+    [Cmdlet(VerbsCommon.Get, "PBSnapshot")]
+    public class Get_PBSnapshot : PBapiPSCmdlet
+    {
+        [Parameter(
+            Position = 0,
+            Mandatory = true,
+            ValueFromPipeline = true,
+            ValueFromPipelineByPropertyName = true
+        )]
+        public string snapshotID;
+
+        protected override void ProcessRecord()
+        {
+            this.WriteObject(PBApi.Service.getSnapshot(snapshotID));
+        }
+    }
+    #endregion
+
     #region Set_PBSnapshot
     [Cmdlet(VerbsCommon.Set, "PBSnapshot")]
     public class Set_PBSnapshot : PBapiPSCmdlet

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws.api.profitbricks.com/" name="ProfitbricksApiService" targetNamespace="http://ws.api.profitbricks.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://ws.api.profitbricks.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ProfitbricksApiService" targetNamespace="http://ws.api.profitbricks.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="ProfitbricksApiServicePortBinding_MTOM_Policy">
+    <ns1:OptimizedMimeSerialization wsp:Optional="true" xmlns:ns1="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+  </wsp:Policy>
   <types>
     <xs:schema targetNamespace="http://ws.api.profitbricks.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
       <xs:element name="ProfitbricksServiceFault" type="tns:ProfitbricksServiceFault" />
@@ -61,6 +64,7 @@
       <xs:element name="deregisterServersOnLoadBalancerResponse" type="tns:deregisterServersOnLoadBalancerResponse" />
       <xs:element name="disconnectStorageFromServer" type="tns:disconnectStorageFromServer" />
       <xs:element name="disconnectStorageFromServerResponse" type="tns:disconnectStorageFromServerResponse" />
+      <xs:element name="firewallRule" type="tns:firewallRule" />
       <xs:element name="getAllDataCenters" type="tns:getAllDataCenters" />
       <xs:element name="getAllDataCentersResponse" type="tns:getAllDataCentersResponse" />
       <xs:element name="getAllImages" type="tns:getAllImages" />
@@ -85,6 +89,8 @@
       <xs:element name="getNotificationsResponse" type="tns:getNotificationsResponse" />
       <xs:element name="getServer" type="tns:getServer" />
       <xs:element name="getServerResponse" type="tns:getServerResponse" />
+      <xs:element name="getSnapshot" type="tns:getSnapshot" />
+      <xs:element name="getSnapshotResponse" type="tns:getSnapshotResponse" />
       <xs:element name="getStorage" type="tns:getStorage" />
       <xs:element name="getStorageResponse" type="tns:getStorageResponse" />
       <xs:element name="registerServersOnLoadBalancer" type="tns:registerServersOnLoadBalancer" />
@@ -235,6 +241,7 @@
           <xs:element minOccurs="0" name="icmpType" type="xs:int" />
           <xs:element minOccurs="0" name="portRangeEnd" type="xs:int" />
           <xs:element minOccurs="0" name="portRangeStart" type="xs:int" />
+          <xs:element minOccurs="0" name="protocol" type="tns:protocol" />
           <xs:element minOccurs="0" name="sourceIp" type="xs:string" />
           <xs:element minOccurs="0" name="sourceMac" type="xs:string" />
           <xs:element minOccurs="0" name="targetIp" type="xs:string" />
@@ -365,6 +372,16 @@
           <xs:element minOccurs="0" name="return" type="tns:versionResponse" />
         </xs:sequence>
       </xs:complexType>
+      <xs:complexType name="getFirewall">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="firewallId" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getFirewallResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:firewall" />
+        </xs:sequence>
+      </xs:complexType>
       <xs:complexType name="deactivateLoadBalancingOnServers">
         <xs:sequence>
           <xs:element minOccurs="0" name="loadBalancerId" type="xs:string" />
@@ -374,16 +391,6 @@
       <xs:complexType name="deactivateLoadBalancingOnServersResponse">
         <xs:sequence>
           <xs:element minOccurs="0" name="return" type="tns:versionResponse" />
-        </xs:sequence>
-      </xs:complexType>
-      <xs:complexType name="getFirewall">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="firewallId" type="xs:string" />
-        </xs:sequence>
-      </xs:complexType>
-      <xs:complexType name="getFirewallResponse">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="return" type="tns:firewall" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="getAllImages">
@@ -439,16 +446,6 @@
           <xs:element minOccurs="0" name="return" type="tns:versionResponse" />
         </xs:sequence>
       </xs:complexType>
-      <xs:complexType name="stopServer">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="serverId" type="xs:string" />
-        </xs:sequence>
-      </xs:complexType>
-      <xs:complexType name="stopServerResponse">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="return" type="tns:requestResponse" />
-        </xs:sequence>
-      </xs:complexType>
       <xs:complexType name="updateServer">
         <xs:sequence>
           <xs:element minOccurs="0" name="request" type="tns:updateServerRequest" />
@@ -469,6 +466,16 @@
       <xs:complexType name="updateServerResponse">
         <xs:sequence>
           <xs:element minOccurs="0" name="return" type="tns:versionResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="stopServer">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="serverId" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="stopServerResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:requestResponse" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="disconnectStorageFromServer">
@@ -566,6 +573,27 @@
           <xs:element minOccurs="0" name="return" type="tns:versionResponse" />
         </xs:sequence>
       </xs:complexType>
+      <xs:complexType name="getAllPublicIpBlocks">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="getAllPublicIpBlocksResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ipBlock" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ipBlock">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="blockId" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="publicIps" nillable="true" type="tns:publicIp" />
+          <xs:element minOccurs="0" name="region" type="tns:region" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="publicIp">
+        <xs:sequence>
+          <xs:element name="ip" type="xs:string" />
+          <xs:element minOccurs="0" name="nicId" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
       <xs:complexType name="createLoadBalancer">
         <xs:sequence>
           <xs:element minOccurs="0" name="request" type="tns:createLbRequest" />
@@ -595,25 +623,27 @@
           </xs:extension>
         </xs:complexContent>
       </xs:complexType>
-      <xs:complexType name="getAllPublicIpBlocks">
-        <xs:sequence />
-      </xs:complexType>
-      <xs:complexType name="getAllPublicIpBlocksResponse">
+      <xs:complexType name="updateSnapshot">
         <xs:sequence>
-          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ipBlock" />
+          <xs:element minOccurs="0" name="request" type="tns:updateSnapshotRequest" />
         </xs:sequence>
       </xs:complexType>
-      <xs:complexType name="ipBlock">
+      <xs:complexType name="updateSnapshotRequest">
         <xs:sequence>
-          <xs:element minOccurs="0" name="blockId" type="xs:string" />
-          <xs:element minOccurs="0" maxOccurs="unbounded" name="publicIps" nillable="true" type="tns:publicIp" />
-          <xs:element minOccurs="0" name="region" type="tns:region" />
+          <xs:element name="snapshotId" type="xs:string" />
+          <xs:element minOccurs="0" name="description" type="xs:string" />
+          <xs:element minOccurs="0" name="snapshotName" type="xs:string" />
+          <xs:element minOccurs="0" name="bootable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="osType" type="tns:osType" />
+          <xs:element minOccurs="0" name="cpuHotPlug" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ramHotPlug" type="xs:boolean" />
+          <xs:element minOccurs="0" name="nicHotPlug" type="xs:boolean" />
+          <xs:element minOccurs="0" name="nicHotUnPlug" type="xs:boolean" />
         </xs:sequence>
       </xs:complexType>
-      <xs:complexType name="publicIp">
+      <xs:complexType name="updateSnapshotResponse">
         <xs:sequence>
-          <xs:element name="ip" type="xs:string" />
-          <xs:element minOccurs="0" name="nicId" type="xs:string" />
+          <xs:element minOccurs="0" name="return" type="tns:requestResponse" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="updateStorage">
@@ -632,27 +662,6 @@
       <xs:complexType name="updateStorageResponse">
         <xs:sequence>
           <xs:element minOccurs="0" name="return" type="tns:versionResponse" />
-        </xs:sequence>
-      </xs:complexType>
-      <xs:complexType name="updateSnapshot">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="request" type="tns:updateSnapshotRequest" />
-        </xs:sequence>
-      </xs:complexType>
-      <xs:complexType name="updateSnapshotRequest">
-        <xs:sequence>
-          <xs:element name="snapshotId" type="xs:string" />
-          <xs:element minOccurs="0" name="description" type="xs:string" />
-          <xs:element minOccurs="0" name="snapshotName" type="xs:string" />
-          <xs:element minOccurs="0" name="bootable" type="xs:boolean" />
-          <xs:element minOccurs="0" name="osType" type="tns:osType" />
-          <xs:element minOccurs="0" name="cpuHotPlug" type="xs:boolean" />
-          <xs:element minOccurs="0" name="ramHotPlug" type="xs:boolean" />
-        </xs:sequence>
-      </xs:complexType>
-      <xs:complexType name="updateSnapshotResponse">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="return" type="tns:requestResponse" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="getLoadBalancer">
@@ -772,6 +781,8 @@
               <xs:element minOccurs="0" name="osType" type="tns:osType" />
               <xs:element minOccurs="0" name="cpuHotPlug" type="xs:boolean" />
               <xs:element minOccurs="0" name="ramHotPlug" type="xs:boolean" />
+              <xs:element minOccurs="0" name="nicHotPlug" type="xs:boolean" />
+              <xs:element minOccurs="0" name="nicHotUnPlug" type="xs:boolean" />
               <xs:element name="region" type="tns:region" />
             </xs:sequence>
           </xs:extension>
@@ -1039,6 +1050,16 @@
           <xs:element minOccurs="0" name="return" type="tns:versionResponse" />
         </xs:sequence>
       </xs:complexType>
+      <xs:complexType name="getSnapshot">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="snapshotId" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getSnapshotResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:snapshot" />
+        </xs:sequence>
+      </xs:complexType>
       <xs:complexType name="connectStorageToServer">
         <xs:sequence>
           <xs:element minOccurs="0" name="request" type="tns:connectStorageRequest" />
@@ -1088,16 +1109,6 @@
           <xs:element minOccurs="0" name="message" type="xs:string" />
         </xs:sequence>
       </xs:complexType>
-      <xs:complexType name="getDataCenterState">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="dataCenterId" type="xs:string" />
-        </xs:sequence>
-      </xs:complexType>
-      <xs:complexType name="getDataCenterStateResponse">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="return" type="tns:provisioningState" />
-        </xs:sequence>
-      </xs:complexType>
       <xs:complexType name="clearDataCenter">
         <xs:sequence>
           <xs:element minOccurs="0" name="dataCenterId" type="xs:string" />
@@ -1106,6 +1117,16 @@
       <xs:complexType name="clearDataCenterResponse">
         <xs:sequence>
           <xs:element minOccurs="0" name="return" type="tns:versionResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getDataCenterState">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dataCenterId" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getDataCenterStateResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:provisioningState" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="setImageOsType">
@@ -1163,6 +1184,14 @@
           <xs:enumeration value="SERVICE_UNAVAILABLE" />
         </xs:restriction>
       </xs:simpleType>
+      <xs:simpleType name="protocol">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="TCP" />
+          <xs:enumeration value="UDP" />
+          <xs:enumeration value="ICMP" />
+          <xs:enumeration value="ANY" />
+        </xs:restriction>
+      </xs:simpleType>
       <xs:simpleType name="provisioningState">
         <xs:restriction base="xs:string">
           <xs:enumeration value="INACTIVE" />
@@ -1218,14 +1247,6 @@
           <xs:enumeration value="CDROM" />
         </xs:restriction>
       </xs:simpleType>
-      <xs:simpleType name="protocol">
-        <xs:restriction base="xs:string">
-          <xs:enumeration value="TCP" />
-          <xs:enumeration value="UDP" />
-          <xs:enumeration value="ICMP" />
-          <xs:enumeration value="ANY" />
-        </xs:restriction>
-      </xs:simpleType>
       <xs:simpleType name="loadBalancerAlgorithm">
         <xs:restriction base="xs:string">
           <xs:enumeration value="ROUND_ROBIN" />
@@ -1250,272 +1271,14 @@
       </xs:simpleType>
     </xs:schema>
   </types>
-  <message name="getServer">
-    <part name="parameters" element="tns:getServer" />
-  </message>
-  <message name="getServerResponse">
-    <part name="parameters" element="tns:getServerResponse" />
-  </message>
-  <message name="ProfitbricksServiceFault">
-    <part name="fault" element="tns:ProfitbricksServiceFault" />
-  </message>
-  <message name="getImage">
-    <part name="parameters" element="tns:getImage" />
-  </message>
-  <message name="getImageResponse">
-    <part name="parameters" element="tns:getImageResponse" />
-  </message>
-  <message name="deactivateFirewalls">
-    <part name="parameters" element="tns:deactivateFirewalls" />
-  </message>
-  <message name="deactivateFirewallsResponse">
-    <part name="parameters" element="tns:deactivateFirewallsResponse" />
-  </message>
-  <message name="activateFirewalls">
-    <part name="parameters" element="tns:activateFirewalls" />
-  </message>
-  <message name="activateFirewallsResponse">
-    <part name="parameters" element="tns:activateFirewallsResponse" />
-  </message>
-  <message name="deleteStorage">
-    <part name="parameters" element="tns:deleteStorage" />
-  </message>
-  <message name="deleteStorageResponse">
-    <part name="parameters" element="tns:deleteStorageResponse" />
-  </message>
-  <message name="resetServer">
-    <part name="parameters" element="tns:resetServer" />
-  </message>
-  <message name="resetServerResponse">
-    <part name="parameters" element="tns:resetServerResponse" />
-  </message>
-  <message name="releasePublicIpBlock">
-    <part name="parameters" element="tns:releasePublicIpBlock" />
-  </message>
-  <message name="releasePublicIpBlockResponse">
-    <part name="parameters" element="tns:releasePublicIpBlockResponse" />
-  </message>
-  <message name="addFirewallRulesToNic">
-    <part name="parameters" element="tns:addFirewallRulesToNic" />
-  </message>
-  <message name="addFirewallRulesToNicResponse">
-    <part name="parameters" element="tns:addFirewallRulesToNicResponse" />
-  </message>
-  <message name="setImageOsType">
-    <part name="parameters" element="tns:setImageOsType" />
-  </message>
-  <message name="setImageOsTypeResponse">
-    <part name="parameters" element="tns:setImageOsTypeResponse" />
-  </message>
-  <message name="updateServer">
-    <part name="parameters" element="tns:updateServer" />
-  </message>
-  <message name="updateServerResponse">
-    <part name="parameters" element="tns:updateServerResponse" />
-  </message>
-  <message name="createLoadBalancer">
-    <part name="parameters" element="tns:createLoadBalancer" />
-  </message>
-  <message name="createLoadBalancerResponse">
-    <part name="parameters" element="tns:createLoadBalancerResponse" />
-  </message>
-  <message name="deregisterServersOnLoadBalancer">
-    <part name="parameters" element="tns:deregisterServersOnLoadBalancer" />
-  </message>
-  <message name="deregisterServersOnLoadBalancerResponse">
-    <part name="parameters" element="tns:deregisterServersOnLoadBalancerResponse" />
-  </message>
-  <message name="registerServersOnLoadBalancer">
-    <part name="parameters" element="tns:registerServersOnLoadBalancer" />
-  </message>
-  <message name="registerServersOnLoadBalancerResponse">
-    <part name="parameters" element="tns:registerServersOnLoadBalancerResponse" />
-  </message>
-  <message name="activateLoadBalancingOnServers">
-    <part name="parameters" element="tns:activateLoadBalancingOnServers" />
-  </message>
-  <message name="activateLoadBalancingOnServersResponse">
-    <part name="parameters" element="tns:activateLoadBalancingOnServersResponse" />
-  </message>
-  <message name="createNic">
-    <part name="parameters" element="tns:createNic" />
-  </message>
-  <message name="createNicResponse">
-    <part name="parameters" element="tns:createNicReturn" />
-  </message>
-  <message name="deleteSnapshot">
-    <part name="parameters" element="tns:deleteSnapshot" />
-  </message>
-  <message name="deleteSnapshotResponse">
-    <part name="parameters" element="tns:deleteSnapshotResponse" />
-  </message>
-  <message name="startServer">
-    <part name="parameters" element="tns:startServer" />
-  </message>
-  <message name="startServerResponse">
-    <part name="parameters" element="tns:startServerResponse" />
-  </message>
-  <message name="removePublicIpFromNic">
-    <part name="parameters" element="tns:removePublicIpFromNic" />
-  </message>
-  <message name="removePublicIpFromNicResponse">
-    <part name="parameters" element="tns:removePublicIpFromNicResponse" />
-  </message>
-  <message name="updateNic">
-    <part name="parameters" element="tns:updateNic" />
-  </message>
-  <message name="updateNicResponse">
-    <part name="parameters" element="tns:updateNicResponse" />
-  </message>
-  <message name="reservePublicIpBlock">
-    <part name="parameters" element="tns:reservePublicIpBlock" />
-  </message>
-  <message name="reservePublicIpBlockResponse">
-    <part name="parameters" element="tns:reservePublicIpBlockResponse" />
-  </message>
-  <message name="getNic">
-    <part name="parameters" element="tns:getNic" />
-  </message>
-  <message name="getNicResponse">
-    <part name="parameters" element="tns:getNicResponse" />
-  </message>
-  <message name="createStorage">
-    <part name="parameters" element="tns:createStorage" />
-  </message>
-  <message name="createStorageResponse">
-    <part name="parameters" element="tns:createStorageReturn" />
-  </message>
-  <message name="stopServer">
-    <part name="parameters" element="tns:stopServer" />
-  </message>
-  <message name="stopServerResponse">
-    <part name="parameters" element="tns:stopServerResponse" />
-  </message>
-  <message name="createSnapshot">
-    <part name="parameters" element="tns:createSnapshot" />
-  </message>
-  <message name="createSnapshotResponse">
-    <part name="parameters" element="tns:createSnapshotReturn" />
-  </message>
-  <message name="deleteLoadBalancer">
-    <part name="parameters" element="tns:deleteLoadBalancer" />
-  </message>
-  <message name="deleteLoadBalancerResponse">
-    <part name="parameters" element="tns:deleteLoadBalancerResponse" />
-  </message>
-  <message name="setInternetAccess">
-    <part name="parameters" element="tns:setInternetAccess" />
-  </message>
-  <message name="setInternetAccessResponse">
-    <part name="parameters" element="tns:setInternetAccessResponse" />
-  </message>
-  <message name="addFirewallRulesToLoadBalancer">
-    <part name="parameters" element="tns:addFirewallRulesToLoadBalancer" />
-  </message>
-  <message name="addFirewallRulesToLoadBalancerResponse">
-    <part name="parameters" element="tns:addFirewallRulesToLoadBalancerResponse" />
-  </message>
-  <message name="deleteNic">
-    <part name="parameters" element="tns:deleteNic" />
-  </message>
-  <message name="deleteNicResponse">
-    <part name="parameters" element="tns:deleteNicResponse" />
-  </message>
-  <message name="deleteServer">
-    <part name="parameters" element="tns:deleteServer" />
-  </message>
-  <message name="deleteServerResponse">
-    <part name="parameters" element="tns:deleteServerResponse" />
-  </message>
-  <message name="deleteFirewalls">
-    <part name="parameters" element="tns:deleteFirewalls" />
-  </message>
-  <message name="deleteFirewallsResponse">
-    <part name="parameters" element="tns:deleteFirewallsResponse" />
-  </message>
-  <message name="updateStorage">
-    <part name="parameters" element="tns:updateStorage" />
-  </message>
-  <message name="updateStorageResponse">
-    <part name="parameters" element="tns:updateStorageResponse" />
-  </message>
-  <message name="removeFirewallRules">
-    <part name="parameters" element="tns:removeFirewallRules" />
-  </message>
-  <message name="removeFirewallRulesResponse">
-    <part name="parameters" element="tns:removeFirewallRulesResponse" />
-  </message>
-  <message name="deactivateLoadBalancingOnServers">
-    <part name="parameters" element="tns:deactivateLoadBalancingOnServers" />
-  </message>
-  <message name="deactivateLoadBalancingOnServersResponse">
-    <part name="parameters" element="tns:deactivateLoadBalancingOnServersResponse" />
-  </message>
-  <message name="updateSnapshot">
-    <part name="parameters" element="tns:updateSnapshot" />
-  </message>
-  <message name="updateSnapshotResponse">
-    <part name="parameters" element="tns:updateSnapshotResponse" />
-  </message>
-  <message name="updateLoadBalancer">
-    <part name="parameters" element="tns:updateLoadBalancer" />
-  </message>
-  <message name="updateLoadBalancerResponse">
-    <part name="parameters" element="tns:updateLoadBalancerResponse" />
-  </message>
-  <message name="createServer">
-    <part name="parameters" element="tns:createServer" />
-  </message>
-  <message name="createServerResponse">
-    <part name="parameters" element="tns:createServerReturn" />
-  </message>
-  <message name="getAllImages">
-    <part name="parameters" element="tns:getAllImages" />
-  </message>
-  <message name="getAllImagesResponse">
-    <part name="parameters" element="tns:getAllImagesResponse" />
-  </message>
-  <message name="getStorage">
-    <part name="parameters" element="tns:getStorage" />
-  </message>
-  <message name="getStorageResponse">
-    <part name="parameters" element="tns:getStorageResponse" />
-  </message>
-  <message name="addPublicIpToNic">
-    <part name="parameters" element="tns:addPublicIpToNic" />
-  </message>
-  <message name="addPublicIpToNicResponse">
-    <part name="parameters" element="tns:addPublicIpToNicResponse" />
-  </message>
-  <message name="getAllPublicIpBlocks">
-    <part name="parameters" element="tns:getAllPublicIpBlocks" />
-  </message>
-  <message name="getAllPublicIpBlocksResponse">
-    <part name="parameters" element="tns:getAllPublicIpBlocksResponse" />
-  </message>
-  <message name="getLoadBalancer">
-    <part name="parameters" element="tns:getLoadBalancer" />
-  </message>
-  <message name="getLoadBalancerResponse">
-    <part name="parameters" element="tns:getLoadBalancerResponse" />
-  </message>
-  <message name="getFirewall">
-    <part name="parameters" element="tns:getFirewall" />
-  </message>
-  <message name="getFirewallResponse">
-    <part name="parameters" element="tns:getFirewallResponse" />
-  </message>
-  <message name="getNotifications">
-    <part name="parameters" element="tns:getNotifications" />
-  </message>
-  <message name="getNotificationsResponse">
-    <part name="parameters" element="tns:getNotificationsResponse" />
-  </message>
   <message name="createDataCenter">
     <part name="parameters" element="tns:createDataCenter" />
   </message>
   <message name="createDataCenterResponse">
     <part name="parameters" element="tns:createDataCenterResponse" />
+  </message>
+  <message name="ProfitbricksServiceFault">
+    <part name="fault" element="tns:ProfitbricksServiceFault" />
   </message>
   <message name="updateDataCenter">
     <part name="parameters" element="tns:updateDataCenter" />
@@ -1541,6 +1304,96 @@
   <message name="getAllDataCentersResponse">
     <part name="parameters" element="tns:getAllDataCentersResponse" />
   </message>
+  <message name="createServer">
+    <part name="parameters" element="tns:createServer" />
+  </message>
+  <message name="createServerResponse">
+    <part name="parameters" element="tns:createServerReturn" />
+  </message>
+  <message name="updateServer">
+    <part name="parameters" element="tns:updateServer" />
+  </message>
+  <message name="updateServerResponse">
+    <part name="parameters" element="tns:updateServerResponse" />
+  </message>
+  <message name="deleteServer">
+    <part name="parameters" element="tns:deleteServer" />
+  </message>
+  <message name="deleteServerResponse">
+    <part name="parameters" element="tns:deleteServerResponse" />
+  </message>
+  <message name="stopServer">
+    <part name="parameters" element="tns:stopServer" />
+  </message>
+  <message name="stopServerResponse">
+    <part name="parameters" element="tns:stopServerResponse" />
+  </message>
+  <message name="startServer">
+    <part name="parameters" element="tns:startServer" />
+  </message>
+  <message name="startServerResponse">
+    <part name="parameters" element="tns:startServerResponse" />
+  </message>
+  <message name="resetServer">
+    <part name="parameters" element="tns:resetServer" />
+  </message>
+  <message name="resetServerResponse">
+    <part name="parameters" element="tns:resetServerResponse" />
+  </message>
+  <message name="getServer">
+    <part name="parameters" element="tns:getServer" />
+  </message>
+  <message name="getServerResponse">
+    <part name="parameters" element="tns:getServerResponse" />
+  </message>
+  <message name="createNic">
+    <part name="parameters" element="tns:createNic" />
+  </message>
+  <message name="createNicResponse">
+    <part name="parameters" element="tns:createNicReturn" />
+  </message>
+  <message name="deleteNic">
+    <part name="parameters" element="tns:deleteNic" />
+  </message>
+  <message name="deleteNicResponse">
+    <part name="parameters" element="tns:deleteNicResponse" />
+  </message>
+  <message name="updateNic">
+    <part name="parameters" element="tns:updateNic" />
+  </message>
+  <message name="updateNicResponse">
+    <part name="parameters" element="tns:updateNicResponse" />
+  </message>
+  <message name="getNic">
+    <part name="parameters" element="tns:getNic" />
+  </message>
+  <message name="getNicResponse">
+    <part name="parameters" element="tns:getNicResponse" />
+  </message>
+  <message name="setInternetAccess">
+    <part name="parameters" element="tns:setInternetAccess" />
+  </message>
+  <message name="setInternetAccessResponse">
+    <part name="parameters" element="tns:setInternetAccessResponse" />
+  </message>
+  <message name="createStorage">
+    <part name="parameters" element="tns:createStorage" />
+  </message>
+  <message name="createStorageResponse">
+    <part name="parameters" element="tns:createStorageReturn" />
+  </message>
+  <message name="updateStorage">
+    <part name="parameters" element="tns:updateStorage" />
+  </message>
+  <message name="updateStorageResponse">
+    <part name="parameters" element="tns:updateStorageResponse" />
+  </message>
+  <message name="deleteStorage">
+    <part name="parameters" element="tns:deleteStorage" />
+  </message>
+  <message name="deleteStorageResponse">
+    <part name="parameters" element="tns:deleteStorageResponse" />
+  </message>
   <message name="connectStorageToServer">
     <part name="parameters" element="tns:connectStorageToServer" />
   </message>
@@ -1552,6 +1405,18 @@
   </message>
   <message name="disconnectStorageFromServerResponse">
     <part name="parameters" element="tns:disconnectStorageFromServerResponse" />
+  </message>
+  <message name="getAllImages">
+    <part name="parameters" element="tns:getAllImages" />
+  </message>
+  <message name="getAllImagesResponse">
+    <part name="parameters" element="tns:getAllImagesResponse" />
+  </message>
+  <message name="setImageOsType">
+    <part name="parameters" element="tns:setImageOsType" />
+  </message>
+  <message name="setImageOsTypeResponse">
+    <part name="parameters" element="tns:setImageOsTypeResponse" />
   </message>
   <message name="addRomDriveToServer">
     <part name="parameters" element="tns:addRomDriveToServer" />
@@ -1565,6 +1430,12 @@
   <message name="removeRomDriveFromServerResponse">
     <part name="parameters" element="tns:removeRomDriveFromServerResponse" />
   </message>
+  <message name="getImage">
+    <part name="parameters" element="tns:getImage" />
+  </message>
+  <message name="getImageResponse">
+    <part name="parameters" element="tns:getImageResponse" />
+  </message>
   <message name="getDataCenter">
     <part name="parameters" element="tns:getDataCenter" />
   </message>
@@ -1577,17 +1448,173 @@
   <message name="getDataCenterStateResponse">
     <part name="parameters" element="tns:getDataCenterStateResponse" />
   </message>
+  <message name="getStorage">
+    <part name="parameters" element="tns:getStorage" />
+  </message>
+  <message name="getStorageResponse">
+    <part name="parameters" element="tns:getStorageResponse" />
+  </message>
+  <message name="reservePublicIpBlock">
+    <part name="parameters" element="tns:reservePublicIpBlock" />
+  </message>
+  <message name="reservePublicIpBlockResponse">
+    <part name="parameters" element="tns:reservePublicIpBlockResponse" />
+  </message>
+  <message name="releasePublicIpBlock">
+    <part name="parameters" element="tns:releasePublicIpBlock" />
+  </message>
+  <message name="releasePublicIpBlockResponse">
+    <part name="parameters" element="tns:releasePublicIpBlockResponse" />
+  </message>
+  <message name="addPublicIpToNic">
+    <part name="parameters" element="tns:addPublicIpToNic" />
+  </message>
+  <message name="addPublicIpToNicResponse">
+    <part name="parameters" element="tns:addPublicIpToNicResponse" />
+  </message>
+  <message name="removePublicIpFromNic">
+    <part name="parameters" element="tns:removePublicIpFromNic" />
+  </message>
+  <message name="removePublicIpFromNicResponse">
+    <part name="parameters" element="tns:removePublicIpFromNicResponse" />
+  </message>
+  <message name="getAllPublicIpBlocks">
+    <part name="parameters" element="tns:getAllPublicIpBlocks" />
+  </message>
+  <message name="getAllPublicIpBlocksResponse">
+    <part name="parameters" element="tns:getAllPublicIpBlocksResponse" />
+  </message>
+  <message name="createLoadBalancer">
+    <part name="parameters" element="tns:createLoadBalancer" />
+  </message>
+  <message name="createLoadBalancerResponse">
+    <part name="parameters" element="tns:createLoadBalancerResponse" />
+  </message>
+  <message name="updateLoadBalancer">
+    <part name="parameters" element="tns:updateLoadBalancer" />
+  </message>
+  <message name="updateLoadBalancerResponse">
+    <part name="parameters" element="tns:updateLoadBalancerResponse" />
+  </message>
+  <message name="deleteLoadBalancer">
+    <part name="parameters" element="tns:deleteLoadBalancer" />
+  </message>
+  <message name="deleteLoadBalancerResponse">
+    <part name="parameters" element="tns:deleteLoadBalancerResponse" />
+  </message>
+  <message name="getLoadBalancer">
+    <part name="parameters" element="tns:getLoadBalancer" />
+  </message>
+  <message name="getLoadBalancerResponse">
+    <part name="parameters" element="tns:getLoadBalancerResponse" />
+  </message>
+  <message name="registerServersOnLoadBalancer">
+    <part name="parameters" element="tns:registerServersOnLoadBalancer" />
+  </message>
+  <message name="registerServersOnLoadBalancerResponse">
+    <part name="parameters" element="tns:registerServersOnLoadBalancerResponse" />
+  </message>
+  <message name="deregisterServersOnLoadBalancer">
+    <part name="parameters" element="tns:deregisterServersOnLoadBalancer" />
+  </message>
+  <message name="deregisterServersOnLoadBalancerResponse">
+    <part name="parameters" element="tns:deregisterServersOnLoadBalancerResponse" />
+  </message>
+  <message name="activateLoadBalancingOnServers">
+    <part name="parameters" element="tns:activateLoadBalancingOnServers" />
+  </message>
+  <message name="activateLoadBalancingOnServersResponse">
+    <part name="parameters" element="tns:activateLoadBalancingOnServersResponse" />
+  </message>
+  <message name="deactivateLoadBalancingOnServers">
+    <part name="parameters" element="tns:deactivateLoadBalancingOnServers" />
+  </message>
+  <message name="deactivateLoadBalancingOnServersResponse">
+    <part name="parameters" element="tns:deactivateLoadBalancingOnServersResponse" />
+  </message>
+  <message name="addFirewallRulesToNic">
+    <part name="parameters" element="tns:addFirewallRulesToNic" />
+  </message>
+  <message name="addFirewallRulesToNicResponse">
+    <part name="parameters" element="tns:addFirewallRulesToNicResponse" />
+  </message>
+  <message name="addFirewallRulesToLoadBalancer">
+    <part name="parameters" element="tns:addFirewallRulesToLoadBalancer" />
+  </message>
+  <message name="addFirewallRulesToLoadBalancerResponse">
+    <part name="parameters" element="tns:addFirewallRulesToLoadBalancerResponse" />
+  </message>
+  <message name="removeFirewallRules">
+    <part name="parameters" element="tns:removeFirewallRules" />
+  </message>
+  <message name="removeFirewallRulesResponse">
+    <part name="parameters" element="tns:removeFirewallRulesResponse" />
+  </message>
+  <message name="activateFirewalls">
+    <part name="parameters" element="tns:activateFirewalls" />
+  </message>
+  <message name="activateFirewallsResponse">
+    <part name="parameters" element="tns:activateFirewallsResponse" />
+  </message>
+  <message name="deactivateFirewalls">
+    <part name="parameters" element="tns:deactivateFirewalls" />
+  </message>
+  <message name="deactivateFirewallsResponse">
+    <part name="parameters" element="tns:deactivateFirewallsResponse" />
+  </message>
+  <message name="deleteFirewalls">
+    <part name="parameters" element="tns:deleteFirewalls" />
+  </message>
+  <message name="deleteFirewallsResponse">
+    <part name="parameters" element="tns:deleteFirewallsResponse" />
+  </message>
+  <message name="getFirewall">
+    <part name="parameters" element="tns:getFirewall" />
+  </message>
+  <message name="getFirewallResponse">
+    <part name="parameters" element="tns:getFirewallResponse" />
+  </message>
   <message name="getAllSnapshots">
     <part name="parameters" element="tns:getAllSnapshots" />
   </message>
   <message name="getAllSnapshotsResponse">
     <part name="parameters" element="tns:getAllSnapshotsResponse" />
   </message>
+  <message name="updateSnapshot">
+    <part name="parameters" element="tns:updateSnapshot" />
+  </message>
+  <message name="updateSnapshotResponse">
+    <part name="parameters" element="tns:updateSnapshotResponse" />
+  </message>
+  <message name="getSnapshot">
+    <part name="parameters" element="tns:getSnapshot" />
+  </message>
+  <message name="getSnapshotResponse">
+    <part name="parameters" element="tns:getSnapshotResponse" />
+  </message>
+  <message name="createSnapshot">
+    <part name="parameters" element="tns:createSnapshot" />
+  </message>
+  <message name="createSnapshotResponse">
+    <part name="parameters" element="tns:createSnapshotReturn" />
+  </message>
+  <message name="deleteSnapshot">
+    <part name="parameters" element="tns:deleteSnapshot" />
+  </message>
+  <message name="deleteSnapshotResponse">
+    <part name="parameters" element="tns:deleteSnapshotResponse" />
+  </message>
   <message name="rollbackSnapshot">
     <part name="parameters" element="tns:rollbackSnapshot" />
   </message>
   <message name="rollbackSnapshotResponse">
     <part name="parameters" element="tns:rollbackSnapshotResponse" />
+  </message>
+  <message name="getNotifications">
+    <part name="parameters" element="tns:getNotifications" />
+  </message>
+  <message name="getNotificationsResponse">
+    <part name="parameters" element="tns:getNotificationsResponse" />
   </message>
   <message name="deleteNotifications">
     <part name="parameters" element="tns:deleteNotifications" />
@@ -1596,810 +1623,300 @@
     <part name="parameters" element="tns:deleteNotificationsResponse" />
   </message>
   <portType name="ProfitbricksApiServicePortType">
-    <operation name="getServer">
-      <input message="tns:getServer" />
-      <output message="tns:getServerResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="getImage">
-      <input message="tns:getImage" />
-      <output message="tns:getImageResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="deactivateFirewalls">
-      <input message="tns:deactivateFirewalls" />
-      <output message="tns:deactivateFirewallsResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="activateFirewalls">
-      <input message="tns:activateFirewalls" />
-      <output message="tns:activateFirewallsResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="deleteStorage">
-      <input message="tns:deleteStorage" />
-      <output message="tns:deleteStorageResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="resetServer">
-      <input message="tns:resetServer" />
-      <output message="tns:resetServerResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="releasePublicIpBlock">
-      <input message="tns:releasePublicIpBlock" />
-      <output message="tns:releasePublicIpBlockResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="addFirewallRulesToNic">
-      <input message="tns:addFirewallRulesToNic" />
-      <output message="tns:addFirewallRulesToNicResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="setImageOsType">
-      <input message="tns:setImageOsType" />
-      <output message="tns:setImageOsTypeResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="updateServer">
-      <input message="tns:updateServer" />
-      <output message="tns:updateServerResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="createLoadBalancer">
-      <input message="tns:createLoadBalancer" />
-      <output message="tns:createLoadBalancerResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="deregisterServersOnLoadBalancer">
-      <input message="tns:deregisterServersOnLoadBalancer" />
-      <output message="tns:deregisterServersOnLoadBalancerResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="registerServersOnLoadBalancer">
-      <input message="tns:registerServersOnLoadBalancer" />
-      <output message="tns:registerServersOnLoadBalancerResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="activateLoadBalancingOnServers">
-      <input message="tns:activateLoadBalancingOnServers" />
-      <output message="tns:activateLoadBalancingOnServersResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="createNic">
-      <input message="tns:createNic" />
-      <output message="tns:createNicResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="deleteSnapshot">
-      <input message="tns:deleteSnapshot" />
-      <output message="tns:deleteSnapshotResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="startServer">
-      <input message="tns:startServer" />
-      <output message="tns:startServerResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="removePublicIpFromNic">
-      <input message="tns:removePublicIpFromNic" />
-      <output message="tns:removePublicIpFromNicResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="updateNic">
-      <input message="tns:updateNic" />
-      <output message="tns:updateNicResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="reservePublicIpBlock">
-      <input message="tns:reservePublicIpBlock" />
-      <output message="tns:reservePublicIpBlockResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="getNic">
-      <input message="tns:getNic" />
-      <output message="tns:getNicResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="createStorage">
-      <input message="tns:createStorage" />
-      <output message="tns:createStorageResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="stopServer">
-      <input message="tns:stopServer" />
-      <output message="tns:stopServerResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="createSnapshot">
-      <input message="tns:createSnapshot" />
-      <output message="tns:createSnapshotResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="deleteLoadBalancer">
-      <input message="tns:deleteLoadBalancer" />
-      <output message="tns:deleteLoadBalancerResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="setInternetAccess">
-      <input message="tns:setInternetAccess" />
-      <output message="tns:setInternetAccessResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="addFirewallRulesToLoadBalancer">
-      <input message="tns:addFirewallRulesToLoadBalancer" />
-      <output message="tns:addFirewallRulesToLoadBalancerResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="deleteNic">
-      <input message="tns:deleteNic" />
-      <output message="tns:deleteNicResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="deleteServer">
-      <input message="tns:deleteServer" />
-      <output message="tns:deleteServerResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="deleteFirewalls">
-      <input message="tns:deleteFirewalls" />
-      <output message="tns:deleteFirewallsResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="updateStorage">
-      <input message="tns:updateStorage" />
-      <output message="tns:updateStorageResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="removeFirewallRules">
-      <input message="tns:removeFirewallRules" />
-      <output message="tns:removeFirewallRulesResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="deactivateLoadBalancingOnServers">
-      <input message="tns:deactivateLoadBalancingOnServers" />
-      <output message="tns:deactivateLoadBalancingOnServersResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="updateSnapshot">
-      <input message="tns:updateSnapshot" />
-      <output message="tns:updateSnapshotResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="updateLoadBalancer">
-      <input message="tns:updateLoadBalancer" />
-      <output message="tns:updateLoadBalancerResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="createServer">
-      <input message="tns:createServer" />
-      <output message="tns:createServerResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="getAllImages">
-      <input message="tns:getAllImages" />
-      <output message="tns:getAllImagesResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="getStorage">
-      <input message="tns:getStorage" />
-      <output message="tns:getStorageResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="addPublicIpToNic">
-      <input message="tns:addPublicIpToNic" />
-      <output message="tns:addPublicIpToNicResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="getAllPublicIpBlocks">
-      <input message="tns:getAllPublicIpBlocks" />
-      <output message="tns:getAllPublicIpBlocksResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="getLoadBalancer">
-      <input message="tns:getLoadBalancer" />
-      <output message="tns:getLoadBalancerResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="getFirewall">
-      <input message="tns:getFirewall" />
-      <output message="tns:getFirewallResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
-    <operation name="getNotifications">
-      <input message="tns:getNotifications" />
-      <output message="tns:getNotificationsResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
-    </operation>
     <operation name="createDataCenter">
-      <input message="tns:createDataCenter" />
-      <output message="tns:createDataCenterResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/createDataCenterRequest" message="tns:createDataCenter" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/createDataCenterResponse" message="tns:createDataCenterResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/createDataCenter/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
     <operation name="updateDataCenter">
-      <input message="tns:updateDataCenter" />
-      <output message="tns:updateDataCenterResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/updateDataCenterRequest" message="tns:updateDataCenter" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/updateDataCenterResponse" message="tns:updateDataCenterResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/updateDataCenter/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
     <operation name="clearDataCenter">
-      <input message="tns:clearDataCenter" />
-      <output message="tns:clearDataCenterResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/clearDataCenterRequest" message="tns:clearDataCenter" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/clearDataCenterResponse" message="tns:clearDataCenterResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/clearDataCenter/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
     <operation name="deleteDataCenter">
-      <input message="tns:deleteDataCenter" />
-      <output message="tns:deleteDataCenterResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteDataCenterRequest" message="tns:deleteDataCenter" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteDataCenterResponse" message="tns:deleteDataCenterResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteDataCenter/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
     <operation name="getAllDataCenters">
-      <input message="tns:getAllDataCenters" />
-      <output message="tns:getAllDataCentersResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllDataCentersRequest" message="tns:getAllDataCenters" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllDataCentersResponse" message="tns:getAllDataCentersResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllDataCenters/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="createServer">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/createServerRequest" message="tns:createServer" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/createServerResponse" message="tns:createServerResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/createServer/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="updateServer">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/updateServerRequest" message="tns:updateServer" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/updateServerResponse" message="tns:updateServerResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/updateServer/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="deleteServer">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteServerRequest" message="tns:deleteServer" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteServerResponse" message="tns:deleteServerResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteServer/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="stopServer">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/stopServerRequest" message="tns:stopServer" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/stopServerResponse" message="tns:stopServerResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/stopServer/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="startServer">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/startServerRequest" message="tns:startServer" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/startServerResponse" message="tns:startServerResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/startServer/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="resetServer">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/resetServerRequest" message="tns:resetServer" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/resetServerResponse" message="tns:resetServerResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/resetServer/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="getServer">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getServerRequest" message="tns:getServer" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getServerResponse" message="tns:getServerResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getServer/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="createNic">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/createNicRequest" message="tns:createNic" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/createNicResponse" message="tns:createNicResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/createNic/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="deleteNic">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteNicRequest" message="tns:deleteNic" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteNicResponse" message="tns:deleteNicResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteNic/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="updateNic">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/updateNicRequest" message="tns:updateNic" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/updateNicResponse" message="tns:updateNicResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/updateNic/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="getNic">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getNicRequest" message="tns:getNic" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getNicResponse" message="tns:getNicResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getNic/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="setInternetAccess">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/setInternetAccessRequest" message="tns:setInternetAccess" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/setInternetAccessResponse" message="tns:setInternetAccessResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/setInternetAccess/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="createStorage">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/createStorageRequest" message="tns:createStorage" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/createStorageResponse" message="tns:createStorageResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/createStorage/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="updateStorage">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/updateStorageRequest" message="tns:updateStorage" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/updateStorageResponse" message="tns:updateStorageResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/updateStorage/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="deleteStorage">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteStorageRequest" message="tns:deleteStorage" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteStorageResponse" message="tns:deleteStorageResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteStorage/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
     <operation name="connectStorageToServer">
-      <input message="tns:connectStorageToServer" />
-      <output message="tns:connectStorageToServerResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/connectStorageToServerRequest" message="tns:connectStorageToServer" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/connectStorageToServerResponse" message="tns:connectStorageToServerResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/connectStorageToServer/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
     <operation name="disconnectStorageFromServer">
-      <input message="tns:disconnectStorageFromServer" />
-      <output message="tns:disconnectStorageFromServerResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/disconnectStorageFromServerRequest" message="tns:disconnectStorageFromServer" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/disconnectStorageFromServerResponse" message="tns:disconnectStorageFromServerResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/disconnectStorageFromServer/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="getAllImages">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllImagesRequest" message="tns:getAllImages" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllImagesResponse" message="tns:getAllImagesResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllImages/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="setImageOsType">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/setImageOsTypeRequest" message="tns:setImageOsType" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/setImageOsTypeResponse" message="tns:setImageOsTypeResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/setImageOsType/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
     <operation name="addRomDriveToServer">
-      <input message="tns:addRomDriveToServer" />
-      <output message="tns:addRomDriveToServerResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/addRomDriveToServerRequest" message="tns:addRomDriveToServer" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/addRomDriveToServerResponse" message="tns:addRomDriveToServerResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/addRomDriveToServer/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
     <operation name="removeRomDriveFromServer">
-      <input message="tns:removeRomDriveFromServer" />
-      <output message="tns:removeRomDriveFromServerResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/removeRomDriveFromServerRequest" message="tns:removeRomDriveFromServer" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/removeRomDriveFromServerResponse" message="tns:removeRomDriveFromServerResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/removeRomDriveFromServer/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="getImage">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getImageRequest" message="tns:getImage" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getImageResponse" message="tns:getImageResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getImage/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
     <operation name="getDataCenter">
-      <input message="tns:getDataCenter" />
-      <output message="tns:getDataCenterResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getDataCenterRequest" message="tns:getDataCenter" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getDataCenterResponse" message="tns:getDataCenterResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getDataCenter/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
     <operation name="getDataCenterState">
-      <input message="tns:getDataCenterState" />
-      <output message="tns:getDataCenterStateResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getDataCenterStateRequest" message="tns:getDataCenterState" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getDataCenterStateResponse" message="tns:getDataCenterStateResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getDataCenterState/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="getStorage">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getStorageRequest" message="tns:getStorage" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getStorageResponse" message="tns:getStorageResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getStorage/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="reservePublicIpBlock">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/reservePublicIpBlockRequest" message="tns:reservePublicIpBlock" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/reservePublicIpBlockResponse" message="tns:reservePublicIpBlockResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/reservePublicIpBlock/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="releasePublicIpBlock">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/releasePublicIpBlockRequest" message="tns:releasePublicIpBlock" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/releasePublicIpBlockResponse" message="tns:releasePublicIpBlockResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/releasePublicIpBlock/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="addPublicIpToNic">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/addPublicIpToNicRequest" message="tns:addPublicIpToNic" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/addPublicIpToNicResponse" message="tns:addPublicIpToNicResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/addPublicIpToNic/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="removePublicIpFromNic">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/removePublicIpFromNicRequest" message="tns:removePublicIpFromNic" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/removePublicIpFromNicResponse" message="tns:removePublicIpFromNicResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/removePublicIpFromNic/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="getAllPublicIpBlocks">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllPublicIpBlocksRequest" message="tns:getAllPublicIpBlocks" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllPublicIpBlocksResponse" message="tns:getAllPublicIpBlocksResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllPublicIpBlocks/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="createLoadBalancer">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/createLoadBalancerRequest" message="tns:createLoadBalancer" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/createLoadBalancerResponse" message="tns:createLoadBalancerResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/createLoadBalancer/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="updateLoadBalancer">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/updateLoadBalancerRequest" message="tns:updateLoadBalancer" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/updateLoadBalancerResponse" message="tns:updateLoadBalancerResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/updateLoadBalancer/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="deleteLoadBalancer">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteLoadBalancerRequest" message="tns:deleteLoadBalancer" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteLoadBalancerResponse" message="tns:deleteLoadBalancerResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteLoadBalancer/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="getLoadBalancer">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getLoadBalancerRequest" message="tns:getLoadBalancer" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getLoadBalancerResponse" message="tns:getLoadBalancerResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getLoadBalancer/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="registerServersOnLoadBalancer">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/registerServersOnLoadBalancerRequest" message="tns:registerServersOnLoadBalancer" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/registerServersOnLoadBalancerResponse" message="tns:registerServersOnLoadBalancerResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/registerServersOnLoadBalancer/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="deregisterServersOnLoadBalancer">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deregisterServersOnLoadBalancerRequest" message="tns:deregisterServersOnLoadBalancer" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deregisterServersOnLoadBalancerResponse" message="tns:deregisterServersOnLoadBalancerResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deregisterServersOnLoadBalancer/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="activateLoadBalancingOnServers">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/activateLoadBalancingOnServersRequest" message="tns:activateLoadBalancingOnServers" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/activateLoadBalancingOnServersResponse" message="tns:activateLoadBalancingOnServersResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/activateLoadBalancingOnServers/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="deactivateLoadBalancingOnServers">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deactivateLoadBalancingOnServersRequest" message="tns:deactivateLoadBalancingOnServers" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deactivateLoadBalancingOnServersResponse" message="tns:deactivateLoadBalancingOnServersResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deactivateLoadBalancingOnServers/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="addFirewallRulesToNic">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/addFirewallRulesToNicRequest" message="tns:addFirewallRulesToNic" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/addFirewallRulesToNicResponse" message="tns:addFirewallRulesToNicResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/addFirewallRulesToNic/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="addFirewallRulesToLoadBalancer">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/addFirewallRulesToLoadBalancerRequest" message="tns:addFirewallRulesToLoadBalancer" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/addFirewallRulesToLoadBalancerResponse" message="tns:addFirewallRulesToLoadBalancerResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/addFirewallRulesToLoadBalancer/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="removeFirewallRules">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/removeFirewallRulesRequest" message="tns:removeFirewallRules" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/removeFirewallRulesResponse" message="tns:removeFirewallRulesResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/removeFirewallRules/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="activateFirewalls">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/activateFirewallsRequest" message="tns:activateFirewalls" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/activateFirewallsResponse" message="tns:activateFirewallsResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/activateFirewalls/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="deactivateFirewalls">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deactivateFirewallsRequest" message="tns:deactivateFirewalls" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deactivateFirewallsResponse" message="tns:deactivateFirewallsResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deactivateFirewalls/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="deleteFirewalls">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteFirewallsRequest" message="tns:deleteFirewalls" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteFirewallsResponse" message="tns:deleteFirewallsResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteFirewalls/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="getFirewall">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getFirewallRequest" message="tns:getFirewall" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getFirewallResponse" message="tns:getFirewallResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getFirewall/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
     <operation name="getAllSnapshots">
-      <input message="tns:getAllSnapshots" />
-      <output message="tns:getAllSnapshotsResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllSnapshotsRequest" message="tns:getAllSnapshots" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllSnapshotsResponse" message="tns:getAllSnapshotsResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllSnapshots/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="updateSnapshot">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/updateSnapshotRequest" message="tns:updateSnapshot" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/updateSnapshotResponse" message="tns:updateSnapshotResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/updateSnapshot/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="getSnapshot">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getSnapshotRequest" message="tns:getSnapshot" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getSnapshotResponse" message="tns:getSnapshotResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getSnapshot/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="createSnapshot">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/createSnapshotRequest" message="tns:createSnapshot" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/createSnapshotResponse" message="tns:createSnapshotResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/createSnapshot/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="deleteSnapshot">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteSnapshotRequest" message="tns:deleteSnapshot" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteSnapshotResponse" message="tns:deleteSnapshotResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteSnapshot/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
     <operation name="rollbackSnapshot">
-      <input message="tns:rollbackSnapshot" />
-      <output message="tns:rollbackSnapshotResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/rollbackSnapshotRequest" message="tns:rollbackSnapshot" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/rollbackSnapshotResponse" message="tns:rollbackSnapshotResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/rollbackSnapshot/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="getNotifications">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getNotificationsRequest" message="tns:getNotifications" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getNotificationsResponse" message="tns:getNotificationsResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getNotifications/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
     <operation name="deleteNotifications">
-      <input message="tns:deleteNotifications" />
-      <output message="tns:deleteNotificationsResponse" />
-      <fault name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteNotificationsRequest" message="tns:deleteNotifications" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteNotificationsResponse" message="tns:deleteNotificationsResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteNotifications/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
   </portType>
   <binding name="ProfitbricksApiServicePortBinding" type="tns:ProfitbricksApiServicePortType">
+    <wsp:PolicyReference URI="#ProfitbricksApiServicePortBinding_MTOM_Policy" />
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="getServer">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="getImage">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="deactivateFirewalls">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="activateFirewalls">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="deleteStorage">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="resetServer">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="releasePublicIpBlock">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="addFirewallRulesToNic">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="setImageOsType">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="updateServer">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="createLoadBalancer">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="deregisterServersOnLoadBalancer">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="registerServersOnLoadBalancer">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="activateLoadBalancingOnServers">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="createNic">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="deleteSnapshot">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="startServer">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="removePublicIpFromNic">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="updateNic">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="reservePublicIpBlock">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="getNic">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="createStorage">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="stopServer">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="createSnapshot">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="deleteLoadBalancer">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="setInternetAccess">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="addFirewallRulesToLoadBalancer">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="deleteNic">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="deleteServer">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="deleteFirewalls">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="updateStorage">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="removeFirewallRules">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="deactivateLoadBalancingOnServers">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="updateSnapshot">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="updateLoadBalancer">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="createServer">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="getAllImages">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="getStorage">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="addPublicIpToNic">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="getAllPublicIpBlocks">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="getLoadBalancer">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="getFirewall">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
-    <operation name="getNotifications">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ProfitbricksServiceFault">
-        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
-      </fault>
-    </operation>
     <operation name="createDataCenter">
       <soap:operation soapAction="" />
       <input>
@@ -2460,6 +1977,186 @@
         <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
       </fault>
     </operation>
+    <operation name="createServer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateServer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteServer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="stopServer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="startServer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="resetServer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getServer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="createNic">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteNic">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateNic">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getNic">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="setInternetAccess">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="createStorage">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateStorage">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteStorage">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
     <operation name="connectStorageToServer">
       <soap:operation soapAction="" />
       <input>
@@ -2473,6 +2170,30 @@
       </fault>
     </operation>
     <operation name="disconnectStorageFromServer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAllImages">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="setImageOsType">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -2508,6 +2229,18 @@
         <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
       </fault>
     </operation>
+    <operation name="getImage">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
     <operation name="getDataCenter">
       <soap:operation soapAction="" />
       <input>
@@ -2532,6 +2265,258 @@
         <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
       </fault>
     </operation>
+    <operation name="getStorage">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="reservePublicIpBlock">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="releasePublicIpBlock">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="addPublicIpToNic">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="removePublicIpFromNic">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAllPublicIpBlocks">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="createLoadBalancer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateLoadBalancer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteLoadBalancer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getLoadBalancer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="registerServersOnLoadBalancer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deregisterServersOnLoadBalancer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="activateLoadBalancingOnServers">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deactivateLoadBalancingOnServers">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="addFirewallRulesToNic">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="addFirewallRulesToLoadBalancer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="removeFirewallRules">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="activateFirewalls">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deactivateFirewalls">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteFirewalls">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getFirewall">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
     <operation name="getAllSnapshots">
       <soap:operation soapAction="" />
       <input>
@@ -2544,7 +2529,67 @@
         <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
       </fault>
     </operation>
+    <operation name="updateSnapshot">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getSnapshot">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="createSnapshot">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteSnapshot">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
     <operation name="rollbackSnapshot">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getNotifications">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

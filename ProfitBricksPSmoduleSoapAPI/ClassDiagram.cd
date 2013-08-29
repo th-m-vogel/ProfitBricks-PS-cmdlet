@@ -484,7 +484,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse" Collapsed="true">
-    <Position X="16.5" Y="3.5" Width="1.5" />
+    <Position X="3.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAACBAAAAAAAAAAAAAAAgAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>Service References\WsProfitBricksApi\Reference.cs</FileName>
@@ -492,7 +492,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.snapshot" Collapsed="true">
-    <Position X="1.75" Y="4.75" Width="1.5" />
+    <Position X="10.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>JACGBCAIggAAwQkAIAAAAAAUAwABAAACBACAAAIAAAg=</HashCode>
       <FileName>Service References\WsProfitBricksApi\Reference.cs</FileName>
@@ -513,77 +513,77 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.versionResponse" Collapsed="true">
-    <Position X="21" Y="4.75" Width="1.5" />
+    <Position X="13" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAABgAAAAAAAAAAAIgIAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Service References\WsProfitBricksApi\Reference.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.dataCenter" Collapsed="true">
-    <Position X="28.75" Y="6.25" Width="1.5" />
+    <Position X="22" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAEAFAAAgAAAAAAAAAAIkAQABEIAABgAEAAAACAA=</HashCode>
       <FileName>Service References\WsProfitBricksApi\Reference.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.server" Collapsed="true">
-    <Position X="31" Y="6.25" Width="1.5" />
+    <Position X="24.25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>RAECQAAdAsggEBQAgQSkgEIUgQCRIBCAAIAwAAIQAUA=</HashCode>
       <FileName>Service References\WsProfitBricksApi\Reference.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.nic" Collapsed="true">
-    <Position X="10.75" Y="6.25" Width="1.5" />
+    <Position X="4" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAoFAAQhAQUAAACAgAIEAAAhIAECAAAgAAQACEM=</HashCode>
       <FileName>Service References\WsProfitBricksApi\Reference.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.storage" Collapsed="true">
-    <Position X="13" Y="6.25" Width="1.5" />
+    <Position X="6.25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAAAABEAAggBQABYKEAAAEggCRIACAAAAAAAgQAQA=</HashCode>
       <FileName>Service References\WsProfitBricksApi\Reference.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.loadBalancer" Collapsed="true">
-    <Position X="15.25" Y="6.25" Width="1.5" />
+    <Position X="8.5" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAgBAAQhAgAAAQCEAAKEgAKRIADEAAQggAAQCwg=</HashCode>
       <FileName>Service References\WsProfitBricksApi\Reference.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createServerResponse" Collapsed="true">
-    <Position X="17.5" Y="6.25" Width="1.5" />
+    <Position X="10.75" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Service References\WsProfitBricksApi\Reference.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createStorageResponse" Collapsed="true">
-    <Position X="19.75" Y="6.25" Width="1.5" />
+    <Position X="13" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Service References\WsProfitBricksApi\Reference.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.registerLbServerResponse" Collapsed="true">
-    <Position X="22" Y="6.25" Width="1.5" />
+    <Position X="15.25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAQBAgAAAAAAAAAAAAIAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Service References\WsProfitBricksApi\Reference.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createLbResponse" Collapsed="true">
-    <Position X="24.25" Y="6.25" Width="1.5" />
+    <Position X="17.5" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Service References\WsProfitBricksApi\Reference.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createNicResponse" Collapsed="true">
-    <Position X="26.5" Y="6.25" Width="1.5" />
+    <Position X="19.75" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
       <FileName>Service References\WsProfitBricksApi\Reference.cs</FileName>
