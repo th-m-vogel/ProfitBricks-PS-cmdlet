@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://ws.api.profitbricks.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ProfitbricksApiService" targetNamespace="http://ws.api.profitbricks.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
-  <wsp:Policy wsu:Id="ProfitbricksApiServicePortBinding_MTOM_Policy">
-    <ns1:OptimizedMimeSerialization wsp:Optional="true" xmlns:ns1="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
-  </wsp:Policy>
   <types>
     <xs:schema targetNamespace="http://ws.api.profitbricks.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
       <xs:element name="ProfitbricksServiceFault" type="tns:ProfitbricksServiceFault" />
@@ -48,6 +45,8 @@
       <xs:element name="deleteDataCenterResponse" type="tns:deleteDataCenterResponse" />
       <xs:element name="deleteFirewalls" type="tns:deleteFirewalls" />
       <xs:element name="deleteFirewallsResponse" type="tns:deleteFirewallsResponse" />
+      <xs:element name="deleteImage" type="tns:deleteImage" />
+      <xs:element name="deleteImageResponse" type="tns:deleteImageResponse" />
       <xs:element name="deleteLoadBalancer" type="tns:deleteLoadBalancer" />
       <xs:element name="deleteLoadBalancerResponse" type="tns:deleteLoadBalancerResponse" />
       <xs:element name="deleteNic" type="tns:deleteNic" />
@@ -67,12 +66,22 @@
       <xs:element name="firewallRule" type="tns:firewallRule" />
       <xs:element name="getAllDataCenters" type="tns:getAllDataCenters" />
       <xs:element name="getAllDataCentersResponse" type="tns:getAllDataCentersResponse" />
+      <xs:element name="getAllFirewalls" type="tns:getAllFirewalls" />
+      <xs:element name="getAllFirewallsResponse" type="tns:getAllFirewallsResponse" />
       <xs:element name="getAllImages" type="tns:getAllImages" />
       <xs:element name="getAllImagesResponse" type="tns:getAllImagesResponse" />
+      <xs:element name="getAllLoadBalancers" type="tns:getAllLoadBalancers" />
+      <xs:element name="getAllLoadBalancersResponse" type="tns:getAllLoadBalancersResponse" />
+      <xs:element name="getAllNic" type="tns:getAllNic" />
+      <xs:element name="getAllNicResponse" type="tns:getAllNicResponse" />
       <xs:element name="getAllPublicIpBlocks" type="tns:getAllPublicIpBlocks" />
       <xs:element name="getAllPublicIpBlocksResponse" type="tns:getAllPublicIpBlocksResponse" />
+      <xs:element name="getAllServers" type="tns:getAllServers" />
+      <xs:element name="getAllServersResponse" type="tns:getAllServersResponse" />
       <xs:element name="getAllSnapshots" type="tns:getAllSnapshots" />
       <xs:element name="getAllSnapshotsResponse" type="tns:getAllSnapshotsResponse" />
+      <xs:element name="getAllStorages" type="tns:getAllStorages" />
+      <xs:element name="getAllStoragesResponse" type="tns:getAllStoragesResponse" />
       <xs:element name="getDataCenter" type="tns:getDataCenter" />
       <xs:element name="getDataCenterResponse" type="tns:getDataCenterResponse" />
       <xs:element name="getDataCenterState" type="tns:getDataCenterState" />
@@ -87,6 +96,8 @@
       <xs:element name="getNicResponse" type="tns:getNicResponse" />
       <xs:element name="getNotifications" type="tns:getNotifications" />
       <xs:element name="getNotificationsResponse" type="tns:getNotificationsResponse" />
+      <xs:element name="getPublicIpBlock" type="tns:getPublicIpBlock" />
+      <xs:element name="getPublicIpBlockResponse" type="tns:getPublicIpBlockResponse" />
       <xs:element name="getServer" type="tns:getServer" />
       <xs:element name="getServerResponse" type="tns:getServerResponse" />
       <xs:element name="getSnapshot" type="tns:getSnapshot" />
@@ -122,6 +133,9 @@
       <xs:element name="updateDataCenter" type="tns:updateDataCenter" />
       <xs:element name="updateDataCenterResponse" type="tns:updateDataCenterResponse" />
       <xs:element name="updateDcRequest" type="tns:updateDcRequest" />
+      <xs:element name="updateImage" type="tns:updateImage" />
+      <xs:element name="updateImageRequest" type="tns:updateImageRequest" />
+      <xs:element name="updateImageResponse" type="tns:updateImageResponse" />
       <xs:element name="updateLbRequest" type="tns:updateLbRequest" />
       <xs:element name="updateLoadBalancer" type="tns:updateLoadBalancer" />
       <xs:element name="updateLoadBalancerResponse" type="tns:updateLoadBalancerResponse" />
@@ -247,6 +261,16 @@
           <xs:element minOccurs="0" name="targetIp" type="xs:string" />
         </xs:sequence>
       </xs:complexType>
+      <xs:complexType name="deleteImage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="imageId" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="deleteImageResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:requestResponse" />
+        </xs:sequence>
+      </xs:complexType>
       <xs:complexType name="getServer">
         <xs:sequence>
           <xs:element minOccurs="0" name="serverId" type="xs:string" />
@@ -340,6 +364,14 @@
           <xs:element minOccurs="0" name="return" type="tns:versionResponse" />
         </xs:sequence>
       </xs:complexType>
+      <xs:complexType name="getAllNic">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="getAllNicResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:nic" />
+        </xs:sequence>
+      </xs:complexType>
       <xs:complexType name="reservePublicIpBlock">
         <xs:sequence>
           <xs:element name="blockSize" type="xs:int" />
@@ -410,6 +442,7 @@
           <xs:element minOccurs="0" name="imageType" type="tns:imageType" />
           <xs:element minOccurs="0" name="memoryHotpluggable" type="xs:boolean" />
           <xs:element minOccurs="0" name="osType" type="tns:osType" />
+          <xs:element minOccurs="0" name="public" type="xs:boolean" />
           <xs:element minOccurs="0" name="region" type="tns:region" />
           <xs:element minOccurs="0" maxOccurs="unbounded" name="serverIds" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="writeable" type="xs:boolean" />
@@ -571,6 +604,14 @@
       <xs:complexType name="removeRomDriveFromServerResponse">
         <xs:sequence>
           <xs:element minOccurs="0" name="return" type="tns:versionResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getAllServers">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="getAllServersResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:server" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="getAllPublicIpBlocks">
@@ -739,6 +780,14 @@
           </xs:extension>
         </xs:complexContent>
       </xs:complexType>
+      <xs:complexType name="getAllFirewalls">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="getAllFirewallsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:firewall" />
+        </xs:sequence>
+      </xs:complexType>
       <xs:complexType name="startServer">
         <xs:sequence>
           <xs:element minOccurs="0" name="serverId" type="xs:string" />
@@ -843,6 +892,35 @@
           <xs:element minOccurs="0" name="return" type="tns:versionResponse" />
         </xs:sequence>
       </xs:complexType>
+      <xs:complexType name="updateImage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:updateImageRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateImageRequest">
+        <xs:sequence>
+          <xs:element name="imageUuid" type="xs:string" />
+          <xs:element name="name" type="xs:string" />
+          <xs:element minOccurs="0" name="description" type="xs:string" />
+          <xs:element minOccurs="0" name="osType" type="tns:os-type" />
+          <xs:element minOccurs="0" name="cpuHotPlug" type="xs:boolean" />
+          <xs:element minOccurs="0" name="cpuHotUnPlug" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ramHotPlug" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ramHotUnPlug" type="xs:boolean" />
+          <xs:element minOccurs="0" name="nicHotPlug" type="xs:boolean" />
+          <xs:element minOccurs="0" name="nicHotUnPlug" type="xs:boolean" />
+          <xs:element minOccurs="0" name="discScsiHotPlug" type="xs:boolean" />
+          <xs:element minOccurs="0" name="discScsiHotUnPlug" type="xs:boolean" />
+          <xs:element minOccurs="0" name="discVirtioHotPlug" type="xs:boolean" />
+          <xs:element minOccurs="0" name="discVirtioHotUnPlug" type="xs:boolean" />
+          <xs:element minOccurs="0" name="bootable" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateImageResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:requestResponse" />
+        </xs:sequence>
+      </xs:complexType>
       <xs:complexType name="addRomDriveToServer">
         <xs:sequence>
           <xs:element minOccurs="0" name="request" type="tns:romDriveRequest" />
@@ -892,6 +970,14 @@
           <xs:element minOccurs="0" name="dataCenterId" type="xs:string" />
           <xs:element minOccurs="0" name="dataCenterName" type="xs:string" />
           <xs:element minOccurs="0" name="dataCenterVersion" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getAllLoadBalancers">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="getAllLoadBalancersResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:loadBalancer" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="createServer">
@@ -978,6 +1064,16 @@
           <xs:element minOccurs="0" name="imageName" type="xs:string" />
         </xs:sequence>
       </xs:complexType>
+      <xs:complexType name="deleteFirewalls">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="firewallIds" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="deleteFirewallsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:versionResponse" />
+        </xs:sequence>
+      </xs:complexType>
       <xs:complexType name="getDataCenter">
         <xs:sequence>
           <xs:element minOccurs="0" name="dataCenterId" type="xs:string" />
@@ -1001,16 +1097,6 @@
             </xs:sequence>
           </xs:extension>
         </xs:complexContent>
-      </xs:complexType>
-      <xs:complexType name="deleteFirewalls">
-        <xs:sequence>
-          <xs:element minOccurs="0" maxOccurs="unbounded" name="firewallIds" type="xs:string" />
-        </xs:sequence>
-      </xs:complexType>
-      <xs:complexType name="deleteFirewallsResponse">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="return" type="tns:versionResponse" />
-        </xs:sequence>
       </xs:complexType>
       <xs:complexType name="deleteSnapshot">
         <xs:sequence>
@@ -1107,6 +1193,24 @@
           <xs:element minOccurs="0" name="messageCode" type="tns:notificationCode" />
           <xs:element minOccurs="0" name="relatedItemType" type="tns:virtualItemType" />
           <xs:element minOccurs="0" name="message" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getAllStorages">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="getAllStoragesResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:storage" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPublicIpBlock">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="blockId" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPublicIpBlockResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:ipBlock" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="clearDataCenter">
@@ -1252,6 +1356,14 @@
           <xs:enumeration value="ROUND_ROBIN" />
         </xs:restriction>
       </xs:simpleType>
+      <xs:simpleType name="os-type">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="UNKNOWN" />
+          <xs:enumeration value="WINDOWS" />
+          <xs:enumeration value="LINUX" />
+          <xs:enumeration value="OTHER" />
+        </xs:restriction>
+      </xs:simpleType>
       <xs:simpleType name="notificationCode">
         <xs:restriction base="xs:string">
           <xs:enumeration value="OTHER" />
@@ -1346,6 +1458,18 @@
   <message name="getServerResponse">
     <part name="parameters" element="tns:getServerResponse" />
   </message>
+  <message name="getAllServers">
+    <part name="parameters" element="tns:getAllServers" />
+  </message>
+  <message name="getAllServersResponse">
+    <part name="parameters" element="tns:getAllServersResponse" />
+  </message>
+  <message name="getAllStorages">
+    <part name="parameters" element="tns:getAllStorages" />
+  </message>
+  <message name="getAllStoragesResponse">
+    <part name="parameters" element="tns:getAllStoragesResponse" />
+  </message>
   <message name="createNic">
     <part name="parameters" element="tns:createNic" />
   </message>
@@ -1369,6 +1493,12 @@
   </message>
   <message name="getNicResponse">
     <part name="parameters" element="tns:getNicResponse" />
+  </message>
+  <message name="getAllNic">
+    <part name="parameters" element="tns:getAllNic" />
+  </message>
+  <message name="getAllNicResponse">
+    <part name="parameters" element="tns:getAllNicResponse" />
   </message>
   <message name="setInternetAccess">
     <part name="parameters" element="tns:setInternetAccess" />
@@ -1405,6 +1535,18 @@
   </message>
   <message name="disconnectStorageFromServerResponse">
     <part name="parameters" element="tns:disconnectStorageFromServerResponse" />
+  </message>
+  <message name="deleteImage">
+    <part name="parameters" element="tns:deleteImage" />
+  </message>
+  <message name="deleteImageResponse">
+    <part name="parameters" element="tns:deleteImageResponse" />
+  </message>
+  <message name="updateImage">
+    <part name="parameters" element="tns:updateImage" />
+  </message>
+  <message name="updateImageResponse">
+    <part name="parameters" element="tns:updateImageResponse" />
   </message>
   <message name="getAllImages">
     <part name="parameters" element="tns:getAllImages" />
@@ -1484,6 +1626,12 @@
   <message name="getAllPublicIpBlocksResponse">
     <part name="parameters" element="tns:getAllPublicIpBlocksResponse" />
   </message>
+  <message name="getPublicIpBlock">
+    <part name="parameters" element="tns:getPublicIpBlock" />
+  </message>
+  <message name="getPublicIpBlockResponse">
+    <part name="parameters" element="tns:getPublicIpBlockResponse" />
+  </message>
   <message name="createLoadBalancer">
     <part name="parameters" element="tns:createLoadBalancer" />
   </message>
@@ -1507,6 +1655,12 @@
   </message>
   <message name="getLoadBalancerResponse">
     <part name="parameters" element="tns:getLoadBalancerResponse" />
+  </message>
+  <message name="getAllLoadBalancers">
+    <part name="parameters" element="tns:getAllLoadBalancers" />
+  </message>
+  <message name="getAllLoadBalancersResponse">
+    <part name="parameters" element="tns:getAllLoadBalancersResponse" />
   </message>
   <message name="registerServersOnLoadBalancer">
     <part name="parameters" element="tns:registerServersOnLoadBalancer" />
@@ -1573,6 +1727,12 @@
   </message>
   <message name="getFirewallResponse">
     <part name="parameters" element="tns:getFirewallResponse" />
+  </message>
+  <message name="getAllFirewalls">
+    <part name="parameters" element="tns:getAllFirewalls" />
+  </message>
+  <message name="getAllFirewallsResponse">
+    <part name="parameters" element="tns:getAllFirewallsResponse" />
   </message>
   <message name="getAllSnapshots">
     <part name="parameters" element="tns:getAllSnapshots" />
@@ -1683,6 +1843,16 @@
       <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getServerResponse" message="tns:getServerResponse" />
       <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getServer/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
+    <operation name="getAllServers">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllServersRequest" message="tns:getAllServers" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllServersResponse" message="tns:getAllServersResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllServers/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="getAllStorages">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllStoragesRequest" message="tns:getAllStorages" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllStoragesResponse" message="tns:getAllStoragesResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllStorages/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
     <operation name="createNic">
       <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/createNicRequest" message="tns:createNic" />
       <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/createNicResponse" message="tns:createNicResponse" />
@@ -1702,6 +1872,11 @@
       <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getNicRequest" message="tns:getNic" />
       <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getNicResponse" message="tns:getNicResponse" />
       <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getNic/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="getAllNic">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllNicRequest" message="tns:getAllNic" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllNicResponse" message="tns:getAllNicResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllNic/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
     <operation name="setInternetAccess">
       <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/setInternetAccessRequest" message="tns:setInternetAccess" />
@@ -1732,6 +1907,16 @@
       <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/disconnectStorageFromServerRequest" message="tns:disconnectStorageFromServer" />
       <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/disconnectStorageFromServerResponse" message="tns:disconnectStorageFromServerResponse" />
       <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/disconnectStorageFromServer/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="deleteImage">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteImageRequest" message="tns:deleteImage" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteImageResponse" message="tns:deleteImageResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/deleteImage/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="updateImage">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/updateImageRequest" message="tns:updateImage" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/updateImageResponse" message="tns:updateImageResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/updateImage/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
     <operation name="getAllImages">
       <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllImagesRequest" message="tns:getAllImages" />
@@ -1798,6 +1983,11 @@
       <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllPublicIpBlocksResponse" message="tns:getAllPublicIpBlocksResponse" />
       <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllPublicIpBlocks/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
+    <operation name="getPublicIpBlock">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getPublicIpBlockRequest" message="tns:getPublicIpBlock" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getPublicIpBlockResponse" message="tns:getPublicIpBlockResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getPublicIpBlock/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
     <operation name="createLoadBalancer">
       <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/createLoadBalancerRequest" message="tns:createLoadBalancer" />
       <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/createLoadBalancerResponse" message="tns:createLoadBalancerResponse" />
@@ -1817,6 +2007,11 @@
       <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getLoadBalancerRequest" message="tns:getLoadBalancer" />
       <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getLoadBalancerResponse" message="tns:getLoadBalancerResponse" />
       <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getLoadBalancer/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
+    <operation name="getAllLoadBalancers">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllLoadBalancersRequest" message="tns:getAllLoadBalancers" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllLoadBalancersResponse" message="tns:getAllLoadBalancersResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllLoadBalancers/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
     <operation name="registerServersOnLoadBalancer">
       <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/registerServersOnLoadBalancerRequest" message="tns:registerServersOnLoadBalancer" />
@@ -1873,6 +2068,11 @@
       <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getFirewallResponse" message="tns:getFirewallResponse" />
       <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getFirewall/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
     </operation>
+    <operation name="getAllFirewalls">
+      <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllFirewallsRequest" message="tns:getAllFirewalls" />
+      <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllFirewallsResponse" message="tns:getAllFirewallsResponse" />
+      <fault wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllFirewalls/Fault/ProfitbricksServiceFault" name="ProfitbricksServiceFault" message="tns:ProfitbricksServiceFault" />
+    </operation>
     <operation name="getAllSnapshots">
       <input wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllSnapshotsRequest" message="tns:getAllSnapshots" />
       <output wsam:Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/getAllSnapshotsResponse" message="tns:getAllSnapshotsResponse" />
@@ -1915,7 +2115,6 @@
     </operation>
   </portType>
   <binding name="ProfitbricksApiServicePortBinding" type="tns:ProfitbricksApiServicePortType">
-    <wsp:PolicyReference URI="#ProfitbricksApiServicePortBinding_MTOM_Policy" />
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <operation name="createDataCenter">
       <soap:operation soapAction="" />
@@ -2061,6 +2260,30 @@
         <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
       </fault>
     </operation>
+    <operation name="getAllServers">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAllStorages">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
     <operation name="createNic">
       <soap:operation soapAction="" />
       <input>
@@ -2098,6 +2321,18 @@
       </fault>
     </operation>
     <operation name="getNic">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAllNic">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -2170,6 +2405,30 @@
       </fault>
     </operation>
     <operation name="disconnectStorageFromServer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteImage">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateImage">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -2337,6 +2596,18 @@
         <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
       </fault>
     </operation>
+    <operation name="getPublicIpBlock">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
     <operation name="createLoadBalancer">
       <soap:operation soapAction="" />
       <input>
@@ -2374,6 +2645,18 @@
       </fault>
     </operation>
     <operation name="getLoadBalancer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAllLoadBalancers">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -2506,6 +2789,18 @@
       </fault>
     </operation>
     <operation name="getFirewall">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ProfitbricksServiceFault">
+        <soap:fault use="literal" name="ProfitbricksServiceFault" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAllFirewalls">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
