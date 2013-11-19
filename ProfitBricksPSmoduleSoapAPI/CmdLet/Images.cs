@@ -37,9 +37,9 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
     }
     #endregion
 
-    #region Set_PBImage
-    [Cmdlet(VerbsCommon.Set, "PBImage")]
-    public class Set_PBImage : PBapiPSCmdlet
+    #region Set_PBImageOStype
+    [Cmdlet(VerbsCommon.Set, "PBImageOStype")]
+    public class Set_PBImageOStype : PBapiPSCmdlet
     {
         [Parameter(
             Position = 0,
@@ -66,4 +66,118 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         }
     }
     #endregion
+
+    #region Set_PBImage
+    [Cmdlet(VerbsCommon.Set, "PBImage")]
+    public class Set_PBImage : PBapiPSCmdlet
+    {
+        [Parameter(
+            Position = 0,
+            Mandatory = true
+        )]
+        public string imageUuid;
+
+        [Parameter(
+            Position = 1,
+            Mandatory = false
+        )]
+        public string name;
+
+        [Parameter(
+            Position = 2,
+            Mandatory = false
+        )]
+        public string description;
+
+        [Parameter(
+            Position = 2,
+            Mandatory = false
+        )]
+        public bool? bootable;
+
+        [Parameter(
+            Position = 3,
+            Mandatory = false
+        )]
+        public ostype? osType;
+
+        [Parameter(
+            Position = 4,
+            Mandatory = false
+        )]
+        public bool? cpuHotPlug;
+
+        [Parameter(
+            Position = 5,
+            Mandatory = false
+        )]
+        public bool? ramHotPlug;
+
+        [Parameter(
+            Position = 6,
+            Mandatory = false
+        )]
+        public bool? nicHotPlug;
+
+        [Parameter(
+            Position = 7,
+            Mandatory = false
+        )]
+        public bool? nicHotUnPlug;
+
+
+        protected override void ProcessRecord()
+        {
+            updateImageRequest Request = new updateImageRequest();
+            if (string.IsNullOrEmpty(name) &&
+                string.IsNullOrEmpty(description) &&
+                !bootable.HasValue &&
+                !osType.HasValue &&
+                !cpuHotPlug.HasValue &&
+                !ramHotPlug.HasValue &&
+                !nicHotPlug.HasValue &&
+                !nicHotUnPlug.HasValue
+                )
+            {
+                throw new System.ArgumentException("at leat on of the following parameters must have a valid value: snapshotName, description, bootable, osType, cpuHotPlug, ramHotPlug, nicHotPlug, nicHotUnPlug");
+            }
+            Request.imageUuid = imageUuid;
+            Request.description = description;
+            Request.name = name;
+            if (bootable.HasValue)
+            {
+                Request.bootable = (bool)bootable;
+                Request.bootableSpecified = true;
+            }
+            if (osType.HasValue)
+            {
+                Request.osType = (ostype)osType;
+                Request.osTypeSpecified = true;
+            }
+            if (cpuHotPlug.HasValue)
+            {
+                Request.cpuHotPlug = (bool)cpuHotPlug;
+                Request.cpuHotPlugSpecified = true;
+            }
+            if (ramHotPlug.HasValue)
+            {
+                Request.ramHotPlug = (bool)ramHotPlug;
+                Request.ramHotPlugSpecified = true;
+            }
+            if (nicHotPlug.HasValue)
+            {
+                Request.nicHotPlug = (bool)nicHotPlug;
+                Request.nicHotPlugSpecified = true;
+            }
+            if (nicHotUnPlug.HasValue)
+            {
+                Request.nicHotUnPlug = (bool)nicHotUnPlug;
+                Request.nicHotUnPlugSpecified = true;
+            }
+
+            this.WriteObject(PBApi.Service.updateImage(Request));
+        }
+    }
+    #endregion
+
 }

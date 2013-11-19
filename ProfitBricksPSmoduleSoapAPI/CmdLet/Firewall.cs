@@ -261,5 +261,15 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
     }
     #endregion
 
+    #region Get-PBFirewalls
+    [Cmdlet(VerbsCommon.Get, "PBFirewalls")]
+    public class Get_Firewalls : PBapiPSCmdlet
+    {
+        protected override void ProcessRecord()
+        {
+            this.WriteObjects(PBApi.Service.getAllFirewalls());
+        }
+    }
+    #endregion
 
 }

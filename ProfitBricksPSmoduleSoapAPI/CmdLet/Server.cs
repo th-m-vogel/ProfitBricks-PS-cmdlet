@@ -298,4 +298,15 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
     }
     #endregion
 
+    #region Get-PBServers
+    [Cmdlet(VerbsCommon.Get, "PBServers")]
+    public class Get_Servers : PBapiPSCmdlet
+    {
+        protected override void ProcessRecord()
+        {
+            this.WriteObjects(PBApi.Service.getAllServers());
+        }
+    }
+    #endregion
+
 }

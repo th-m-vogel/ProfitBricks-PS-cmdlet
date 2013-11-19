@@ -214,4 +214,16 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         }
     }
     #endregion
+
+    #region Get-PBStorages
+    [Cmdlet(VerbsCommon.Get, "PBStorages")]
+    public class Get_Storages : PBapiPSCmdlet
+    {
+        protected override void ProcessRecord()
+        {
+            this.WriteObjects(PBApi.Service.getAllStorages ());
+        }
+    }
+    #endregion
+
 }

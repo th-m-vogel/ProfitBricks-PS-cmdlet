@@ -133,6 +133,7 @@ namespace ProfitBricksPSmoduleSoapAPI
             BasicHttpBinding binding = new BasicHttpBinding();
             binding.Security.Mode = BasicHttpSecurityMode.Transport;
             binding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Basic;
+            binding.MaxReceivedMessageSize = 524288;
             // assin to the statc Class 
             PBApi.Service  = new ProfitbricksApiServicePortTypeClient(binding, EA);
             // Set Credidentials

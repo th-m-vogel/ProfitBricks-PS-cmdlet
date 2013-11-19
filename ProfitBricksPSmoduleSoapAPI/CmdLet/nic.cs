@@ -191,4 +191,15 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
     }
     #endregion    
 
+    #region Get-PBNics
+    [Cmdlet(VerbsCommon.Get, "PBNics")]
+    public class Get_Nics : PBapiPSCmdlet
+    {
+        protected override void ProcessRecord()
+        {
+            this.WriteObjects(PBApi.Service.getAllNic());
+        }
+    }
+    #endregion
+
 }

@@ -210,4 +210,16 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         }
     }
     #endregion
+
+    #region Get-PBLoadBalancers
+    [Cmdlet(VerbsCommon.Get, "PBLoadBalancers")]
+    public class Get_LoadBalancers : PBapiPSCmdlet
+    {
+        protected override void ProcessRecord()
+        {
+            this.WriteObjects(PBApi.Service.getAllLoadBalancers());
+        }
+    }
+    #endregion
+
 }
