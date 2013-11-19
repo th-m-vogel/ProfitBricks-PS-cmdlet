@@ -77,7 +77,7 @@ After loading the module open the API using yor ProfitBricks credentials (exampl
 	$credentials = Get-Credential -Message "ProfitBricks Login"
 	Open-PBApiService -Credentials $credentials
 
-Get your ressources:
+Get all your ressources:
 
 	$DC_Ressources = Get-PBDatacenterIdentifiers | Get-PBDatacenter
 	$DC_Images = Get-PBImages
@@ -124,9 +124,9 @@ Create a simple Datacenter
 ## To Do
 
 - Implement missing CmdLets - **done**
-- asap implement new API features when published by ProfitBricks - **Last Update Snapshot / DHCP 08/01/2013**
+- asap implement new API features when published by ProfitBricks - **Last Update new Cmdlet to get all Servers, Storages, FIrewalls, Nics and Loadbalancers  11/19/2013**
 - create a dll-Help.xml and a module manifest - ongoing
-- Add CmdLet New-Instance, create Server including up do 8 network connections and 8 storages
+- Add CmdLet New-Instance, create Server including up do 6 network connections and 8 storages
 - Add CmdLet Remove-Instance, delte server including all connected storages
 - Add support for -Verbos -Debug and -Confirm 
 
