@@ -79,7 +79,9 @@
     <None Include="ProfitBricksSoapApi.psd1">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Service References\WsProfitBricksApi\ProfitbricksApiService.wsdl" />
+    <None Include="Service References\WsProfitBricksApi\ProfitbricksApiService.wsdl">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\WsProfitBricksApi\" />

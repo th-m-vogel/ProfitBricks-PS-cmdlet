@@ -922,6 +922,14 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         private bool nicHotUnPlugFieldSpecified;
         
+        private System.DateTime creationTimestampField;
+        
+        private bool creationTimestampFieldSpecified;
+        
+        private System.DateTime modificationTimestampField;
+        
+        private bool modificationTimestampFieldSpecified;
+        
         private region regionField;
         
         /// <remarks/>
@@ -1130,6 +1138,54 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public System.DateTime creationTimestamp {
+            get {
+                return this.creationTimestampField;
+            }
+            set {
+                this.creationTimestampField = value;
+                this.RaisePropertyChanged("creationTimestamp");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool creationTimestampSpecified {
+            get {
+                return this.creationTimestampFieldSpecified;
+            }
+            set {
+                this.creationTimestampFieldSpecified = value;
+                this.RaisePropertyChanged("creationTimestampSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        public System.DateTime modificationTimestamp {
+            get {
+                return this.modificationTimestampField;
+            }
+            set {
+                this.modificationTimestampField = value;
+                this.RaisePropertyChanged("modificationTimestamp");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool modificationTimestampSpecified {
+            get {
+                return this.modificationTimestampFieldSpecified;
+            }
+            set {
+                this.modificationTimestampFieldSpecified = value;
+                this.RaisePropertyChanged("modificationTimestampSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
         public region region {
             get {
                 return this.regionField;
