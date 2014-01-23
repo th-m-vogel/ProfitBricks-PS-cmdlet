@@ -16,8 +16,8 @@ https://github.com/th-m-vogel/ProfitBricks-PS-cmdlet/blob/master/Psmodule.binary
 
 ## Dependencies
 
-PowerShell V2 (`$psversiontable.psversion`)
-.NET Framework 2.0 (recommendet 3.5.1)
+PowerShell V3 (`$psversiontable.psversion`)
+For PowerSHell V3 - on Server 2008R2 you need Windows Management Framework 3. WMF 3.0 is available for download at Microsoft ( KB2506143-x64 ). WMF 3.0 does require at least .NET Framework 4
 
 ## Installation
 ### Simple DLL load
