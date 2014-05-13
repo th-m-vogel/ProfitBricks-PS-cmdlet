@@ -108,14 +108,16 @@ namespace ProfitBricksPSmoduleSoapAPI
         [Parameter(
             ParameterSetName = "UserPass",
             Position = 0, 
-            Mandatory = true
+            Mandatory = true,
+            HelpMessage = "Your ProfitBricks Password"
         )]
         public string Username;
 
         [Parameter(
             ParameterSetName = "UserPass",
             Position = 1,
-            Mandatory = true
+            Mandatory = true,
+            HelpMessage = "Your ProfitBricks Username, usually an e-mail address"
         )]
         public string Password;
 
@@ -126,14 +128,29 @@ namespace ProfitBricksPSmoduleSoapAPI
         )]
         public PSCredential Credentials;
 
+        [Parameter(
+            Mandatory = false,
+            HelpMessage = "For Test and debug only, specify an alternative endpoint address (URI Formated, https://host.domain.top/path/to/endpoint)"
+        )]
+        public string ApiEndpoint;
+
         protected override void ProcessRecord()
         {
-            EndpointAddress EA = new EndpointAddress("https://api.profitbricks.com/1.2");
+            if (string.IsNullOrEmpty(ApiEndpoint))
+            {
+                ApiEndpoint = "https://api.profitbricks.com/1.2";
+            }
+            EndpointAddress EA = new EndpointAddress(ApiEndpoint);
             // We want to use Basic Auth via SSL to the Webservice
             BasicHttpBinding binding = new BasicHttpBinding();
             binding.Security.Mode = BasicHttpSecurityMode.Transport;
             binding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Basic;
+            // allow large messages
             binding.MaxReceivedMessageSize = 524288;
+            // extended timeout for slow soap responses
+            binding.ReceiveTimeout = new TimeSpan(0, 5, 0);
+            // binding.ReceiveTimeout =
+                
             // assin to the statc Class 
             PBApi.Service  = new ProfitbricksApiServicePortTypeClient(binding, EA);
             // Set Credidentials
@@ -153,7 +170,6 @@ namespace ProfitBricksPSmoduleSoapAPI
                     );
                 break;
             }
-            // hustvreturens true
             this.WriteObject(Username);
         }
     }
