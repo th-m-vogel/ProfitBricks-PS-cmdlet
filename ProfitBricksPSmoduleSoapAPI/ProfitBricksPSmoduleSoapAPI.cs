@@ -149,6 +149,7 @@ namespace ProfitBricksPSmoduleSoapAPI
             binding.MaxReceivedMessageSize = 524288;
             // extended timeout for slow soap responses
             binding.ReceiveTimeout = new TimeSpan(0, 5, 0);
+            binding.SendTimeout = new TimeSpan(0, 5, 0);
             // binding.ReceiveTimeout =
                 
             // assin to the statc Class 
