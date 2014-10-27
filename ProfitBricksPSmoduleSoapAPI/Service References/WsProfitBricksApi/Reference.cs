@@ -12,7 +12,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -100,7 +100,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
     public enum faultCode {
@@ -137,7 +137,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -183,7 +183,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -257,7 +257,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -317,7 +317,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -461,7 +461,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
     public enum busType {
@@ -477,7 +477,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -493,6 +493,8 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         private int icmpTypeField;
         
         private bool icmpTypeFieldSpecified;
+        
+        private string nameField;
         
         private int portRangeEndField;
         
@@ -574,6 +576,18 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public int portRangeEnd {
             get {
                 return this.portRangeEndField;
@@ -597,7 +611,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public int portRangeStart {
             get {
                 return this.portRangeStartField;
@@ -621,7 +635,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public protocol protocol {
             get {
                 return this.protocolField;
@@ -645,7 +659,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public string sourceIp {
             get {
                 return this.sourceIpField;
@@ -657,7 +671,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public string sourceMac {
             get {
                 return this.sourceMacField;
@@ -669,7 +683,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public string targetIp {
             get {
                 return this.targetIpField;
@@ -691,7 +705,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
     public enum protocol {
@@ -710,7 +724,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -812,7 +826,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
     public enum provisioningState {
@@ -849,7 +863,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(server))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(nic))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(createSnapshotResponse))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -881,7 +895,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -910,9 +924,25 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         private bool cpuHotPlugFieldSpecified;
         
+        private bool cpuHotUnPlugField;
+        
+        private bool cpuHotUnPlugFieldSpecified;
+        
+        private bool discVirtioHotPlugField;
+        
+        private bool discVirtioHotPlugFieldSpecified;
+        
+        private bool discVirtioHotUnPlugField;
+        
+        private bool discVirtioHotUnPlugFieldSpecified;
+        
         private bool ramHotPlugField;
         
         private bool ramHotPlugFieldSpecified;
+        
+        private bool ramHotUnPlugField;
+        
+        private bool ramHotUnPlugFieldSpecified;
         
         private bool nicHotPlugField;
         
@@ -930,7 +960,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         private bool modificationTimestampFieldSpecified;
         
-        private region regionField;
+        private location locationField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -1066,6 +1096,78 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public bool cpuHotUnPlug {
+            get {
+                return this.cpuHotUnPlugField;
+            }
+            set {
+                this.cpuHotUnPlugField = value;
+                this.RaisePropertyChanged("cpuHotUnPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool cpuHotUnPlugSpecified {
+            get {
+                return this.cpuHotUnPlugFieldSpecified;
+            }
+            set {
+                this.cpuHotUnPlugFieldSpecified = value;
+                this.RaisePropertyChanged("cpuHotUnPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public bool discVirtioHotPlug {
+            get {
+                return this.discVirtioHotPlugField;
+            }
+            set {
+                this.discVirtioHotPlugField = value;
+                this.RaisePropertyChanged("discVirtioHotPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool discVirtioHotPlugSpecified {
+            get {
+                return this.discVirtioHotPlugFieldSpecified;
+            }
+            set {
+                this.discVirtioHotPlugFieldSpecified = value;
+                this.RaisePropertyChanged("discVirtioHotPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public bool discVirtioHotUnPlug {
+            get {
+                return this.discVirtioHotUnPlugField;
+            }
+            set {
+                this.discVirtioHotUnPlugField = value;
+                this.RaisePropertyChanged("discVirtioHotUnPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool discVirtioHotUnPlugSpecified {
+            get {
+                return this.discVirtioHotUnPlugFieldSpecified;
+            }
+            set {
+                this.discVirtioHotUnPlugFieldSpecified = value;
+                this.RaisePropertyChanged("discVirtioHotUnPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
         public bool ramHotPlug {
             get {
                 return this.ramHotPlugField;
@@ -1089,7 +1191,31 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        public bool ramHotUnPlug {
+            get {
+                return this.ramHotUnPlugField;
+            }
+            set {
+                this.ramHotUnPlugField = value;
+                this.RaisePropertyChanged("ramHotUnPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ramHotUnPlugSpecified {
+            get {
+                return this.ramHotUnPlugFieldSpecified;
+            }
+            set {
+                this.ramHotUnPlugFieldSpecified = value;
+                this.RaisePropertyChanged("ramHotUnPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
         public bool nicHotPlug {
             get {
                 return this.nicHotPlugField;
@@ -1113,7 +1239,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
         public bool nicHotUnPlug {
             get {
                 return this.nicHotUnPlugField;
@@ -1137,7 +1263,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
         public System.DateTime creationTimestamp {
             get {
                 return this.creationTimestampField;
@@ -1161,7 +1287,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=16)]
         public System.DateTime modificationTimestamp {
             get {
                 return this.modificationTimestampField;
@@ -1185,20 +1311,20 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
-        public region region {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=17)]
+        public location location {
             get {
-                return this.regionField;
+                return this.locationField;
             }
             set {
-                this.regionField = value;
-                this.RaisePropertyChanged("region");
+                this.locationField = value;
+                this.RaisePropertyChanged("location");
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
     public enum osType {
@@ -1217,23 +1343,26 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
-    public enum region {
+    public enum location {
         
         /// <remarks/>
-        DEFAULT,
+        [System.Xml.Serialization.XmlEnumAttribute("de/fkb")]
+        defkb,
         
         /// <remarks/>
-        NORTH_AMERICA,
+        [System.Xml.Serialization.XmlEnumAttribute("de/fra")]
+        defra,
         
         /// <remarks/>
-        EUROPE,
+        [System.Xml.Serialization.XmlEnumAttribute("us/las")]
+        uslas,
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1246,9 +1375,9 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         private bool dataCenterVersionFieldSpecified;
         
-        private region regionField;
+        private location locationField;
         
-        private bool regionFieldSpecified;
+        private bool locationFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -1288,31 +1417,31 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public region region {
+        public location location {
             get {
-                return this.regionField;
+                return this.locationField;
             }
             set {
-                this.regionField = value;
-                this.RaisePropertyChanged("region");
+                this.locationField = value;
+                this.RaisePropertyChanged("location");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool regionSpecified {
+        public bool locationSpecified {
             get {
-                return this.regionFieldSpecified;
+                return this.locationFieldSpecified;
             }
             set {
-                this.regionFieldSpecified = value;
-                this.RaisePropertyChanged("regionSpecified");
+                this.locationFieldSpecified = value;
+                this.RaisePropertyChanged("locationSpecified");
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1321,9 +1450,9 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         private string blockIdField;
         
-        private region regionField;
+        private location locationField;
         
-        private bool regionFieldSpecified;
+        private bool locationFieldSpecified;
         
         private string[] ipsField;
         
@@ -1341,25 +1470,25 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public region region {
+        public location location {
             get {
-                return this.regionField;
+                return this.locationField;
             }
             set {
-                this.regionField = value;
-                this.RaisePropertyChanged("region");
+                this.locationField = value;
+                this.RaisePropertyChanged("location");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool regionSpecified {
+        public bool locationSpecified {
             get {
-                return this.regionFieldSpecified;
+                return this.locationFieldSpecified;
             }
             set {
-                this.regionFieldSpecified = value;
-                this.RaisePropertyChanged("regionSpecified");
+                this.locationFieldSpecified = value;
+                this.RaisePropertyChanged("locationSpecified");
             }
         }
         
@@ -1387,7 +1516,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(createNicResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(server))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(nic))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1438,7 +1567,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1457,9 +1586,9 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         private bool provisioningStateFieldSpecified;
         
-        private region regionField;
+        private location locationField;
         
-        private bool regionFieldSpecified;
+        private bool locationFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -1535,31 +1664,31 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public region region {
+        public location location {
             get {
-                return this.regionField;
+                return this.locationField;
             }
             set {
-                this.regionField = value;
-                this.RaisePropertyChanged("region");
+                this.locationField = value;
+                this.RaisePropertyChanged("location");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool regionSpecified {
+        public bool locationSpecified {
             get {
-                return this.regionFieldSpecified;
+                return this.locationFieldSpecified;
             }
             set {
-                this.regionFieldSpecified = value;
-                this.RaisePropertyChanged("regionSpecified");
+                this.locationFieldSpecified = value;
+                this.RaisePropertyChanged("locationSpecified");
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1611,6 +1740,30 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         private availabilityZone availabilityZoneField;
         
         private bool availabilityZoneFieldSpecified;
+        
+        private bool cpuHotPlugField;
+        
+        private bool cpuHotPlugFieldSpecified;
+        
+        private bool ramHotPlugField;
+        
+        private bool ramHotPlugFieldSpecified;
+        
+        private bool nicHotPlugField;
+        
+        private bool nicHotPlugFieldSpecified;
+        
+        private bool nicHotUnPlugField;
+        
+        private bool nicHotUnPlugFieldSpecified;
+        
+        private bool discVirtioHotPlugField;
+        
+        private bool discVirtioHotPlugFieldSpecified;
+        
+        private bool discVirtioHotUnPlugField;
+        
+        private bool discVirtioHotUnPlugFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -1887,10 +2040,154 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
                 this.RaisePropertyChanged("availabilityZoneSpecified");
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
+        public bool cpuHotPlug {
+            get {
+                return this.cpuHotPlugField;
+            }
+            set {
+                this.cpuHotPlugField = value;
+                this.RaisePropertyChanged("cpuHotPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool cpuHotPlugSpecified {
+            get {
+                return this.cpuHotPlugFieldSpecified;
+            }
+            set {
+                this.cpuHotPlugFieldSpecified = value;
+                this.RaisePropertyChanged("cpuHotPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=16)]
+        public bool ramHotPlug {
+            get {
+                return this.ramHotPlugField;
+            }
+            set {
+                this.ramHotPlugField = value;
+                this.RaisePropertyChanged("ramHotPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ramHotPlugSpecified {
+            get {
+                return this.ramHotPlugFieldSpecified;
+            }
+            set {
+                this.ramHotPlugFieldSpecified = value;
+                this.RaisePropertyChanged("ramHotPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=17)]
+        public bool nicHotPlug {
+            get {
+                return this.nicHotPlugField;
+            }
+            set {
+                this.nicHotPlugField = value;
+                this.RaisePropertyChanged("nicHotPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool nicHotPlugSpecified {
+            get {
+                return this.nicHotPlugFieldSpecified;
+            }
+            set {
+                this.nicHotPlugFieldSpecified = value;
+                this.RaisePropertyChanged("nicHotPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=18)]
+        public bool nicHotUnPlug {
+            get {
+                return this.nicHotUnPlugField;
+            }
+            set {
+                this.nicHotUnPlugField = value;
+                this.RaisePropertyChanged("nicHotUnPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool nicHotUnPlugSpecified {
+            get {
+                return this.nicHotUnPlugFieldSpecified;
+            }
+            set {
+                this.nicHotUnPlugFieldSpecified = value;
+                this.RaisePropertyChanged("nicHotUnPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=19)]
+        public bool discVirtioHotPlug {
+            get {
+                return this.discVirtioHotPlugField;
+            }
+            set {
+                this.discVirtioHotPlugField = value;
+                this.RaisePropertyChanged("discVirtioHotPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool discVirtioHotPlugSpecified {
+            get {
+                return this.discVirtioHotPlugFieldSpecified;
+            }
+            set {
+                this.discVirtioHotPlugFieldSpecified = value;
+                this.RaisePropertyChanged("discVirtioHotPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=20)]
+        public bool discVirtioHotUnPlug {
+            get {
+                return this.discVirtioHotUnPlugField;
+            }
+            set {
+                this.discVirtioHotUnPlugField = value;
+                this.RaisePropertyChanged("discVirtioHotUnPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool discVirtioHotUnPlugSpecified {
+            get {
+                return this.discVirtioHotUnPlugFieldSpecified;
+            }
+            set {
+                this.discVirtioHotUnPlugFieldSpecified = value;
+                this.RaisePropertyChanged("discVirtioHotUnPlugSpecified");
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2095,7 +2392,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
     public enum virtualMachineState {
@@ -2123,7 +2420,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
     public enum availabilityZone {
@@ -2139,7 +2436,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2316,7 +2613,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2535,7 +2832,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
     public enum loadBalancerAlgorithm {
@@ -2545,7 +2842,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2568,7 +2865,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2591,7 +2888,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2642,7 +2939,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2665,7 +2962,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2688,7 +2985,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2710,6 +3007,52 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
+    public partial class createDataCenterRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string dataCenterNameField;
+        
+        private location locationField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string dataCenterName {
+            get {
+                return this.dataCenterNameField;
+            }
+            set {
+                this.dataCenterNameField = value;
+                this.RaisePropertyChanged("dataCenterName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public location location {
+            get {
+                return this.locationField;
+            }
+            set {
+                this.locationField = value;
+                this.RaisePropertyChanged("location");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://ws.api.profitbricks.com/", ConfigurationName="WsProfitBricksApi.ProfitbricksApiServicePortType")]
     public interface ProfitbricksApiServicePortType {
@@ -2723,7 +3066,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(requestResponse))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterResponse createDataCenter(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterRequest request);
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterResponse createDataCenter(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterRequest1 request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.api.profitbricks.com/ProfitbricksApiServicePortType/updateDataCenterReq" +
@@ -3416,22 +3759,17 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="createDataCenter", WrapperNamespace="http://ws.api.profitbricks.com/", IsWrapped=true)]
-    public partial class createDataCenterRequest {
+    public partial class createDataCenterRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string dataCenterName;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterRequest request;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.region region;
-        
-        public createDataCenterRequest() {
+        public createDataCenterRequest1() {
         }
         
-        public createDataCenterRequest(string dataCenterName, ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.region region) {
-            this.dataCenterName = dataCenterName;
-            this.region = region;
+        public createDataCenterRequest1(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterRequest request) {
+            this.request = request;
         }
     }
     
@@ -3454,7 +3792,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3608,7 +3946,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3622,6 +3960,10 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         private int dataCenterVersionField;
         
         private bool dataCenterVersionFieldSpecified;
+        
+        private provisioningState provisioningStateField;
+        
+        private bool provisioningStateFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -3671,6 +4013,30 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
             }
         }
         
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public provisioningState provisioningState {
+            get {
+                return this.provisioningStateField;
+            }
+            set {
+                this.provisioningStateField = value;
+                this.RaisePropertyChanged("provisioningState");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool provisioningStateSpecified {
+            get {
+                return this.provisioningStateFieldSpecified;
+            }
+            set {
+                this.provisioningStateFieldSpecified = value;
+                this.RaisePropertyChanged("provisioningStateSpecified");
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -3710,7 +4076,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3742,6 +4108,30 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         private availabilityZone availabilityZoneField;
         
         private bool availabilityZoneFieldSpecified;
+        
+        private bool cpuHotPlugField;
+        
+        private bool cpuHotPlugFieldSpecified;
+        
+        private bool ramHotPlugField;
+        
+        private bool ramHotPlugFieldSpecified;
+        
+        private bool nicHotPlugField;
+        
+        private bool nicHotPlugFieldSpecified;
+        
+        private bool nicHotUnPlugField;
+        
+        private bool nicHotUnPlugFieldSpecified;
+        
+        private bool discVirtioHotPlugField;
+        
+        private bool discVirtioHotPlugFieldSpecified;
+        
+        private bool discVirtioHotUnPlugField;
+        
+        private bool discVirtioHotUnPlugFieldSpecified;
         
         public createServerRequest() {
             this.serverNameField = "";
@@ -3904,6 +4294,150 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
             }
         }
         
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public bool cpuHotPlug {
+            get {
+                return this.cpuHotPlugField;
+            }
+            set {
+                this.cpuHotPlugField = value;
+                this.RaisePropertyChanged("cpuHotPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool cpuHotPlugSpecified {
+            get {
+                return this.cpuHotPlugFieldSpecified;
+            }
+            set {
+                this.cpuHotPlugFieldSpecified = value;
+                this.RaisePropertyChanged("cpuHotPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public bool ramHotPlug {
+            get {
+                return this.ramHotPlugField;
+            }
+            set {
+                this.ramHotPlugField = value;
+                this.RaisePropertyChanged("ramHotPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ramHotPlugSpecified {
+            get {
+                return this.ramHotPlugFieldSpecified;
+            }
+            set {
+                this.ramHotPlugFieldSpecified = value;
+                this.RaisePropertyChanged("ramHotPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        public bool nicHotPlug {
+            get {
+                return this.nicHotPlugField;
+            }
+            set {
+                this.nicHotPlugField = value;
+                this.RaisePropertyChanged("nicHotPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool nicHotPlugSpecified {
+            get {
+                return this.nicHotPlugFieldSpecified;
+            }
+            set {
+                this.nicHotPlugFieldSpecified = value;
+                this.RaisePropertyChanged("nicHotPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+        public bool nicHotUnPlug {
+            get {
+                return this.nicHotUnPlugField;
+            }
+            set {
+                this.nicHotUnPlugField = value;
+                this.RaisePropertyChanged("nicHotUnPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool nicHotUnPlugSpecified {
+            get {
+                return this.nicHotUnPlugFieldSpecified;
+            }
+            set {
+                this.nicHotUnPlugFieldSpecified = value;
+                this.RaisePropertyChanged("nicHotUnPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
+        public bool discVirtioHotPlug {
+            get {
+                return this.discVirtioHotPlugField;
+            }
+            set {
+                this.discVirtioHotPlugField = value;
+                this.RaisePropertyChanged("discVirtioHotPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool discVirtioHotPlugSpecified {
+            get {
+                return this.discVirtioHotPlugFieldSpecified;
+            }
+            set {
+                this.discVirtioHotPlugFieldSpecified = value;
+                this.RaisePropertyChanged("discVirtioHotPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
+        public bool discVirtioHotUnPlug {
+            get {
+                return this.discVirtioHotUnPlugField;
+            }
+            set {
+                this.discVirtioHotUnPlugField = value;
+                this.RaisePropertyChanged("discVirtioHotUnPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool discVirtioHotUnPlugSpecified {
+            get {
+                return this.discVirtioHotUnPlugFieldSpecified;
+            }
+            set {
+                this.discVirtioHotUnPlugFieldSpecified = value;
+                this.RaisePropertyChanged("discVirtioHotUnPlugSpecified");
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -3951,7 +4485,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3981,6 +4515,30 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         private availabilityZone availabilityZoneField;
         
         private bool availabilityZoneFieldSpecified;
+        
+        private bool cpuHotPlugField;
+        
+        private bool cpuHotPlugFieldSpecified;
+        
+        private bool ramHotPlugField;
+        
+        private bool ramHotPlugFieldSpecified;
+        
+        private bool nicHotPlugField;
+        
+        private bool nicHotPlugFieldSpecified;
+        
+        private bool nicHotUnPlugField;
+        
+        private bool nicHotUnPlugFieldSpecified;
+        
+        private bool discVirtioHotPlugField;
+        
+        private bool discVirtioHotPlugFieldSpecified;
+        
+        private bool discVirtioHotUnPlugField;
+        
+        private bool discVirtioHotUnPlugFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -4123,6 +4681,150 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
             set {
                 this.availabilityZoneFieldSpecified = value;
                 this.RaisePropertyChanged("availabilityZoneSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public bool cpuHotPlug {
+            get {
+                return this.cpuHotPlugField;
+            }
+            set {
+                this.cpuHotPlugField = value;
+                this.RaisePropertyChanged("cpuHotPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool cpuHotPlugSpecified {
+            get {
+                return this.cpuHotPlugFieldSpecified;
+            }
+            set {
+                this.cpuHotPlugFieldSpecified = value;
+                this.RaisePropertyChanged("cpuHotPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public bool ramHotPlug {
+            get {
+                return this.ramHotPlugField;
+            }
+            set {
+                this.ramHotPlugField = value;
+                this.RaisePropertyChanged("ramHotPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ramHotPlugSpecified {
+            get {
+                return this.ramHotPlugFieldSpecified;
+            }
+            set {
+                this.ramHotPlugFieldSpecified = value;
+                this.RaisePropertyChanged("ramHotPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public bool nicHotPlug {
+            get {
+                return this.nicHotPlugField;
+            }
+            set {
+                this.nicHotPlugField = value;
+                this.RaisePropertyChanged("nicHotPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool nicHotPlugSpecified {
+            get {
+                return this.nicHotPlugFieldSpecified;
+            }
+            set {
+                this.nicHotPlugFieldSpecified = value;
+                this.RaisePropertyChanged("nicHotPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public bool nicHotUnPlug {
+            get {
+                return this.nicHotUnPlugField;
+            }
+            set {
+                this.nicHotUnPlugField = value;
+                this.RaisePropertyChanged("nicHotUnPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool nicHotUnPlugSpecified {
+            get {
+                return this.nicHotUnPlugFieldSpecified;
+            }
+            set {
+                this.nicHotUnPlugFieldSpecified = value;
+                this.RaisePropertyChanged("nicHotUnPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        public bool discVirtioHotPlug {
+            get {
+                return this.discVirtioHotPlugField;
+            }
+            set {
+                this.discVirtioHotPlugField = value;
+                this.RaisePropertyChanged("discVirtioHotPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool discVirtioHotPlugSpecified {
+            get {
+                return this.discVirtioHotPlugFieldSpecified;
+            }
+            set {
+                this.discVirtioHotPlugFieldSpecified = value;
+                this.RaisePropertyChanged("discVirtioHotPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+        public bool discVirtioHotUnPlug {
+            get {
+                return this.discVirtioHotUnPlugField;
+            }
+            set {
+                this.discVirtioHotUnPlugField = value;
+                this.RaisePropertyChanged("discVirtioHotUnPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool discVirtioHotUnPlugSpecified {
+            get {
+                return this.discVirtioHotUnPlugFieldSpecified;
+            }
+            set {
+                this.discVirtioHotUnPlugFieldSpecified = value;
+                this.RaisePropertyChanged("discVirtioHotUnPlugSpecified");
             }
         }
         
@@ -4409,7 +5111,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4583,7 +5285,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4845,7 +5547,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4969,7 +5671,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5129,7 +5831,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5344,20 +6046,20 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
     public partial class updateImageRequest : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string imageUuidField;
+        private string imageIdField;
         
-        private string nameField;
+        private string imageNameField;
         
         private string descriptionField;
         
-        private ostype osTypeField;
+        private osType osTypeField;
         
         private bool osTypeFieldSpecified;
         
@@ -5385,14 +6087,6 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         private bool nicHotUnPlugFieldSpecified;
         
-        private bool discScsiHotPlugField;
-        
-        private bool discScsiHotPlugFieldSpecified;
-        
-        private bool discScsiHotUnPlugField;
-        
-        private bool discScsiHotUnPlugFieldSpecified;
-        
         private bool discVirtioHotPlugField;
         
         private bool discVirtioHotPlugFieldSpecified;
@@ -5407,25 +6101,25 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string imageUuid {
+        public string imageId {
             get {
-                return this.imageUuidField;
+                return this.imageIdField;
             }
             set {
-                this.imageUuidField = value;
-                this.RaisePropertyChanged("imageUuid");
+                this.imageIdField = value;
+                this.RaisePropertyChanged("imageId");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string name {
+        public string imageName {
             get {
-                return this.nameField;
+                return this.imageNameField;
             }
             set {
-                this.nameField = value;
-                this.RaisePropertyChanged("name");
+                this.imageNameField = value;
+                this.RaisePropertyChanged("imageName");
             }
         }
         
@@ -5443,7 +6137,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public ostype osType {
+        public osType osType {
             get {
                 return this.osTypeField;
             }
@@ -5611,54 +6305,6 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public bool discScsiHotPlug {
-            get {
-                return this.discScsiHotPlugField;
-            }
-            set {
-                this.discScsiHotPlugField = value;
-                this.RaisePropertyChanged("discScsiHotPlug");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool discScsiHotPlugSpecified {
-            get {
-                return this.discScsiHotPlugFieldSpecified;
-            }
-            set {
-                this.discScsiHotPlugFieldSpecified = value;
-                this.RaisePropertyChanged("discScsiHotPlugSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        public bool discScsiHotUnPlug {
-            get {
-                return this.discScsiHotUnPlugField;
-            }
-            set {
-                this.discScsiHotUnPlugField = value;
-                this.RaisePropertyChanged("discScsiHotUnPlug");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool discScsiHotUnPlugSpecified {
-            get {
-                return this.discScsiHotUnPlugFieldSpecified;
-            }
-            set {
-                this.discScsiHotUnPlugFieldSpecified = value;
-                this.RaisePropertyChanged("discScsiHotUnPlugSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
         public bool discVirtioHotPlug {
             get {
                 return this.discVirtioHotPlugField;
@@ -5682,7 +6328,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
         public bool discVirtioHotUnPlug {
             get {
                 return this.discVirtioHotUnPlugField;
@@ -5706,7 +6352,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
         public bool bootable {
             get {
                 return this.bootableField;
@@ -5737,25 +6383,6 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="os-type", Namespace="http://ws.api.profitbricks.com/")]
-    public enum ostype {
-        
-        /// <remarks/>
-        UNKNOWN,
-        
-        /// <remarks/>
-        WINDOWS,
-        
-        /// <remarks/>
-        LINUX,
-        
-        /// <remarks/>
-        OTHER,
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -5795,16 +6422,34 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
     public partial class image : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private bool cpuHotpluggableField;
+        private bool bootableField;
         
-        private bool cpuHotpluggableFieldSpecified;
+        private bool bootableFieldSpecified;
+        
+        private bool cpuHotPlugField;
+        
+        private bool cpuHotPlugFieldSpecified;
+        
+        private bool cpuHotUnPlugField;
+        
+        private bool cpuHotUnPlugFieldSpecified;
+        
+        private string descriptionField;
+        
+        private bool discVirtioHotPlugField;
+        
+        private bool discVirtioHotPlugFieldSpecified;
+        
+        private bool discVirtioHotUnPlugField;
+        
+        private bool discVirtioHotUnPlugFieldSpecified;
         
         private string imageIdField;
         
@@ -5818,9 +6463,17 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         private bool imageTypeFieldSpecified;
         
-        private bool memoryHotpluggableField;
+        private location locationField;
         
-        private bool memoryHotpluggableFieldSpecified;
+        private bool locationFieldSpecified;
+        
+        private bool nicHotPlugField;
+        
+        private bool nicHotPlugFieldSpecified;
+        
+        private bool nicHotUnPlugField;
+        
+        private bool nicHotUnPlugFieldSpecified;
         
         private osType osTypeField;
         
@@ -5830,9 +6483,13 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         private bool publicFieldSpecified;
         
-        private region regionField;
+        private bool ramHotPlugField;
         
-        private bool regionFieldSpecified;
+        private bool ramHotPlugFieldSpecified;
+        
+        private bool ramHotUnPlugField;
+        
+        private bool ramHotUnPlugFieldSpecified;
         
         private string[] serverIdsField;
         
@@ -5842,30 +6499,138 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool cpuHotpluggable {
+        public bool bootable {
             get {
-                return this.cpuHotpluggableField;
+                return this.bootableField;
             }
             set {
-                this.cpuHotpluggableField = value;
-                this.RaisePropertyChanged("cpuHotpluggable");
+                this.bootableField = value;
+                this.RaisePropertyChanged("bootable");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool cpuHotpluggableSpecified {
+        public bool bootableSpecified {
             get {
-                return this.cpuHotpluggableFieldSpecified;
+                return this.bootableFieldSpecified;
             }
             set {
-                this.cpuHotpluggableFieldSpecified = value;
-                this.RaisePropertyChanged("cpuHotpluggableSpecified");
+                this.bootableFieldSpecified = value;
+                this.RaisePropertyChanged("bootableSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public bool cpuHotPlug {
+            get {
+                return this.cpuHotPlugField;
+            }
+            set {
+                this.cpuHotPlugField = value;
+                this.RaisePropertyChanged("cpuHotPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool cpuHotPlugSpecified {
+            get {
+                return this.cpuHotPlugFieldSpecified;
+            }
+            set {
+                this.cpuHotPlugFieldSpecified = value;
+                this.RaisePropertyChanged("cpuHotPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public bool cpuHotUnPlug {
+            get {
+                return this.cpuHotUnPlugField;
+            }
+            set {
+                this.cpuHotUnPlugField = value;
+                this.RaisePropertyChanged("cpuHotUnPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool cpuHotUnPlugSpecified {
+            get {
+                return this.cpuHotUnPlugFieldSpecified;
+            }
+            set {
+                this.cpuHotUnPlugFieldSpecified = value;
+                this.RaisePropertyChanged("cpuHotUnPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("description");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public bool discVirtioHotPlug {
+            get {
+                return this.discVirtioHotPlugField;
+            }
+            set {
+                this.discVirtioHotPlugField = value;
+                this.RaisePropertyChanged("discVirtioHotPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool discVirtioHotPlugSpecified {
+            get {
+                return this.discVirtioHotPlugFieldSpecified;
+            }
+            set {
+                this.discVirtioHotPlugFieldSpecified = value;
+                this.RaisePropertyChanged("discVirtioHotPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public bool discVirtioHotUnPlug {
+            get {
+                return this.discVirtioHotUnPlugField;
+            }
+            set {
+                this.discVirtioHotUnPlugField = value;
+                this.RaisePropertyChanged("discVirtioHotUnPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool discVirtioHotUnPlugSpecified {
+            get {
+                return this.discVirtioHotUnPlugFieldSpecified;
+            }
+            set {
+                this.discVirtioHotUnPlugFieldSpecified = value;
+                this.RaisePropertyChanged("discVirtioHotUnPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public string imageId {
             get {
                 return this.imageIdField;
@@ -5877,7 +6642,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public string imageName {
             get {
                 return this.imageNameField;
@@ -5889,7 +6654,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public long imageSize {
             get {
                 return this.imageSizeField;
@@ -5913,7 +6678,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public imageType imageType {
             get {
                 return this.imageTypeField;
@@ -5937,31 +6702,79 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public bool memoryHotpluggable {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public location location {
             get {
-                return this.memoryHotpluggableField;
+                return this.locationField;
             }
             set {
-                this.memoryHotpluggableField = value;
-                this.RaisePropertyChanged("memoryHotpluggable");
+                this.locationField = value;
+                this.RaisePropertyChanged("location");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool memoryHotpluggableSpecified {
+        public bool locationSpecified {
             get {
-                return this.memoryHotpluggableFieldSpecified;
+                return this.locationFieldSpecified;
             }
             set {
-                this.memoryHotpluggableFieldSpecified = value;
-                this.RaisePropertyChanged("memoryHotpluggableSpecified");
+                this.locationFieldSpecified = value;
+                this.RaisePropertyChanged("locationSpecified");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public bool nicHotPlug {
+            get {
+                return this.nicHotPlugField;
+            }
+            set {
+                this.nicHotPlugField = value;
+                this.RaisePropertyChanged("nicHotPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool nicHotPlugSpecified {
+            get {
+                return this.nicHotPlugFieldSpecified;
+            }
+            set {
+                this.nicHotPlugFieldSpecified = value;
+                this.RaisePropertyChanged("nicHotPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        public bool nicHotUnPlug {
+            get {
+                return this.nicHotUnPlugField;
+            }
+            set {
+                this.nicHotUnPlugField = value;
+                this.RaisePropertyChanged("nicHotUnPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool nicHotUnPlugSpecified {
+            get {
+                return this.nicHotUnPlugFieldSpecified;
+            }
+            set {
+                this.nicHotUnPlugFieldSpecified = value;
+                this.RaisePropertyChanged("nicHotUnPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
         public osType osType {
             get {
                 return this.osTypeField;
@@ -5985,7 +6798,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
         public bool @public {
             get {
                 return this.publicField;
@@ -6009,31 +6822,55 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public region region {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
+        public bool ramHotPlug {
             get {
-                return this.regionField;
+                return this.ramHotPlugField;
             }
             set {
-                this.regionField = value;
-                this.RaisePropertyChanged("region");
+                this.ramHotPlugField = value;
+                this.RaisePropertyChanged("ramHotPlug");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool regionSpecified {
+        public bool ramHotPlugSpecified {
             get {
-                return this.regionFieldSpecified;
+                return this.ramHotPlugFieldSpecified;
             }
             set {
-                this.regionFieldSpecified = value;
-                this.RaisePropertyChanged("regionSpecified");
+                this.ramHotPlugFieldSpecified = value;
+                this.RaisePropertyChanged("ramHotPlugSpecified");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("serverIds", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=16)]
+        public bool ramHotUnPlug {
+            get {
+                return this.ramHotUnPlugField;
+            }
+            set {
+                this.ramHotUnPlugField = value;
+                this.RaisePropertyChanged("ramHotUnPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ramHotUnPlugSpecified {
+            get {
+                return this.ramHotUnPlugFieldSpecified;
+            }
+            set {
+                this.ramHotUnPlugFieldSpecified = value;
+                this.RaisePropertyChanged("ramHotUnPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("serverIds", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=17)]
         public string[] serverIds {
             get {
                 return this.serverIdsField;
@@ -6045,7 +6882,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=18)]
         public bool writeable {
             get {
                 return this.writeableField;
@@ -6079,7 +6916,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
     public enum imageType {
@@ -6119,6 +6956,52 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
+    public partial class imageOsTypeRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string imageIdField;
+        
+        private osType osTypeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string imageId {
+            get {
+                return this.imageIdField;
+            }
+            set {
+                this.imageIdField = value;
+                this.RaisePropertyChanged("imageId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public osType osType {
+            get {
+                return this.osTypeField;
+            }
+            set {
+                this.osTypeField = value;
+                this.RaisePropertyChanged("osType");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6127,18 +7010,13 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string imageId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.osType osType;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.imageOsTypeRequest request;
         
         public setImageOsTypeRequest() {
         }
         
-        public setImageOsTypeRequest(string imageId, ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.osType osType) {
-            this.imageId = imageId;
-            this.osType = osType;
+        public setImageOsTypeRequest(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.imageOsTypeRequest request) {
+            this.request = request;
         }
     }
     
@@ -6161,7 +7039,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6455,6 +7333,52 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
+    public partial class createReservePublicIpBlockRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int blockSizeField;
+        
+        private location locationField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int blockSize {
+            get {
+                return this.blockSizeField;
+            }
+            set {
+                this.blockSizeField = value;
+                this.RaisePropertyChanged("blockSize");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public location location {
+            get {
+                return this.locationField;
+            }
+            set {
+                this.locationField = value;
+                this.RaisePropertyChanged("location");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6463,18 +7387,13 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int blockSize;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.api.profitbricks.com/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.region region;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createReservePublicIpBlockRequest request;
         
         public reservePublicIpBlockRequest() {
         }
         
-        public reservePublicIpBlockRequest(int blockSize, ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.region region) {
-            this.blockSize = blockSize;
-            this.region = region;
+        public reservePublicIpBlockRequest(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createReservePublicIpBlockRequest request) {
+            this.request = request;
         }
     }
     
@@ -6615,7 +7534,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6624,11 +7543,11 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         private string blockIdField;
         
+        private location locationField;
+        
+        private bool locationFieldSpecified;
+        
         private publicIp[] publicIpsField;
-        
-        private region regionField;
-        
-        private bool regionFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -6643,7 +7562,31 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("publicIps", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public location location {
+            get {
+                return this.locationField;
+            }
+            set {
+                this.locationField = value;
+                this.RaisePropertyChanged("location");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool locationSpecified {
+            get {
+                return this.locationFieldSpecified;
+            }
+            set {
+                this.locationFieldSpecified = value;
+                this.RaisePropertyChanged("locationSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("publicIps", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
         public publicIp[] publicIps {
             get {
                 return this.publicIpsField;
@@ -6651,30 +7594,6 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
             set {
                 this.publicIpsField = value;
                 this.RaisePropertyChanged("publicIps");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public region region {
-            get {
-                return this.regionField;
-            }
-            set {
-                this.regionField = value;
-                this.RaisePropertyChanged("region");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool regionSpecified {
-            get {
-                return this.regionFieldSpecified;
-            }
-            set {
-                this.regionFieldSpecified = value;
-                this.RaisePropertyChanged("regionSpecified");
             }
         }
         
@@ -6689,7 +7608,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6799,7 +7718,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6958,7 +7877,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7346,7 +8265,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7360,6 +8279,8 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         private int icmpTypeField;
         
         private bool icmpTypeFieldSpecified;
+        
+        private string nameField;
         
         private int portRangeEndField;
         
@@ -7429,6 +8350,18 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public int portRangeEnd {
             get {
                 return this.portRangeEndField;
@@ -7452,7 +8385,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public int portRangeStart {
             get {
                 return this.portRangeStartField;
@@ -7476,7 +8409,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public protocol protocol {
             get {
                 return this.protocolField;
@@ -7500,7 +8433,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public string sourceIp {
             get {
                 return this.sourceIpField;
@@ -7512,7 +8445,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public string sourceMac {
             get {
                 return this.sourceMacField;
@@ -7524,7 +8457,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public string targetIp {
             get {
                 return this.targetIpField;
@@ -7864,7 +8797,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7889,9 +8822,17 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         private bool cpuHotPlugFieldSpecified;
         
+        private bool cpuHotUnPlugField;
+        
+        private bool cpuHotUnPlugFieldSpecified;
+        
         private bool ramHotPlugField;
         
         private bool ramHotPlugFieldSpecified;
+        
+        private bool ramHotUnPlugField;
+        
+        private bool ramHotUnPlugFieldSpecified;
         
         private bool nicHotPlugField;
         
@@ -7900,6 +8841,14 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         private bool nicHotUnPlugField;
         
         private bool nicHotUnPlugFieldSpecified;
+        
+        private bool discVirtioHotPlugField;
+        
+        private bool discVirtioHotPlugFieldSpecified;
+        
+        private bool discVirtioHotUnPlugField;
+        
+        private bool discVirtioHotUnPlugFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -8011,6 +8960,30 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public bool cpuHotUnPlug {
+            get {
+                return this.cpuHotUnPlugField;
+            }
+            set {
+                this.cpuHotUnPlugField = value;
+                this.RaisePropertyChanged("cpuHotUnPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool cpuHotUnPlugSpecified {
+            get {
+                return this.cpuHotUnPlugFieldSpecified;
+            }
+            set {
+                this.cpuHotUnPlugFieldSpecified = value;
+                this.RaisePropertyChanged("cpuHotUnPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public bool ramHotPlug {
             get {
                 return this.ramHotPlugField;
@@ -8034,7 +9007,31 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public bool ramHotUnPlug {
+            get {
+                return this.ramHotUnPlugField;
+            }
+            set {
+                this.ramHotUnPlugField = value;
+                this.RaisePropertyChanged("ramHotUnPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ramHotUnPlugSpecified {
+            get {
+                return this.ramHotUnPlugFieldSpecified;
+            }
+            set {
+                this.ramHotUnPlugFieldSpecified = value;
+                this.RaisePropertyChanged("ramHotUnPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public bool nicHotPlug {
             get {
                 return this.nicHotPlugField;
@@ -8058,7 +9055,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
         public bool nicHotUnPlug {
             get {
                 return this.nicHotUnPlugField;
@@ -8078,6 +9075,54 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
             set {
                 this.nicHotUnPlugFieldSpecified = value;
                 this.RaisePropertyChanged("nicHotUnPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public bool discVirtioHotPlug {
+            get {
+                return this.discVirtioHotPlugField;
+            }
+            set {
+                this.discVirtioHotPlugField = value;
+                this.RaisePropertyChanged("discVirtioHotPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool discVirtioHotPlugSpecified {
+            get {
+                return this.discVirtioHotPlugFieldSpecified;
+            }
+            set {
+                this.discVirtioHotPlugFieldSpecified = value;
+                this.RaisePropertyChanged("discVirtioHotPlugSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        public bool discVirtioHotUnPlug {
+            get {
+                return this.discVirtioHotUnPlugField;
+            }
+            set {
+                this.discVirtioHotUnPlugField = value;
+                this.RaisePropertyChanged("discVirtioHotUnPlug");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool discVirtioHotUnPlugSpecified {
+            get {
+                return this.discVirtioHotUnPlugFieldSpecified;
+            }
+            set {
+                this.discVirtioHotUnPlugFieldSpecified = value;
+                this.RaisePropertyChanged("discVirtioHotUnPlugSpecified");
             }
         }
         
@@ -8164,7 +9209,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8296,7 +9341,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8378,7 +9423,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8536,7 +9581,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
     public enum notificationCode {
@@ -8549,7 +9594,7 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.33440")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.api.profitbricks.com/")]
     public enum virtualItemType {
@@ -8668,14 +9713,13 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.createDataCenter(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterRequest request) {
+        ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterResponse ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType.createDataCenter(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterRequest1 request) {
             return base.Channel.createDataCenter(request);
         }
         
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDcResponse createDataCenter(string dataCenterName, ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.region region) {
-            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterRequest();
-            inValue.dataCenterName = dataCenterName;
-            inValue.region = region;
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDcResponse createDataCenter(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterRequest request) {
+            ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterRequest1 inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterRequest1();
+            inValue.request = request;
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createDataCenterResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).createDataCenter(inValue);
             return retVal.@return;
         }
@@ -9007,10 +10051,9 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
             return base.Channel.setImageOsType(request);
         }
         
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse setImageOsType(string imageId, ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.osType osType) {
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.requestResponse setImageOsType(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.imageOsTypeRequest request) {
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.setImageOsTypeRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.setImageOsTypeRequest();
-            inValue.imageId = imageId;
-            inValue.osType = osType;
+            inValue.request = request;
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.setImageOsTypeResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).setImageOsType(inValue);
             return retVal.@return;
         }
@@ -9093,10 +10136,9 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
             return base.Channel.reservePublicIpBlock(request);
         }
         
-        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ipBlockResponse reservePublicIpBlock(int blockSize, ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.region region) {
+        public ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ipBlockResponse reservePublicIpBlock(ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.createReservePublicIpBlockRequest request) {
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.reservePublicIpBlockRequest inValue = new ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.reservePublicIpBlockRequest();
-            inValue.blockSize = blockSize;
-            inValue.region = region;
+            inValue.request = request;
             ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.reservePublicIpBlockResponse retVal = ((ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi.ProfitbricksApiServicePortType)(this)).reservePublicIpBlock(inValue);
             return retVal.@return;
         }

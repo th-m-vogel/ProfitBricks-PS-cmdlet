@@ -62,7 +62,12 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             //{
             //    throw new System.ArgumentException("at leat on of the following parameters must have a valid value: StringParam, IntParam");
             //}
-            this.WriteObject(PBApi.Service.setImageOsType(imageId, osType));
+            imageOsTypeRequest Request = new imageOsTypeRequest();
+
+            Request.imageId = imageId ;
+            Request.osType = osType;
+
+            this.WriteObject(PBApi.Service.setImageOsType(Request));
         }
     }
     #endregion
@@ -75,13 +80,13 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Position = 0,
             Mandatory = true
         )]
-        public string imageUuid;
+        public string imageId;
 
         [Parameter(
             Position = 1,
             Mandatory = false
         )]
-        public string name;
+        public string imageName;
 
         [Parameter(
             Position = 2,
@@ -99,7 +104,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Position = 3,
             Mandatory = false
         )]
-        public ostype? osType;
+        public osType? osType;
 
         [Parameter(
             Position = 4,
@@ -129,7 +134,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         protected override void ProcessRecord()
         {
             updateImageRequest Request = new updateImageRequest();
-            if (string.IsNullOrEmpty(name) &&
+            if (string.IsNullOrEmpty(imageName) &&
                 string.IsNullOrEmpty(description) &&
                 !bootable.HasValue &&
                 !osType.HasValue &&
@@ -141,9 +146,9 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             {
                 throw new System.ArgumentException("at leat on of the following parameters must have a valid value: snapshotName, description, bootable, osType, cpuHotPlug, ramHotPlug, nicHotPlug, nicHotUnPlug");
             }
-            Request.imageUuid = imageUuid;
+            Request.imageId = imageId;
             Request.description = description;
-            Request.name = name;
+            Request.imageName = imageName;
             if (bootable.HasValue)
             {
                 Request.bootable = (bool)bootable;
@@ -151,7 +156,7 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             }
             if (osType.HasValue)
             {
-                Request.osType = (ostype)osType;
+                Request.osType = (osType)osType;
                 Request.osTypeSpecified = true;
             }
             if (cpuHotPlug.HasValue)

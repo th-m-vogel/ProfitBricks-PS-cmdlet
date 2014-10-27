@@ -36,11 +36,15 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             ValueFromPipeline = true,
             ValueFromPipelineByPropertyName = true
         )]
-        public region region;
+        public location Location;
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(PBApi.Service.reservePublicIpBlock(blockSize,region));
+            createReservePublicIpBlockRequest Request = new createReservePublicIpBlockRequest();
+            Request.blockSize = blockSize;
+            Request.location = Location;
+
+            this.WriteObject(PBApi.Service.reservePublicIpBlock(Request));
         }
     }
     #endregion

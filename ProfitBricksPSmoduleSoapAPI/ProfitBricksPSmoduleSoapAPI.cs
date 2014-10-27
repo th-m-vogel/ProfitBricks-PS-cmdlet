@@ -138,7 +138,7 @@ namespace ProfitBricksPSmoduleSoapAPI
         {
             if (string.IsNullOrEmpty(ApiEndpoint))
             {
-                ApiEndpoint = "https://api.profitbricks.com/1.2";
+                ApiEndpoint = "https://api.profitbricks.com/1.3";
             }
             EndpointAddress EA = new EndpointAddress(ApiEndpoint);
             // We want to use Basic Auth via SSL to the Webservice

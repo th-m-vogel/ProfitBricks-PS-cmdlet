@@ -111,13 +111,18 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             Position = 1,
             Mandatory = false
         )]
-        public region Region;
+        public location Location;
 
         protected override void ProcessRecord()
         {
-            this.WriteVerbose("Create Datacenter: " + dataCenterName + " in Region " + Region);
+            createDataCenterRequest Request = new createDataCenterRequest();
 
-            var response = PBApi.Service.createDataCenter(dataCenterName, Region);
+            Request.dataCenterName = dataCenterName;
+            Request.location = Location;
+
+            this.WriteVerbose("Create Datacenter: " + dataCenterName + " at Location " + Location);
+
+            var response = PBApi.Service.createDataCenter(Request);
             this.WriteVerbose("RequestID " + response.requestId + " created Dataceter using UUID " + response.dataCenterId);
             // return CreateDatacenterResponse
             this.WriteObject(response);
