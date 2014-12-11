@@ -1398,6 +1398,7 @@
           <xs:enumeration value="de/fkb" />
           <xs:enumeration value="de/fra" />
           <xs:enumeration value="us/las" />
+          <xs:enumeration value="us/lasdev" />
         </xs:restriction>
       </xs:simpleType>
       <xs:simpleType name="imageType">

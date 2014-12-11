@@ -1359,6 +1359,10 @@ namespace ProfitBricksPSmoduleSoapAPI.WsProfitBricksApi {
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("us/las")]
         uslas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("us/lasdev")]
+        uslasdev,
     }
     
     /// <remarks/>
