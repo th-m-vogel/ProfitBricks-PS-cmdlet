@@ -130,6 +130,18 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         )]
         public bool? nicHotUnPlug;
 
+        [Parameter(
+            Position = 12,
+            Mandatory = false
+        )]
+        public bool? discVirtioHotPlug;
+
+        [Parameter(
+            Position = 13,
+            Mandatory = false
+        )]
+        public bool? discVirtioHotUnPlug;
+
 
         protected override void ProcessRecord()
         {
@@ -141,10 +153,12 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
                 !cpuHotPlug.HasValue &&
                 !ramHotPlug.HasValue &&
                 !nicHotPlug.HasValue &&
-                !nicHotUnPlug.HasValue
+                !nicHotUnPlug.HasValue &&
+                !discVirtioHotPlug.HasValue &&
+                !discVirtioHotUnPlug.HasValue
                 )
             {
-                throw new System.ArgumentException("at leat on of the following parameters must have a valid value: snapshotName, description, bootable, osType, cpuHotPlug, ramHotPlug, nicHotPlug, nicHotUnPlug");
+                throw new System.ArgumentException("at leat on of the following parameters must have a valid value: snapshotName, description, bootable, osType, cpuHotPlug, ramHotPlug, nicHotPlug, nicHotUnPlug, discVirtioHotPlug, discVirtioHotUnPlug");
             }
             Request.imageId = imageId;
             Request.description = description;
@@ -178,6 +192,16 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             {
                 Request.nicHotUnPlug = (bool)nicHotUnPlug;
                 Request.nicHotUnPlugSpecified = true;
+            }
+            if (discVirtioHotPlug.HasValue)
+            {
+                Request.discVirtioHotPlug = (bool)discVirtioHotPlug;
+                Request.discVirtioHotPlugSpecified = true;
+            }
+            if (discVirtioHotUnPlug.HasValue)
+            {
+                Request.discVirtioHotUnPlug = (bool)discVirtioHotUnPlug;
+                Request.discVirtioHotUnPlug = true;
             }
 
             this.WriteObject(PBApi.Service.updateImage(Request));

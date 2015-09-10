@@ -90,6 +90,42 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         )]
         public osType? osType;
 
+        [Parameter(
+            Position = 11,
+            Mandatory = false
+        )]
+        public bool? cpuHotPlug;
+
+        [Parameter(
+            Position = 12,
+            Mandatory = false
+        )]
+        public bool? ramHotPlug;
+
+        [Parameter(
+            Position = 13,
+            Mandatory = false
+        )]
+        public bool? nicHotPlug;
+
+        [Parameter(
+            Position = 14,
+            Mandatory = false
+        )]
+        public bool? nicHotUnPlug;
+
+        [Parameter(
+            Position = 15,
+            Mandatory = false
+        )]
+        public bool? discVirtioHotPlug;
+
+        [Parameter(
+            Position = 16,
+            Mandatory = false
+        )]
+        public bool? discVirtioHotUnPlug;
+
         protected override void ProcessRecord()
         {
             createServerRequest Request = new createServerRequest();
@@ -118,6 +154,36 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             {
                 Request.osType = (osType)osType;
                 Request.osTypeSpecified = true ;
+            }
+            if (cpuHotPlug.HasValue)
+            {
+                Request.cpuHotPlug = (bool)cpuHotPlug;
+                Request.cpuHotPlugSpecified = true;
+            }
+            if (ramHotPlug.HasValue)
+            {
+                Request.ramHotPlug = (bool)ramHotPlug;
+                Request.ramHotPlugSpecified = true;
+            }
+            if (nicHotPlug.HasValue)
+            {
+                Request.nicHotPlug = (bool)nicHotPlug;
+                Request.nicHotPlugSpecified = true;
+            }
+            if (nicHotUnPlug.HasValue)
+            {
+                Request.nicHotUnPlug = (bool)nicHotUnPlug;
+                Request.nicHotUnPlugSpecified = true;
+            }
+            if (discVirtioHotPlug.HasValue)
+            {
+                Request.discVirtioHotPlug = (bool)discVirtioHotPlug;
+                Request.discVirtioHotPlugSpecified = true;
+            }
+            if (discVirtioHotUnPlug.HasValue)
+            {
+                Request.discVirtioHotUnPlug = (bool)discVirtioHotUnPlug;
+                Request.discVirtioHotUnPlugSpecified = true;
             }
 
             this.WriteObject(PBApi.Service.createServer(Request));
@@ -234,6 +300,42 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
         )]
         public osType? osType;
 
+        [Parameter(
+            Position = 8,
+            Mandatory = false
+        )]
+        public bool? cpuHotPlug;
+
+        [Parameter(
+            Position = 9,
+            Mandatory = false
+        )]
+        public bool? ramHotPlug;
+
+        [Parameter(
+            Position = 10,
+            Mandatory = false
+        )]
+        public bool? nicHotPlug;
+
+        [Parameter(
+            Position = 11,
+            Mandatory = false
+        )]
+        public bool? nicHotUnPlug;
+
+        [Parameter(
+            Position = 12,
+            Mandatory = false
+        )]
+        public bool? discVirtioHotPlug;
+
+        [Parameter(
+            Position = 13,
+            Mandatory = false
+        )]
+        public bool? discVirtioHotUnPlug;
+
         protected override void ProcessRecord()
         {
             updateServerRequest Request = new updateServerRequest();
@@ -243,11 +345,17 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
                 string.IsNullOrEmpty(bootFromStorageId) &&
                 !availabilityZone.HasValue &&
                 !osType.HasValue &&
+                !cpuHotPlug.HasValue &&
+                !ramHotPlug.HasValue &&
+                !nicHotPlug.HasValue &&
+                !nicHotUnPlug.HasValue &&
+                !discVirtioHotPlug.HasValue &&
+                !discVirtioHotUnPlug.HasValue &&
                 !cores.HasValue &&
                 !ram.HasValue
                 )
             {
-                throw new System.ArgumentException("at leat on of the following parameters must have a valid value: serverName, cores, ram, bootFromImageId, bootFromStorageId, availabilityZone, osType");
+                throw new System.ArgumentException("at leat on of the following parameters must have a valid value: serverName, cores, ram, bootFromImageId, bootFromStorageId, availabilityZone, osType, cpuHotPlug, ramHotPlug, nicHotPlug, nicHotUnPlug, discVirtioHotPlug, discVirtioHotUnPlug");
             }
             Request.serverId = serverId;
             if (cores.HasValue)
@@ -272,6 +380,37 @@ namespace ProfitBricksPSmoduleSoapAPI.CmdLet
             {
                 Request.osType = (osType)osType;
                 Request.osTypeSpecified = true ;
+            }
+
+            if (cpuHotPlug.HasValue)
+            {
+                Request.cpuHotPlug = (bool)cpuHotPlug;
+                Request.cpuHotPlugSpecified = true;
+            }
+            if (ramHotPlug.HasValue)
+            {
+                Request.ramHotPlug = (bool)ramHotPlug;
+                Request.ramHotPlugSpecified = true;
+            }
+            if (nicHotPlug.HasValue)
+            {
+                Request.nicHotPlug = (bool)nicHotPlug;
+                Request.nicHotPlugSpecified = true;
+            }
+            if (nicHotUnPlug.HasValue)
+            {
+                Request.nicHotUnPlug = (bool)nicHotUnPlug;
+                Request.nicHotUnPlugSpecified = true;
+            }
+            if (discVirtioHotPlug.HasValue)
+            {
+                Request.discVirtioHotPlug = (bool)discVirtioHotPlug;
+                Request.discVirtioHotPlugSpecified = true;
+            }
+            if (discVirtioHotUnPlug.HasValue)
+            {
+                Request.discVirtioHotUnPlug = (bool)discVirtioHotUnPlug;
+                Request.discVirtioHotUnPlugSpecified = true;
             }
 
             this.WriteObject(PBApi.Service.updateServer(Request));
